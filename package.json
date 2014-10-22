@@ -1,0 +1,22 @@
+{
+  "name": "mor-charpentier",
+  "version": "2.0.0",
+  "description": "Mor-Charpentier site for 2015",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/8manos/mor-charpentier.git"
+  },
+  "author": "cesosag",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/8manos/mor-charpentier/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.9",
+    "gulp-ruby-sass": "~0.7.1"
+  }
+}
