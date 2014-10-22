@@ -1,3 +1,10 @@
+<?php
+
+ob_start();
+language_attributes();
+$lang_attr = ob_get_clean();
+
+?>
 <!DOCTYPE html>
 <html  <?php language_attributes(); ?>>
 <head>
@@ -19,14 +26,3 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
-	<header role="banner">
-		<h1><a href="<?php echo home_url(); ?>/" rel="home"><?php bloginfo('name');?></a></h1>
-
-		<nav role="navigation">
-			<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
-		</nav>
-	</header>
-
-	<!-- If you want to use an element as a wrapper, i.e. for styling only, then <div> is still the element to use -->
-	<div class="wrap">

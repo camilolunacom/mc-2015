@@ -1,9 +1,3 @@
-	</div>
-
-	<footer role="contentinfo">
-		<small>&copy; <?php bloginfo('name'); ?></small>
-	</footer>
-
 	<?php wp_footer(); ?>
 
 	<!-- Google Analytics - Optimized version by Mathias Bynens -->
