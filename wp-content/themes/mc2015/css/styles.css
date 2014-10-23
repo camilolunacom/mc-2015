@@ -88,3 +88,11 @@ main {
   -moz-writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
   writing-mode: vertical-rl; }
+  .prod-team a {
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s; }
+    .prod-team a:hover {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
