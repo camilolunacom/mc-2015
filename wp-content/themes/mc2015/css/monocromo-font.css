@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'monocromo';
+	src: url('monocromo.eot');
+    src: url('monocromo.eot?#iefix') format('embedded-opentype'),
+         url('monocromo.woff') format('woff'),
+         url('monocromo.ttf') format('truetype'),
+         url('monocromo.svg#monocromo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

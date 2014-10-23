@@ -1,0 +1,216 @@
+/* Monocromo */
+@font-face {
+	font-family: 'monocromo';
+	src: url('fonts/monocromo.eot');
+    src: url('fonts/monocromo.eot?#iefix') format('embedded-opentype'),
+         url('fonts/monocromo.woff') format('woff'),
+         url('fonts/monocromo.ttf') format('truetype'),
+         url('fonts/monocromo.svg#monocromo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Euclid flex */
+@font-face {
+    font-family: 'euclid_flex';
+    src: url('fonts/euclidflex-ultralight-webfont.eot');
+    src: url('fonts/euclidflex-ultralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/euclidflex-ultralight-webfont.woff2') format('woff2'),
+         url('fonts/euclidflex-ultralight-webfont.woff') format('woff'),
+         url('fonts/euclidflex-ultralight-webfont.ttf') format('truetype'),
+         url('fonts/euclidflex-ultralight-webfont.svg#euclid_flexultralight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'euclid_flex';
+    src: url('fonts/euclidflex-ultralightitalic-webfont.eot');
+    src: url('fonts/euclidflex-ultralightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/euclidflex-ultralightitalic-webfont.woff2') format('woff2'),
+         url('fonts/euclidflex-ultralightitalic-webfont.woff') format('woff'),
+         url('fonts/euclidflex-ultralightitalic-webfont.ttf') format('truetype'),
+         url('fonts/euclidflex-ultralightitalic-webfont.svg#euclid_flexultralight_italic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'euclid_flex';
+    src: url('fonts/euclidflex-light-webfont.eot');
+    src: url('fonts/euclidflex-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/euclidflex-light-webfont.woff2') format('woff2'),
+         url('fonts/euclidflex-light-webfont.woff') format('woff'),
+         url('fonts/euclidflex-light-webfont.ttf') format('truetype'),
+         url('fonts/euclidflex-light-webfont.svg#euclid_flexlight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'euclid_flex';
+    src: url('fonts/euclidflex-lightitalic-webfont.eot');
+    src: url('fonts/euclidflex-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/euclidflex-lightitalic-webfont.woff2') format('woff2'),
+         url('fonts/euclidflex-lightitalic-webfont.woff') format('woff'),
+         url('fonts/euclidflex-lightitalic-webfont.ttf') format('truetype'),
+         url('fonts/euclidflex-lightitalic-webfont.svg#euclid_flexlight_italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'euclid_flex';
+    src: url('fonts/euclidflex-regular-webfont.eot');
+    src: url('fonts/euclidflex-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/euclidflex-regular-webfont.woff2') format('woff2'),
+         url('fonts/euclidflex-regular-webfont.woff') format('woff'),
+         url('fonts/euclidflex-regular-webfont.ttf') format('truetype'),
+         url('fonts/euclidflex-regular-webfont.svg#euclid_flexregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'euclid_flex';
+    src: url('fonts/euclidflex-regularitalic-webfont.eot');
+    src: url('fonts/euclidflex-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/euclidflex-regularitalic-webfont.woff2') format('woff2'),
+         url('fonts/euclidflex-regularitalic-webfont.woff') format('woff'),
+         url('fonts/euclidflex-regularitalic-webfont.ttf') format('truetype'),
+         url('fonts/euclidflex-regularitalic-webfont.svg#euclid_flexitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'euclid_flex';
+    src: url('fonts/euclidflex-medium-webfont.eot');
+    src: url('fonts/euclidflex-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/euclidflex-medium-webfont.woff2') format('woff2'),
+         url('fonts/euclidflex-medium-webfont.woff') format('woff'),
+         url('fonts/euclidflex-medium-webfont.ttf') format('truetype'),
+         url('fonts/euclidflex-medium-webfont.svg#euclid_flexmedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'euclid_flex';
+    src: url('fonts/euclidflex-mediumitalic-webfont.eot');
+    src: url('fonts/euclidflex-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/euclidflex-mediumitalic-webfont.woff2') format('woff2'),
+         url('fonts/euclidflex-mediumitalic-webfont.woff') format('woff'),
+         url('fonts/euclidflex-mediumitalic-webfont.ttf') format('truetype'),
+         url('fonts/euclidflex-mediumitalic-webfont.svg#euclid_flexmedium_italic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'euclid_flex';
+    src: url('fonts/euclidflex-bold-webfont.eot');
+    src: url('fonts/euclidflex-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/euclidflex-bold-webfont.woff2') format('woff2'),
+         url('fonts/euclidflex-bold-webfont.woff') format('woff'),
+         url('fonts/euclidflex-bold-webfont.ttf') format('truetype'),
+         url('fonts/euclidflex-bold-webfont.svg#euclid_flexbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'euclid_flex';
+    src: url('fonts/euclidflex-bolditalic-webfont.eot');
+    src: url('fonts/euclidflex-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/euclidflex-bolditalic-webfont.woff2') format('woff2'),
+         url('fonts/euclidflex-bolditalic-webfont.woff') format('woff'),
+         url('fonts/euclidflex-bolditalic-webfont.ttf') format('truetype'),
+         url('fonts/euclidflex-bolditalic-webfont.svg#euclid_flexbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+/* Suisse works */
+@font-face {
+    font-family: 'suisse_works';
+    src: url('fonts/suisseworks-regular-webfont.eot');
+    src: url('fonts/suisseworks-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/suisseworks-regular-webfont.woff2') format('woff2'),
+         url('fonts/suisseworks-regular-webfont.woff') format('woff'),
+         url('fonts/suisseworks-regular-webfont.ttf') format('truetype'),
+         url('fonts/suisseworks-regular-webfont.svg#suisse_worksregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse_works';
+    src: url('fonts/suisseworks-regularitalic-webfont.eot');
+    src: url('fonts/suisseworks-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/suisseworks-regularitalic-webfont.woff2') format('woff2'),
+         url('fonts/suisseworks-regularitalic-webfont.woff') format('woff'),
+         url('fonts/suisseworks-regularitalic-webfont.ttf') format('truetype'),
+         url('fonts/suisseworks-regularitalic-webfont.svg#suisse_worksitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'suisse_works';
+    src: url('fonts/suisseworks-medium-webfont.eot');
+    src: url('fonts/suisseworks-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/suisseworks-medium-webfont.woff2') format('woff2'),
+         url('fonts/suisseworks-medium-webfont.woff') format('woff'),
+         url('fonts/suisseworks-medium-webfont.ttf') format('truetype'),
+         url('fonts/suisseworks-medium-webfont.svg#suisse_worksmedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse_works';
+    src: url('fonts/suisseworks-mediumitalic-webfont.eot');
+    src: url('fonts/suisseworks-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/suisseworks-mediumitalic-webfont.woff2') format('woff2'),
+         url('fonts/suisseworks-mediumitalic-webfont.woff') format('woff'),
+         url('fonts/suisseworks-mediumitalic-webfont.ttf') format('truetype'),
+         url('fonts/suisseworks-mediumitalic-webfont.svg#suisse_worksmedium_italic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'suisse_works';
+    src: url('fonts/suisseworks-bold-webfont.eot');
+    src: url('fonts/suisseworks-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/suisseworks-bold-webfont.woff2') format('woff2'),
+         url('fonts/suisseworks-bold-webfont.woff') format('woff'),
+         url('fonts/suisseworks-bold-webfont.ttf') format('truetype'),
+         url('fonts/suisseworks-bold-webfont.svg#suisse_worksbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse_works';
+    src: url('fonts/suisseworks-bolditalic-webfont.eot');
+    src: url('fonts/suisseworks-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/suisseworks-bolditalic-webfont.woff2') format('woff2'),
+         url('fonts/suisseworks-bolditalic-webfont.woff') format('woff'),
+         url('fonts/suisseworks-bolditalic-webfont.ttf') format('truetype'),
+         url('fonts/suisseworks-bolditalic-webfont.svg#suisse_worksbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Suisse worksbook */
+@font-face {
+    font-family: 'suisse_worksbook';
+    src: url('fonts/suisseworks-book-webfont.eot');
+    src: url('fonts/suisseworks-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/suisseworks-book-webfont.woff2') format('woff2'),
+         url('fonts/suisseworks-book-webfont.woff') format('woff'),
+         url('fonts/suisseworks-book-webfont.ttf') format('truetype'),
+         url('fonts/suisseworks-book-webfont.svg#suisse_worksbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse_worksbook';
+    src: url('fonts/suisseworks-bookitalic-webfont.eot');
+    src: url('fonts/suisseworks-bookitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/suisseworks-bookitalic-webfont.woff2') format('woff2'),
+         url('fonts/suisseworks-bookitalic-webfont.woff') format('woff'),
+         url('fonts/suisseworks-bookitalic-webfont.ttf') format('truetype'),
+         url('fonts/suisseworks-bookitalic-webfont.svg#suisse_worksbook_italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
