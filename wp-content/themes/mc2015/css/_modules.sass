@@ -1,9 +1,37 @@
+.announcements
+	border: 3px solid
+	line-height: 1em
+	padding: 0.25em
+	text-align: center
+
+.kc-ml-languages
+	display: inline-block
+	list-style-type: none
+	font-size: 12px
+	font-weight: 500
+
+	li
+		display: inline-block
+		text-transform: uppercase
+
+		&:not(:first-of-type):before
+			content: '/'
+			display: inline-block
+			margin-right: 0.2em
+
+.logo
+	display: inline-block
+	width: 250px
+
 .prod-team
 	font-family: monocromo
+	position: absolute
+	right: 0.5em
 	-webkit-text-orientation: upright
 	-moz-text-orientation: upright
 	-ms-text-orientation: upright
 	text-orientation: upright
+	top: 0.5em
 	-webkit-writing-mode: vertical-rl
 	-moz-writing-mode: vertical-rl
 	-ms-writing-mode: vertical-rl
