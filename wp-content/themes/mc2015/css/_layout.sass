@@ -2,12 +2,31 @@ main
 	position: relative
 
 	&.index
+		background-attachment: fixed !important
+		background-position: center !important
 		background-size: cover !important
 		background-repeat: no-repeat !important
 		color: white
+		text-align: center
 
 		a
 			color: white
+
+		.footer-items,
+		.kc-ml-languages,
+		.logo
+			position: absolute
+
+		.footer-items
+			bottom: 0
+
+		.kc-ml-languages
+			right: 10em
+			top: 1em
+
+		.logo
+			left: 1em
+			top: 1em
 
 		.menu
 			font-size: 66px
@@ -23,3 +42,15 @@ main
 				list-style-type: none
 				margin-bottom: 0
 				padding: 0
+
+.vertical-align
+	& > *
+		display: inline-block
+		vertical-align: middle
+
+	&:before
+		content: ''
+		display: inline-block
+		height: 100%
+		margin-right: -0.25em
+		vertical-align: middle
