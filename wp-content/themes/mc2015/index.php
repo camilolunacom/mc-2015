@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="wrap">
-	<main role="main"   style="background:url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>)">
+	<main class="index" role="main"   style="background:url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>)">
 		<figure class="logo">
 			<a href="<?php echo home_url(); ?>/" rel="home">
 				<img src="" alt="Mor-Charpentier">
