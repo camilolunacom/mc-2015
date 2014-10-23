@@ -19,6 +19,7 @@ main
 
 		.footer-items
 			bottom: 0
+			left: 1em
 
 		.kc-ml-languages
 			right: 10em
@@ -55,5 +56,9 @@ main
 		content: ''
 		display: inline-block
 		height: 100%
-		margin-right: -0.25em
+		margin-right: -0.75em
 		vertical-align: middle
+
+@media screen and (min-width: $desktop)
+	.vertical-align:before
+		margin-right: -0.25em

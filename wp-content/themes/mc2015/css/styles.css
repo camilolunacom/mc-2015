@@ -50,7 +50,8 @@ main {
     main.index .logo {
       position: absolute; }
     main.index .footer-items {
-      bottom: 0; }
+      bottom: 0;
+      left: 1em; }
     main.index .kc-ml-languages {
       right: 10em;
       top: 1em; }
@@ -78,9 +79,12 @@ main {
   content: "";
   display: inline-block;
   height: 100%;
-  margin-right: -0.25em;
+  margin-right: -0.75em;
   vertical-align: middle; }
 
+@media screen and (min-width: 48em) {
+  .vertical-align:before {
+    margin-right: -0.25em; } }
 .announcements {
   font-size: 17px;
   margin: 0 auto;
@@ -100,7 +104,11 @@ main {
   line-height: 1em;
   list-style-type: none;
   margin-bottom: 0;
-  padding: 0; }
+  padding: 0;
+  text-align: left; }
+
+.index-menu {
+  margin-top: -10em; }
 
 .kc-ml-languages {
   display: none;
@@ -168,6 +176,9 @@ main {
       transform: rotate(90deg); }
 
 @media screen and (min-width: 48em) {
+  .index-menu {
+    margin-top: 0; }
+
   .footer-item {
     display: inline-block;
     text-align: left; }
