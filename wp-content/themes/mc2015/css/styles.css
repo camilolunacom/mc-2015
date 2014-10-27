@@ -63,7 +63,7 @@ main {
       font-weight: bold;
       text-align: center; }
       main.index .menu a:hover {
-        color: #CCC; }
+        color: rgba(255, 255, 255, 0.7); }
       main.index .menu li {
         display: block;
         line-height: 1em; }
