@@ -33,6 +33,11 @@ figure {
     vertical-align: middle;
     width: 100%; }
 
+footer {
+  padding: 1em; }
+  footer .footer-items {
+    margin: 0; }
+
 header a,
 footer a {
   color: black; }
@@ -148,6 +153,14 @@ main {
   font-family: "suisse_works";
   font-weight: bold;
   text-transform: lowercase; }
+.navigation-menu .social-networks {
+  display: none;
+  margin: 0; }
+  .navigation-menu .social-networks .social-network {
+    color: white;
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 0.25em; }
 
 .picture-credits {
   bottom: 0;
@@ -212,6 +225,8 @@ main {
       list-style-type: none;
       padding: 0;
       text-align: center; }
+    .navigation-menu .kc-ml-languages .current-language a {
+      color: rgba(255, 255, 255, 0.7); }
     .navigation-menu .logo {
       left: 10px;
       position: absolute;
@@ -219,14 +234,18 @@ main {
     .navigation-menu .menu {
       font-size: 66px; }
     .navigation-menu .nav-footer {
-      bottom: 0;
+      bottom: 1em;
       left: 0;
       position: absolute;
       right: 0; }
     .navigation-menu #hamburguer {
+      cursor: pointer;
+      font-size: 1.5em;
       position: absolute;
       right: 1em;
-      top: 1em; } }
+      top: 1em;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s; } }
 @media screen and (min-width: 48em) {
   .index-menu {
     margin-top: 0; }
@@ -264,7 +283,7 @@ main {
   .navigation-menu .menu li.current_page_item a {
     color: black; }
   .navigation-menu #hamburguer {
-    display: none; }
+    display: none !important; }
 
   .picture-credits {
     display: block; } }
@@ -283,5 +302,8 @@ main {
       .navigation-menu.is-visible a:hover {
         color: rgba(255, 255, 255, 0.7); }
     .navigation-menu.is-visible nav,
-    .navigation-menu.is-visible .kc-ml-languages {
-      display: block; } }
+    .navigation-menu.is-visible .kc-ml-languages,
+    .navigation-menu.is-visible .social-networks {
+      display: block; }
+    .navigation-menu.is-visible #hamburguer {
+      color: rgba(255, 255, 255, 0.7); } }
