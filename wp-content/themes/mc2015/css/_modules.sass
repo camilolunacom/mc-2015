@@ -47,6 +47,12 @@
 	a
 		font-size: 4rem
 
+.navigation-menu
+	.menu
+		font-family: 'suisse_works'
+		font-weight: bold
+		text-transform: lowercase
+
 .picture-credits
 	bottom: 0
 	display: none
@@ -112,11 +118,6 @@
 			padding: 0
 			text-align: center
 
-		.icon-menu
-			position: absolute
-			right: 1em
-			top: 1em
-
 		.logo
 			left: 10px
 			position: absolute
@@ -124,14 +125,17 @@
 
 		.menu
 			font-size: 66px
-			font-weight: bold
-			text-transform: lowercase
 
 		.nav-footer
 			bottom: 0
 			left: 0
 			position: absolute
 			right: 0
+
+		#hamburguer
+			position: absolute
+			right: 1em
+			top: 1em
 
 @media screen and (min-width: $desktop)
 	.index-menu
@@ -151,6 +155,36 @@
 
 	.kc-ml-languages
 		display: inline-block
+
+	.navigation-menu
+		nav
+			display: inline-block
+			vertical-align: top
+
+		ul
+			list-style-type: none
+			padding: 0
+
+		li
+			display: inline-block
+			margin-left: 1em
+
+		.kc-ml-languages
+			position: absolute
+			right: 10em
+			top: 1em
+
+		.menu
+			a
+				color: rgba(0, 0, 0, 0.3)
+
+			a:hover,
+			li.current_page_item a
+				color: black
+
+
+		#hamburguer
+			display: none
 
 	.picture-credits
 		display: block
