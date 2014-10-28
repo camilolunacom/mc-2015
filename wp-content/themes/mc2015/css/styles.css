@@ -33,6 +33,13 @@ figure {
     vertical-align: middle;
     width: 100%; }
 
+header a,
+footer a {
+  color: black; }
+  header a:hover,
+  footer a:hover {
+    color: rgba(0, 0, 0, 0.7); }
+
 header {
   padding: 1em;
   position: relative; }
@@ -80,7 +87,7 @@ main {
         padding: 0; }
 
 .vertical-align > * {
-  display: inline-block;
+  display: inline-block !important;
   vertical-align: middle; }
 .vertical-align:before {
   content: "";
@@ -136,6 +143,40 @@ main {
   display: inline-block; }
   .logo a {
     font-size: 4rem; }
+
+.navigation-menu {
+  height: 96px;
+  position: relative;
+  -webkit-transition: all 0.3;
+  transition: all 0.3;
+  width: 100%; }
+  .navigation-menu nav,
+  .navigation-menu .kc-ml-languages,
+  .navigation-menu .prod-team {
+    display: none; }
+  .navigation-menu nav {
+    width: 100%; }
+  .navigation-menu ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; }
+  .navigation-menu .icon-menu {
+    position: absolute;
+    right: 1em;
+    top: 1em; }
+  .navigation-menu .logo {
+    left: 10px;
+    position: absolute;
+    top: 0; }
+  .navigation-menu .menu {
+    font-size: 66px;
+    font-weight: bold;
+    text-transform: lowercase; }
+  .navigation-menu .nav-footer {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0; }
 
 .picture-credits {
   bottom: 0;
@@ -203,3 +244,19 @@ main {
 
   .picture-credits {
     display: block; } }
+.navigation-menu.is-visible {
+  background: #222;
+  border: 10px solid;
+  color: white;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 999999999999999; }
+  .navigation-menu.is-visible a {
+    color: white; }
+    .navigation-menu.is-visible a:hover {
+      color: rgba(255, 255, 255, 0.7); }
+  .navigation-menu.is-visible nav,
+  .navigation-menu.is-visible .kc-ml-languages {
+    display: block; }
