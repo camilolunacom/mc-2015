@@ -114,6 +114,67 @@ main {
     line-height: 1em;
     padding: 0.75em 1em; }
 
+.artist {
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding: 1em;
+  position: relative;
+  text-align: center; }
+  .artist .artist-name {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6em 0;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s; }
+  .artist .view-artist {
+    background-color: black;
+    bottom: 3em;
+    color: white;
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    left: -webkit-calc(50% - 34px);
+    left: calc(50% - 34px);
+    opacity: 0;
+    padding: 0.25em 0.5em;
+    pointer-events: none;
+    position: absolute;
+    text-transform: uppercase;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
+    .artist .view-artist:before {
+      border-left: 2px solid black;
+      bottom: 3em;
+      content: "";
+      height: 4em;
+      left: -webkit-calc(50% - 1px);
+      left: calc(50% - 1px);
+      position: absolute; }
+  .artist:before {
+    background-color: rgba(255, 255, 255, 0.75);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1; }
+  .artist:hover .artist-name {
+    background-color: rgba(255, 255, 255, 0.8); }
+  .artist:hover .view-artist {
+    opacity: 1;
+    pointer-events: initial; }
+
+.artists {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%; }
+
 .footer-item {
   margin-bottom: 1em; }
 
