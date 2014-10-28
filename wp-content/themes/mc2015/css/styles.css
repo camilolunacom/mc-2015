@@ -147,7 +147,7 @@ main {
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s; }
     .artist .view-artist:before {
-      border-left: 2px solid black;
+      border: 1px solid black;
       bottom: 3em;
       content: "";
       height: 4em;
