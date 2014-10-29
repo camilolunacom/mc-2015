@@ -25,6 +25,7 @@ main
 			left: 1em
 
 		.kc-ml-languages
+			display: none !important
 			right: 10em
 			top: 1em
 
@@ -33,8 +34,10 @@ main
 			top: 1em
 
 		.menu
-			font-size: 66px
+			font-size: 33px
 			font-weight: bold
+			margin-bottom: 1em
+			padding: 0
 			text-align: center
 
 			li
@@ -46,6 +49,9 @@ main
 				list-style-type: none
 				margin-bottom: 0
 				padding: 0
+
+		.prod-team
+			display: none !important
 
 	&:not(.index)
 		margin-top: $menu_height
@@ -59,9 +65,17 @@ main
 		content: ''
 		display: inline-block
 		height: 100%
-		margin-right: -0.75em
+		margin-right: -0.25em
 		vertical-align: middle
 
 @media screen and (min-width: $tablet)
+	main.index
+		.kc-ml-languages,
+		.prod-team
+			display: block !important
+
+		.menu
+			font-size: 66px
+
 	.vertical-align:before
 		margin-right: -0.25em

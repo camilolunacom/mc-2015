@@ -24,8 +24,7 @@ body.home,
 html,
 main.index,
 .wrap.index {
-  min-height: 100%;
-  height: 100%; }
+  min-height: 100%; }
 
 figure {
   margin: 0; }
@@ -52,6 +51,12 @@ header {
 main {
   padding: 1em; }
 
+@media screen and (min-width: 48em) {
+  body.home,
+  html,
+  main.index,
+  .wrap.index {
+    height: 100%; } }
 main {
   position: relative; }
   main.index {
@@ -74,14 +79,17 @@ main {
       bottom: 0;
       left: 1em; }
     main.index .kc-ml-languages {
+      display: none !important;
       right: 10em;
       top: 1em; }
     main.index .logo {
       left: 1em;
       top: 1em; }
     main.index .menu {
-      font-size: 66px;
+      font-size: 33px;
       font-weight: bold;
+      margin-bottom: 1em;
+      padding: 0;
       text-align: center; }
       main.index .menu li {
         display: block;
@@ -90,6 +98,8 @@ main {
         list-style-type: none;
         margin-bottom: 0;
         padding: 0; }
+    main.index .prod-team {
+      display: none !important; }
   main:not(.index) {
     margin-top: 96px; }
 
@@ -100,10 +110,16 @@ main {
   content: "";
   display: inline-block;
   height: 100%;
-  margin-right: -0.75em;
+  margin-right: -0.25em;
   vertical-align: middle; }
 
 @media screen and (min-width: 48em) {
+  main.index .kc-ml-languages,
+  main.index .prod-team {
+    display: block !important; }
+  main.index .menu {
+    font-size: 66px; }
+
   .vertical-align:before {
     margin-right: -0.25em; } }
 .announcements {
@@ -218,7 +234,8 @@ main {
   text-align: left; }
 
 .index-menu {
-  margin-top: -10em; }
+  margin-bottom: 14em;
+  margin-top: 2em; }
 
 .kc-ml-languages {
   display: none;
@@ -331,7 +348,7 @@ main {
       position: absolute;
       top: 0; }
     .navigation-menu .menu {
-      font-size: 66px; }
+      font-size: 33px; }
     .navigation-menu .nav-footer {
       bottom: 1em;
       left: 0;
@@ -368,6 +385,7 @@ main {
         height: 2em; }
 
   .index-menu {
+    margin-bottom: 0;
     margin-top: 0; }
 
   .footer-item {
