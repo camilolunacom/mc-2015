@@ -214,6 +214,35 @@
 		&:hover
 			transform: rotate(90deg)
 
+.select-display
+	font-size: 12px
+	font-weight: 500
+	list-style-type: none
+	padding: 0
+	text-transform: uppercase
+
+	a
+		color: rgba(0, 0, 0, 0.3)
+
+	li
+		display: inline-block
+		padding: 0.2em
+		width: 49%
+
+		&.active a,
+		a:hover
+			color: black
+
+		&:first-of-type
+			text-align: right
+
+	span
+		margin: 0 0.25em
+		vertical-align: middle
+
+		&[class^="icon-"]
+			font-size: x-large
+
 @media screen and (max-width: $tablet)
 	.navigation-menu
 		height: $menu_height
@@ -309,8 +338,6 @@
 	.kc-ml-languages
 		display: inline-block
 
-
-
 	.navigation-menu
 		nav
 			display: inline-block
@@ -325,7 +352,7 @@
 
 		.kc-ml-languages
 			position: absolute
-			right: 10em
+			right: 5em
 			top: 1em
 
 		.kc-ml-languages,
@@ -359,3 +386,6 @@
 			position: absolute
 			right: 0
 			text-align: center
+
+		.kc-ml-languages
+			right: 10em
