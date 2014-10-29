@@ -117,61 +117,87 @@ main {
     padding: 0.75em 1em; }
 
 .artist {
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  padding: 1em;
-  position: relative;
-  text-align: center; }
-  .artist .artist-name {
-    font-size: 18px;
-    font-weight: bold;
-    padding: 6em 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .artist.list {
+    background: none !important;
+    padding-left: 2em; }
+    .artist.list span,
+    .artist.list .view-artist {
+      display: none; }
+    .artist.list .artist-link {
+      border-bottom: 2px solid transparent;
+      color: black;
+      display: inline-block;
+      font-size: 19px;
+      font-weight: 500;
+      padding-bottom: 0.25em;
+      text-decoration: none;
+      -webkit-transition: border-color 0.3s;
+      transition: border-color 0.3s; }
+      .artist.list .artist-link:hover {
+        border-color: black; }
+    .artist.list:not(:last-of-type) {
+      margin-bottom: 1em; }
+  .artist.thumb {
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 1em;
     position: relative;
-    z-index: 2;
-    -webkit-transition: background-color 0.3s;
-    transition: background-color 0.3s; }
-  .artist .view-artist {
-    background-color: black;
-    bottom: 3em;
-    color: white;
-    display: block;
-    font-size: 10px;
-    font-weight: bold;
-    left: -webkit-calc(50% - 34px);
-    left: calc(50% - 34px);
-    opacity: 0;
-    padding: 0.25em 0.5em;
-    pointer-events: none;
-    position: absolute;
-    text-transform: uppercase;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s; }
-    .artist .view-artist:before {
-      border: 1px solid black;
+    text-align: center; }
+    .artist.thumb .artist-name {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 6em 0;
+      position: relative;
+      z-index: 2;
+      -webkit-transition: background-color 0.3s;
+      transition: background-color 0.3s; }
+    .artist.thumb .artist-link {
+      display: none; }
+    .artist.thumb .view-artist {
+      background-color: black;
       bottom: 3em;
+      color: white;
+      display: block;
+      font-size: 10px;
+      font-weight: bold;
+      left: -webkit-calc(50% - 34px);
+      left: calc(50% - 34px);
+      opacity: 0;
+      padding: 0.25em 0.5em;
+      pointer-events: none;
+      position: absolute;
+      text-transform: uppercase;
+      -webkit-transition: opacity 0.3s;
+      transition: opacity 0.3s; }
+      .artist.thumb .view-artist:before {
+        border: 1px solid black;
+        bottom: 3em;
+        content: "";
+        height: 4em;
+        left: -webkit-calc(50% - 1px);
+        left: calc(50% - 1px);
+        position: absolute; }
+    .artist.thumb:before {
+      background-color: rgba(255, 255, 255, 0.75);
       content: "";
-      height: 4em;
-      left: -webkit-calc(50% - 1px);
-      left: calc(50% - 1px);
-      position: absolute; }
-  .artist:before {
-    background-color: rgba(255, 255, 255, 0.75);
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1; }
-  .artist:hover .artist-name {
-    background-color: rgba(255, 255, 255, 0.8); }
-  .artist:hover .view-artist {
-    opacity: 1;
-    pointer-events: initial; }
-  .artist:not(:last-of-type) {
-    margin-bottom: 2em; }
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1; }
+    .artist.thumb:hover .artist-name {
+      background-color: rgba(255, 255, 255, 0.8); }
+    .artist.thumb:hover .view-artist {
+      opacity: 1;
+      pointer-events: initial; }
+    .artist.thumb:not(:last-of-type) {
+      margin-bottom: 2em; }
 
 .artists {
   list-style-type: none;
@@ -320,6 +346,27 @@ main {
       -webkit-transition: color 0.3s;
       transition: color 0.3s; } }
 @media screen and (min-width: 48em) {
+  .artists li {
+    display: inline-block;
+    width: 49%; }
+  .artists.list {
+    width: 60%; }
+    .artists.list li {
+      padding-left: 0; }
+  .artists.thumb {
+    text-align: center;
+    width: 100%; }
+    .artists.thumb li {
+      margin: 1em;
+      width: 250px; }
+    .artists.thumb .artist-name {
+      padding: 3em 0; }
+    .artists.thumb .view-artist {
+      bottom: 1em; }
+      .artists.thumb .view-artist:before {
+        bottom: 2.5em;
+        height: 2em; }
+
   .index-menu {
     margin-top: 0; }
 
@@ -367,6 +414,9 @@ main {
   .picture-credits {
     display: block; } }
 @media screen and (min-width: 62.5em) {
+  .artists.thumb li {
+    width: 250; }
+
   .navigation-menu nav {
     left: 0;
     position: absolute;

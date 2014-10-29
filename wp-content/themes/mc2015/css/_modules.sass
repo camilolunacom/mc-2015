@@ -10,64 +10,94 @@
 		padding: 0.75em 1em
 
 .artist
-	background-position: center
-	background-repeat: no-repeat
-	background-size: cover
-	padding: 1em
-	position: relative
-	text-align: center
+	box-sizing: border-box
 
-	.artist-name
-		font-size: 18px
-		font-weight: bold
-		padding: 6em 0
+	&.list
+		background: none !important
+		padding-left: 2em
+
+		span,
+		.view-artist
+			display: none
+
+		.artist-link
+			border-bottom: 2px solid transparent
+			color: black
+			display: inline-block
+			font-size: 19px
+			font-weight: 500
+			padding-bottom: 0.25em
+			text-decoration: none
+			transition: border-color 0.3s
+
+			&:hover
+				border-color: black
+
+		&:not(:last-of-type)
+			margin-bottom: 1em
+
+	&.thumb
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		padding: 1em
 		position: relative
-		z-index: 2
-		transition: background-color 0.3s
+		text-align: center
 
-	.view-artist
-		background-color: black
-		bottom: 3em
-		color: white
-		display: block
-		font-size: 10px
-		font-weight: bold
-		left: calc(50% - 34px)
-		opacity: 0
-		padding: 0.25em 0.5em
-		pointer-events: none
-		position: absolute
-		text-transform: uppercase
-		transition: opacity 0.3s
-
-		&:before
-			border: 1px solid black
-			bottom: 3em
-			content: ''
-			height: 4em
-			left: calc(50% - 1px)
-			position: absolute
-
-	&:before
-		background-color: rgba(255, 255, 255, 0.75)
-		content: ''
-		height: 100%
-		left: 0
-		position: absolute
-		top: 0
-		width: 100%
-		z-index: 1
-
-	&:hover
 		.artist-name
-			background-color: rgba(255, 255, 255, 0.8)
+			font-size: 18px
+			font-weight: bold
+			padding: 6em 0
+			position: relative
+			z-index: 2
+			transition: background-color 0.3s
+
+		.artist-link
+			display: none
 
 		.view-artist
-			opacity: 1
-			pointer-events: initial
+			background-color: black
+			bottom: 3em
+			color: white
+			display: block
+			font-size: 10px
+			font-weight: bold
+			left: calc(50% - 34px)
+			opacity: 0
+			padding: 0.25em 0.5em
+			pointer-events: none
+			position: absolute
+			text-transform: uppercase
+			transition: opacity 0.3s
 
-	&:not(:last-of-type)
-		margin-bottom: 2em
+			&:before
+				border: 1px solid black
+				bottom: 3em
+				content: ''
+				height: 4em
+				left: calc(50% - 1px)
+				position: absolute
+
+		&:before
+			background-color: rgba(255, 255, 255, 0.75)
+			content: ''
+			height: 100%
+			left: 0
+			position: absolute
+			top: 0
+			width: 100%
+			z-index: 1
+
+		&:hover
+			.artist-name
+				background-color: rgba(255, 255, 255, 0.8)
+
+			.view-artist
+				opacity: 1
+				pointer-events: initial
+
+		&:not(:last-of-type)
+			margin-bottom: 2em
 
 .artists
 	list-style-type: none
@@ -230,6 +260,35 @@
 			transition: color 0.3s
 
 @media screen and (min-width: $tablet)
+	.artists
+		li
+			display: inline-block
+			width: 49%
+
+		&.list
+			width: 60%
+
+			li
+				padding-left: 0
+
+		&.thumb
+			text-align: center
+			width: 100%
+
+			li
+				margin: 1em
+				width: 250px
+
+			.artist-name
+				padding: 3em 0
+
+			.view-artist
+				bottom: 1em
+
+				&:before
+					bottom: 2.5em
+					height: 2em
+
 	.index-menu
 		margin-top: 0
 
@@ -287,6 +346,11 @@
 		display: block
 
 @media screen and (min-width: $desktop)
+	.artists
+		&.thumb
+			li
+				width: 250
+
 	.navigation-menu
 		nav
 			left: 0
