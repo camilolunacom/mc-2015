@@ -218,6 +218,7 @@ main {
 .artists {
   list-style-type: none;
   margin: 0 auto;
+  margin-top: 2em;
   padding: 0;
   width: 80%; }
 

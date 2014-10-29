@@ -7,8 +7,8 @@
 <div class="wrap">
 	<main role="main">
 		<ul class="select-display">
-			<li class="active"><a href="#"><span><?php _e( 'Thumbnail', 'mor'); ?></span><span class="icon-grid"></span></a></li>
-			<li><a href="#"><span class="icon-list"></span><span><?php _e( 'List', 'mor'); ?></span></a></li>
+			<li class="active"><a id="disp-thumb" href="#"><span><?php _e( 'Thumbnail', 'mor'); ?></span><span class="icon-grid"></span></a></li>
+			<li><a id="disp-list" href="#"><span class="icon-list"></span><span><?php _e( 'List', 'mor'); ?></span></a></li>
 		</ul>
 		<ul class="artists thumb">
 			<?php while ( $loop->have_posts() ) : $loop->the_post();
