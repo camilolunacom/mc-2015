@@ -66,6 +66,9 @@
 			opacity: 1
 			pointer-events: initial
 
+	&:not(:last-of-type)
+		margin-bottom: 2em
+
 .artists
 	list-style-type: none
 	margin: 0 auto
@@ -111,6 +114,15 @@
 		font-size: 4rem
 
 .navigation-menu
+	background: rgba(255, 255, 255, 0.7)
+	border: 10px solid black
+	border-bottom: none
+	left: 0
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 999999999999999
+
 	.menu
 		font-family: 'suisse_works'
 		font-weight: bold
@@ -171,10 +183,9 @@
 		&:hover
 			transform: rotate(90deg)
 
-@media screen and (max-width: $desktop)
+@media screen and (max-width: $tablet)
 	.navigation-menu
 		height: $menu_height
-		position: relative
 		transition: all 0.3
 		width: 100%
 
@@ -218,7 +229,7 @@
 			top: 1em
 			transition: color 0.3s
 
-@media screen and (min-width: $desktop)
+@media screen and (min-width: $tablet)
 	.index-menu
 		margin-top: 0
 
@@ -250,23 +261,35 @@
 
 		li
 			display: inline-block
-			margin-left: 1em
 
 		.kc-ml-languages
 			position: absolute
 			right: 10em
 			top: 1em
 
+		.kc-ml-languages,
 		.menu
 			a
 				color: rgba(0, 0, 0, 0.3)
 
 			a:hover,
-			li.current_page_item a
+			li.current_page_item a,
+			li.current-language a
 				color: black
+
+		.menu li
+			margin-left: 1em
 
 		#hamburguer
 			display: none !important
 
 	.picture-credits
 		display: block
+
+@media screen and (min-width: $desktop)
+	.navigation-menu
+		nav
+			left: 0
+			position: absolute
+			right: 0
+			text-align: center
