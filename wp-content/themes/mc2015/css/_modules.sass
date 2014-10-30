@@ -1,3 +1,6 @@
+article
+	padding: 0 1em
+
 .announcements
 	font-size: 17px
 	margin: 0 auto
@@ -166,9 +169,6 @@
 
 		.social-network
 			color: white
-			display: inline-block
-			font-size: 1.5em
-			padding: 0.25em
 
 .picture-credits
 	bottom: 0
@@ -192,6 +192,78 @@
 			content: '/'
 			display: inline-block
 			margin-right: 0.2em
+
+.post-actions
+	text-align: center
+
+	[class^="icon-"]
+		background: black
+		border: 1px solid black
+		border-radius: 50%
+		color: black
+		display: inline-block
+		font-size: x-large
+		height: 25px
+		transition: all 0.3s
+		width: 25.5px
+
+	.post-attachment-link
+		display: inline-block
+		padding: 0.5em
+		width: 100px
+
+		&:hover
+			[class^="icon-"]
+				color: white
+
+	.post-attachment-text
+		font-size: 14px
+		font-weight: 500
+
+.post-content
+	p
+		font-size: 14px
+
+		&:first-of-type
+			font-size: 20px
+			font-weight: bold
+			text-align: center
+
+.post-gallery
+	margin: 0 auto
+	position: relative
+
+	figcaption
+		margin-top: 0.5em
+
+		div
+			font-size: 12px
+			text-transform: uppercase
+
+			&.line1
+				font-weight: bold
+
+	.gallery-controls
+		left: -1em
+		position: absolute
+		right: -1em
+		top: 45%
+		z-index: 2
+
+		div
+			cursor: pointer
+			display: inline-block
+
+			&.owl-next
+				float: right
+
+			&.owl-prev
+				float: left
+
+.post-title
+	font-size: 38px
+	font-weight: bold
+	text-align: center
 
 .prod-team
 	font-family: monocromo
@@ -243,6 +315,17 @@
 
 		&[class^="icon-"]
 			font-size: x-large
+
+.social-networks
+	list-style-type: none
+	margin: 0.5em 0
+	padding: 0
+	text-align: center
+
+	.social-network
+		display: inline-block
+		font-size: 1.5em
+		padding: 0.25em
 
 @media screen and (max-width: $tablet)
 	.navigation-menu

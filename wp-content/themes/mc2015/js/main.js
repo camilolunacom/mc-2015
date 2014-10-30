@@ -17,4 +17,16 @@ $(document).on('ready', function(){
 			$('ul.artists, li.artist').addClass('list');
 		}
 	});
+
+	if($('.owl-carousel').length > 0){
+		$('.owl-carousel').owlCarousel({
+			autoHeight: true,
+			dots: false,
+			items: 1,
+			loop: true,
+			nav: true,
+			navContainer: '.gallery-controls',
+			navText: ['<i class="icon-left"></i>', '<i class="icon-right"></i>']
+		});
+	}
 });
