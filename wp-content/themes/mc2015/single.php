@@ -27,15 +27,15 @@
 			</div>
 			<div class="post-content">
 				<?php the_content(); ?>
-			</div>
-			<div class="post-actions">
-				<div class="post-attachment">
-					<a href="" class="post-attachment-link">
-						<div class="icon-download"></div>
-						<div class="post-attachment-text">Download CV</div>
-					</a>
+				<div class="post-actions">
+					<div class="post-attachment">
+						<a href="" class="post-attachment-link">
+							<div class="icon-download"></div>
+							<div class="post-attachment-text">Download CV</div>
+						</a>
+					</div>
+					<div class="post-share"></div>
 				</div>
-				<div class="post-share"></div>
 			</div>
 			<?php $meta_values = get_post_meta( get_the_ID(), '_images', true); ?>
 		</article>

@@ -221,6 +221,8 @@ article
 		font-weight: 500
 
 .post-content
+	position: relative
+
 	p
 		font-size: 14px
 
@@ -374,6 +376,10 @@ article
 			transition: color 0.3s
 
 @media screen and (min-width: $tablet)
+	article
+		margin: 0 auto
+		width: 70%
+
 	.artists
 		li
 			display: inline-block
@@ -458,6 +464,11 @@ article
 	.picture-credits
 		display: block
 
+	.post-gallery
+		.gallery-controls
+			left: -4em
+			right: -4em
+
 @media screen and (min-width: $desktop)
 	.artists
 		&.thumb
@@ -473,3 +484,12 @@ article
 
 		.kc-ml-languages
 			right: 10em
+
+	.post-actions
+		position: absolute
+		right: -8em
+		top: 6em
+
+	.post-content
+		margin: 0 auto
+		width: 55%
