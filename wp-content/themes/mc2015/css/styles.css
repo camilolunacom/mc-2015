@@ -283,6 +283,39 @@ article {
     .navigation-menu .social-networks .social-network {
       color: white; }
 
+.next-post-link,
+.prev-post-link {
+  bottom: 0;
+  display: none;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  -webkit-writing-mode: vertical-lr;
+  -moz-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  z-index: 0; }
+  .next-post-link a,
+  .prev-post-link a {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    font-weight: 500; }
+    .next-post-link a:hover,
+    .prev-post-link a:hover {
+      color: black; }
+  .next-post-link i,
+  .prev-post-link i {
+    margin: 0.2em 0; }
+
+.next-post-link {
+  right: 1em; }
+
+.prev-post-link {
+  left: 1em;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
 .picture-credits {
   bottom: 0;
   display: none;
@@ -531,6 +564,10 @@ article {
     margin-left: 1em; }
   .navigation-menu #hamburguer {
     display: none !important; }
+
+  .next-post-link,
+  .prev-post-link {
+    display: block; }
 
   .picture-credits {
     display: block; }

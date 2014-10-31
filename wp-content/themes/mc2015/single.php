@@ -3,7 +3,12 @@
 <div class="wrap">
 	<main role="main">
 		<?php while(have_posts()) : the_post(); ?>
-
+		<div class="prev-post-link">
+			<?php next_post_link('%link', '<i class="icon-arrow-right"></i>%title'); ?>	
+		</div>
+		<div class="next-post-link">
+			<?php previous_post_link('%link', '%title<i class="icon-arrow-right"></i>'); ?>
+		</div>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<h1 class="post-title"><?php the_title(); ?></h1>
 			<div class="post-gallery">

@@ -170,6 +170,37 @@ article
 		.social-network
 			color: white
 
+.next-post-link,
+.prev-post-link
+	bottom: 0
+	display: none
+	position: fixed
+	text-align: center
+	top: 0
+	-webkit-writing-mode: vertical-lr
+	-moz-writing-mode: vertical-lr
+	-ms-writing-mode: vertical-lr
+	writing-mode: vertical-lr
+	z-index: 0
+
+	a
+		color: rgba(0, 0, 0, 0.3)
+		font-size: 14px
+		font-weight: 500
+
+		&:hover
+			color: black
+
+	i
+		margin: 0.2em 0
+
+.next-post-link
+	right: 1em
+
+.prev-post-link
+	left: 1em
+	transform: rotate(180deg)
+
 .picture-credits
 	bottom: 0
 	display: none
@@ -460,6 +491,10 @@ article
 
 		#hamburguer
 			display: none !important
+
+	.next-post-link,
+	.prev-post-link
+		display: block
 
 	.picture-credits
 		display: block
