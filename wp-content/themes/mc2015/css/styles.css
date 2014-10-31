@@ -260,7 +260,9 @@ article {
       margin-right: 0.2em; }
 
 .logo {
-  display: inline-block; }
+  display: inline-block;
+  position: relative;
+  z-index: 2; }
   .logo a {
     font-size: 4rem; }
 
