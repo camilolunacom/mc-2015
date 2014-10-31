@@ -253,6 +253,35 @@ article
 		font-size: 14px
 		font-weight: 500
 
+	.post-share
+		margin-top: 1em
+
+		[class^="icon-"]
+			background: white
+			border-color: white
+
+			&:hover
+				background: black
+				border-color: black
+				color: white
+
+	.post-share-text
+		font-size: 14px
+		font-weight: 500
+		text-transform: uppercase
+
+	.social-networks
+		margin-top: 3em
+		position: relative
+
+		&:before
+			border: 1px solid black
+			content: ''
+			height: 2em
+			left: calc(50% - 1px)
+			position: absolute
+			top: -2.5em
+
 .post-content
 	position: relative
 
@@ -502,6 +531,10 @@ article
 		display: block
 
 	.post-gallery
+		figcaption
+			div
+				display: inline-block
+
 		.gallery-controls
 			left: -4em
 			right: -4em
@@ -524,7 +557,7 @@ article
 
 	.post-actions
 		position: absolute
-		right: -8em
+		right: -9em
 		top: 6em
 
 	.post-content

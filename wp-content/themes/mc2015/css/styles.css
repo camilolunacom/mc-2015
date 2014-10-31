@@ -364,6 +364,30 @@ article {
   .post-actions .post-attachment-text {
     font-size: 14px;
     font-weight: 500; }
+  .post-actions .post-share {
+    margin-top: 1em; }
+    .post-actions .post-share [class^="icon-"] {
+      background: white;
+      border-color: white; }
+      .post-actions .post-share [class^="icon-"]:hover {
+        background: black;
+        border-color: black;
+        color: white; }
+  .post-actions .post-share-text {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase; }
+  .post-actions .social-networks {
+    margin-top: 3em;
+    position: relative; }
+    .post-actions .social-networks:before {
+      border: 1px solid black;
+      content: "";
+      height: 2em;
+      left: -webkit-calc(50% - 1px);
+      left: calc(50% - 1px);
+      position: absolute;
+      top: -2.5em; }
 
 .post-content {
   position: relative; }
@@ -574,6 +598,8 @@ article {
   .picture-credits {
     display: block; }
 
+  .post-gallery figcaption div {
+    display: inline-block; }
   .post-gallery .gallery-controls {
     left: -4em;
     right: -4em; } }
@@ -591,7 +617,7 @@ article {
 
   .post-actions {
     position: absolute;
-    right: -8em;
+    right: -9em;
     top: 6em; }
 
   .post-content {
