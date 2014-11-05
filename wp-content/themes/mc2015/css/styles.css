@@ -21,6 +21,8 @@ a {
   text-decoration: none;
   -webkit-transition: color 0.3s;
   transition: color 0.3s; }
+  a:hover {
+    color: rgba(0, 0, 0, 0.7); }
 
 body {
   background: white;
@@ -266,6 +268,52 @@ article {
         margin: 0.25em 0;
         width: 30%; }
 
+.exhibition-current {
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-top: 2em;
+  padding: 1em;
+  position: relative; }
+  .exhibition-current .exhibition-content {
+    background: white;
+    height: 100%;
+    padding: 1em;
+    text-align: center; }
+  .exhibition-current .exhibition-detail {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1em;
+    margin: 0 auto 0.5em auto; }
+  .exhibition-current .exhibition-text {
+    font-size: 12px;
+    margin: 0 auto; }
+    .exhibition-current .exhibition-text p {
+      margin-bottom: 1em;
+      margin-top: 0; }
+  .exhibition-current .exhibition-title {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1em;
+    margin: 1em auto; }
+  .exhibition-current .exhibition-type {
+    font-size: 12px;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: -3em; }
+    .exhibition-current .exhibition-type:after {
+      border: 1px solid;
+      bottom: -6em;
+      content: "";
+      height: 5.5em;
+      left: -webkit-calc(50% - 1px);
+      left: calc(50% - 1px);
+      position: absolute; }
+
 .footer-item {
   margin-bottom: 1em; }
 
@@ -402,30 +450,6 @@ article {
   .post-actions .post-attachment-text {
     font-size: 14px;
     font-weight: 500; }
-  .post-actions .post-share {
-    margin-top: 1em; }
-    .post-actions .post-share [class^="icon-"] {
-      background: white;
-      border-color: white; }
-      .post-actions .post-share [class^="icon-"]:hover {
-        background: black;
-        border-color: black;
-        color: white; }
-  .post-actions .post-share-text {
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase; }
-  .post-actions .social-networks {
-    margin-top: 3em;
-    position: relative; }
-    .post-actions .social-networks:before {
-      border: 1px solid black;
-      content: "";
-      height: 2em;
-      left: -webkit-calc(50% - 1px);
-      left: calc(50% - 1px);
-      position: absolute;
-      top: -2.5em; }
 
 .post-content {
   position: relative; }
@@ -459,6 +483,34 @@ article {
         float: right; }
       .post-gallery .gallery-controls div.owl-prev {
         float: left; }
+
+.post-share {
+  margin-top: 1em;
+  text-align: center; }
+  .post-share [class^="icon-"] {
+    background: white;
+    border-color: white;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+    .post-share [class^="icon-"]:hover {
+      background: black;
+      border-color: black;
+      color: white; }
+  .post-share .post-share-text {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase; }
+  .post-share .social-networks {
+    margin-top: 3em;
+    position: relative; }
+    .post-share .social-networks:before {
+      border: 1px solid black;
+      content: "";
+      height: 2em;
+      left: -webkit-calc(50% - 1px);
+      left: calc(50% - 1px);
+      position: absolute;
+      top: -2.5em; }
 
 .post-title {
   font-size: 38px;
@@ -583,6 +635,13 @@ article {
       .artists.thumb .view-artist:before {
         bottom: 2.5em;
         height: 2em; }
+
+  .exhibition-current .exhibition-detail {
+    width: 45%; }
+  .exhibition-current .exhibition-text {
+    width: 60%; }
+  .exhibition-current .exhibition-title {
+    width: 50%; }
 
   .index-menu {
     margin-bottom: 0;

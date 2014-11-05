@@ -146,6 +146,57 @@ article
 				margin: 0.25em 0
 				width: 30%
 
+.exhibition-current
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	margin-top: 2em
+	padding: 1em
+	position: relative
+
+	.exhibition-content
+		background: white
+		height: 100%
+		padding: 1em
+		text-align: center
+
+	.exhibition-detail
+		font-size: 20px
+		font-weight: bold
+		line-height: 1em
+		margin: 0 auto 0.5em auto
+
+	.exhibition-text
+		font-size: 12px
+		margin: 0 auto
+
+		p
+			margin-bottom: 1em
+			margin-top: 0
+
+	.exhibition-title
+		font-size: 32px
+		font-weight: bold
+		line-height: 1em
+		margin: 1em auto
+
+	.exhibition-type
+		font-size: 12px
+		font-weight: bold
+		left: 0
+		position: absolute
+		right: 0
+		text-transform: uppercase
+		top: -3em
+
+		&:after
+			border: 1px solid
+			bottom: -6em
+			content: ''
+			height: 5.5em
+			left: calc(50% - 1px)
+			position: absolute
+
 .footer-item
 	margin-bottom: 1em
 
@@ -290,35 +341,6 @@ article
 		font-size: 14px
 		font-weight: 500
 
-	.post-share
-		margin-top: 1em
-
-		[class^="icon-"]
-			background: white
-			border-color: white
-
-			&:hover
-				background: black
-				border-color: black
-				color: white
-
-	.post-share-text
-		font-size: 14px
-		font-weight: 500
-		text-transform: uppercase
-
-	.social-networks
-		margin-top: 3em
-		position: relative
-
-		&:before
-			border: 1px solid black
-			content: ''
-			height: 2em
-			left: calc(50% - 1px)
-			position: absolute
-			top: -2.5em
-
 .post-content
 	position: relative
 
@@ -360,6 +382,37 @@ article
 
 			&.owl-prev
 				float: left
+
+.post-share
+	margin-top: 1em
+	text-align: center
+
+	[class^="icon-"]
+		background: white
+		border-color: white
+		border-radius: 50%
+
+		&:hover
+			background: black
+			border-color: black
+			color: white
+
+	.post-share-text
+		font-size: 14px
+		font-weight: 500
+		text-transform: uppercase
+
+	.social-networks
+		margin-top: 3em
+		position: relative
+
+		&:before
+			border: 1px solid black
+			content: ''
+			height: 2em
+			left: calc(50% - 1px)
+			position: absolute
+			top: -2.5em
 
 .post-title
 	font-size: 38px
@@ -507,6 +560,16 @@ article
 				&:before
 					bottom: 2.5em
 					height: 2em
+
+	.exhibition-current
+		.exhibition-detail
+			width: 45%
+
+		.exhibition-text
+			width: 60%
+
+		.exhibition-title
+			width: 50%
 
 	.index-menu
 		margin-bottom: 0
