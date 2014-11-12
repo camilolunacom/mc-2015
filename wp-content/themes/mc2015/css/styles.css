@@ -303,11 +303,21 @@ article {
     line-height: 1em;
     margin: 1em auto; }
 
+.exhibition-group {
+  display: none;
+  position: relative; }
+  .exhibition-group .exhibition-close {
+    font-weight: bold;
+    line-height: 1em;
+    position: absolute;
+    right: -0.5em;
+    top: -1em; }
+
 .exhibition-past {
   display: inline-block;
-  margin: 1em;
+  margin: 1em 0;
   text-align: left;
-  width: 300px; }
+  width: 280px; }
   .exhibition-past .exhibition-detail {
     font-size: 14px;
     font-weight: normal;
@@ -316,8 +326,7 @@ article {
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
-    height: 180px;
-    width: 300px; }
+    height: 180px; }
     .exhibition-past .exhibition-img a {
       display: block;
       height: 100%;
@@ -437,11 +446,6 @@ article {
     top: -8em; }
   .past-exhibitions .past-exhibition-by-year {
     position: relative; }
-    .past-exhibitions .past-exhibition-by-year .exhibition-close {
-      font-weight: bold;
-      position: absolute;
-      right: 0.5em;
-      top: 0.5em; }
   .past-exhibitions .past-exhibition-year {
     font-size: 32px;
     font-weight: bold;
@@ -696,6 +700,9 @@ article {
     width: 60%; }
   .exhibition-current .exhibition-title {
     width: 50%; }
+
+  .exhibition-past {
+    margin: 1em; }
 
   .index-menu {
     margin-bottom: 0;

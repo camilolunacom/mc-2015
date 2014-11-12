@@ -29,4 +29,18 @@ $(document).on('ready', function(){
 			navText: ['<i class="icon-left"></i>', '<i class="icon-right"></i>']
 		});
 	}
+
+	if($('.past-exhibition-year').length > 0){
+		$('.past-exhibition-year').on('click', function(e){
+			e.preventDefault();
+			$('.past-exhibition-year').removeClass('active');
+			$('.exhibition-group').slideUp();
+			$(this).addClass('active').siblings('.exhibition-group').slideDown();
+		});
+		$('.exhibition-close').on('click', function(e){
+			e.preventDefault();
+			$(this).parent().slideUp();
+			$('.past-exhibition-year').removeClass('active');
+		});
+	}
 });
