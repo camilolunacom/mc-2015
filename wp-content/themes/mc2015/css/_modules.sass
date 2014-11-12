@@ -1,6 +1,12 @@
 article
 	padding: 0 1em
 
+	&.exhibition
+		.post-title
+			margin-left: auto
+			margin-right: auto
+			max-width: 470px
+
 .announcements
 	font-size: 17px
 	margin: 0 auto
@@ -475,6 +481,11 @@ article
 			position: absolute
 			top: -2.5em
 
+.post-subtitle
+	font-size: 20px
+	font-weight: bold
+	text-align: center
+
 .post-title
 	font-size: 38px
 	font-weight: bold
@@ -591,6 +602,7 @@ article
 @media screen and (min-width: $tablet)
 	article
 		margin: 0 auto
+		max-width: 800px
 		width: 70%
 
 	.artists
