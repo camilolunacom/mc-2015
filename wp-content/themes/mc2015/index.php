@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <main role="main">
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -10,6 +9,4 @@
 
 	<?php endwhile; ?>
 </main>
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

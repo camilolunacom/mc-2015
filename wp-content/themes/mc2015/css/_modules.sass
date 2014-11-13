@@ -65,19 +65,10 @@ article
 			display: none
 
 		.view-artist
-			background-color: black
-			bottom: 3em
-			color: white
-			display: block
-			font-size: 10px
-			font-weight: bold
 			left: calc(50% - 34px)
 			opacity: 0
-			padding: 0.25em 0.5em
 			pointer-events: none
 			position: absolute
-			text-transform: uppercase
-			transition: opacity 0.3s
 
 			&:before
 				border: 1px solid black
@@ -108,7 +99,8 @@ article
 		&:not(:last-of-type)
 			margin-bottom: 2em
 
-.artists
+.artists,
+.news
 	list-style-type: none
 	margin: 0 auto
 	margin-top: 2em
@@ -303,6 +295,40 @@ article
 
 		.social-network
 			color: white
+
+.news-item
+	background-position: left
+	background-repeat: no-repeat
+	background-size: auto 100%
+	box-sizing: border-box
+	margin: 2em auto
+	max-width: 600px
+	padding: 2em 4em
+	position: relative
+	text-align: center
+
+	.news-title
+		margin: 0.5em auto
+
+	.read-more
+		display: inline-block
+
+	&>div
+		position: relative
+		z-index: 2
+
+	&:nth-child(even)
+		background-position: right
+
+	&:before
+		background-color: rgba(255, 255, 255, 0.75)
+		content: ''
+		height: 100%
+		left: 0
+		position: absolute
+		top: 0
+		width: 100%
+		z-index: 1
 
 .next-post-link,
 .prev-post-link
@@ -512,6 +538,21 @@ article
 
 		&:hover
 			transform: rotate(90deg)
+
+.read-more,
+.view-artist
+	background-color: black
+	bottom: 3em
+	color: white
+	display: block
+	font-size: 10px
+	font-weight: bold
+	padding: 0.25em 0.5em
+	text-transform: uppercase
+	transition: opacity 0.3s
+
+	&:hover
+		color: white
 
 .select-display
 	font-size: 12px

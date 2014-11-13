@@ -25,3 +25,4 @@ $lang_attr = ob_get_clean();
 
 	<?php wp_head(); ?>
 </head>
+<body <?php body_class(); ?>>

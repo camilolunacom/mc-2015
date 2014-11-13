@@ -200,21 +200,11 @@ article {
     .artist.thumb .artist-link {
       display: none; }
     .artist.thumb .view-artist {
-      background-color: black;
-      bottom: 3em;
-      color: white;
-      display: block;
-      font-size: 10px;
-      font-weight: bold;
       left: -webkit-calc(50% - 34px);
       left: calc(50% - 34px);
       opacity: 0;
-      padding: 0.25em 0.5em;
       pointer-events: none;
-      position: absolute;
-      text-transform: uppercase;
-      -webkit-transition: opacity 0.3s;
-      transition: opacity 0.3s; }
+      position: absolute; }
       .artist.thumb .view-artist:before {
         border: 1px solid black;
         bottom: 3em;
@@ -240,7 +230,8 @@ article {
     .artist.thumb:not(:last-of-type) {
       margin-bottom: 2em; }
 
-.artists {
+.artists,
+.news {
   list-style-type: none;
   margin: 0 auto;
   margin-top: 2em;
@@ -414,6 +405,38 @@ article {
     margin: 0; }
     .navigation-menu .social-networks .social-network {
       color: white; }
+
+.news-item {
+  background-position: left;
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 2em auto;
+  max-width: 600px;
+  padding: 2em 4em;
+  position: relative;
+  text-align: center; }
+  .news-item .news-title {
+    margin: 0.5em auto; }
+  .news-item .read-more {
+    display: inline-block; }
+  .news-item > div {
+    position: relative;
+    z-index: 2; }
+  .news-item:nth-child(even) {
+    background-position: right; }
+  .news-item:before {
+    background-color: rgba(255, 255, 255, 0.75);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1; }
 
 .next-post-link,
 .prev-post-link {
@@ -606,6 +629,22 @@ article {
       -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
       transform: rotate(90deg); }
+
+.read-more,
+.view-artist {
+  background-color: black;
+  bottom: 3em;
+  color: white;
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-transform: uppercase;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+  .read-more:hover,
+  .view-artist:hover {
+    color: white; }
 
 .select-display {
   font-size: 12px;
