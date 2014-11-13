@@ -1,7 +1,6 @@
 <?php get_header(); ?>
-<body <?php body_class(); ?>>
 	<div class="wrap index">
-		<main class="index vertical-align" role="main"   style="background:url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>)">
+		<main class="index vertical-align" role="main"   style="background:url(http://dev.mor-charpentier.com/wp-content/uploads/2013/01/Julieta-Aranda-For-I-am-not-sleepy-yet-and-I-dont-want-to-rest.jpg); ?>)">
 			<div class="logo">
 				<a class="icon-logo" href="<?php echo home_url(); ?>/" rel="home"></a>
 			</div>
