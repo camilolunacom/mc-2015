@@ -105,6 +105,8 @@ article
 	margin: 0 auto
 	margin-top: 2em
 	padding: 0
+
+.artists
 	width: 80%
 
 .events
@@ -296,40 +298,6 @@ article
 		.social-network
 			color: white
 
-.news-item
-	background-position: left
-	background-repeat: no-repeat
-	background-size: auto 100%
-	box-sizing: border-box
-	margin: 2em auto
-	max-width: 600px
-	padding: 2em 4em
-	position: relative
-	text-align: center
-
-	.news-title
-		margin: 0.5em auto
-
-	.read-more
-		display: inline-block
-
-	&>div
-		position: relative
-		z-index: 2
-
-	&:nth-child(even)
-		background-position: right
-
-	&:before
-		background-color: rgba(255, 255, 255, 0.75)
-		content: ''
-		height: 100%
-		left: 0
-		position: absolute
-		top: 0
-		width: 100%
-		z-index: 1
-
 .next-post-link,
 .prev-post-link
 	bottom: 0
@@ -356,6 +324,54 @@ article
 
 .next-post-link
 	right: 1em
+
+.news-item
+	background-position: left
+	background-repeat: no-repeat
+	background-size: auto 100%
+	box-sizing: border-box
+	margin: 2em auto
+	max-width: 600px
+	padding: 1em
+	position: relative
+	text-align: center
+
+	.news-date
+		font-size: 12px
+		font-weight: 500
+
+	.news-excerpt
+		font-family: suisse_works
+		font-size: 14px
+		font-weight: bold
+		margin: 0 auto
+		max-width: 450px
+
+	.news-title
+		font-size: 32px
+		font-weight: bold
+		margin: 0.5em auto
+		max-width: 370px
+
+	.read-more
+		display: inline-block
+
+	&>div
+		position: relative
+		z-index: 2
+
+	&:nth-child(even)
+		background-position: right
+
+	&:before
+		background-color: rgba(255, 255, 255, 0.75)
+		content: ''
+		height: 100%
+		left: 0
+		position: absolute
+		top: 0
+		width: 100%
+		z-index: 1
 
 .past-exhibitions
 	margin-top: 8em
@@ -743,6 +759,9 @@ article
 	.next-post-link,
 	.prev-post-link
 		display: block
+
+	.news-item
+		padding: 2em 4em
 
 	.picture-credits
 		display: block
