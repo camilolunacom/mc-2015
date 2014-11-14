@@ -18,7 +18,7 @@
 					<div class="news-excerpt">
 						<?php echo the_excerpt(); ?>
 					</div>
-					<a href="<?php echo the_permalink(); ?>" class="read-more"><?php _e( 'Read more', 'mor'); ?></a>
+					<a href="<?php echo the_permalink(); ?>" class="read-more"><?php _e('Read more', 'mor'); ?></a>
 				</div>
 			</li>
 			<?php endwhile; ?>
