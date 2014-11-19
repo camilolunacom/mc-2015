@@ -33,12 +33,14 @@
 			<div class="post-content">
 				<?php the_content(); ?>
 				<div class="post-actions">
+					<?php if ( $cv = get_post_meta(get_the_ID(), '_cv', true) ) { ?>
 					<div class="post-attachment">
-						<a href="" class="post-attachment-link">
+						<a href="<?php echo wp_get_attachment_url( $cv ) ?>" class="post-attachment-link">
 							<div class="icon-download"></div>
 							<div class="post-attachment-text">Download CV</div>
 						</a>
 					</div>
+					<?php } ?>
 					<div class="post-share">
 						<div class="post-share-text"><?php _e( 'Share', 'mor'); ?></div>
 						<ul class="social-networks">
