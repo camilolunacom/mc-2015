@@ -26,7 +26,7 @@
 
 			<div class="picture-credits">
 				<span class="picture-artist"><?php echo $line1; ?></span>
-				<span class="picture-title"><?php echo $match[0]; ?></span>
+				<span class="picture-title"><?php echo $line2; ?></span>
 			</div>
 
 			<div class="index-menu">
