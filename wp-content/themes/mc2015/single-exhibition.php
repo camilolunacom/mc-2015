@@ -1,30 +1,38 @@
-<?php get_header(); ?>
-<?php get_template_part('part', 'header'); ?>
+<?php 
+	get_header(); 
+	get_template_part('part', 'header'); 
+	global $post;
+	$data = MCG::$exhibition_data;
+?>
 <div class="wrap">
 	<main role="main">
 		<?php while(have_posts()) : the_post(); ?>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<h1 class="post-title"><?php the_title(); ?></h1>
-			<h2 class="post-subtitle">6 Septembre-11 Octobre 2014</h2>
+			<h2 class="post-subtitle"><?php echo MCG::$exhibition_data['date']['result']; ?></h2>
+
+			<?php if ( $data['images'] ) { ?>
 			<div class="post-gallery">
 				<div class="owl-carousel">
+					<?php foreach ( $data['images'] as $c => $img ) { ?>
 					<figure>
-						<img src="http://dev.mor-charpentier.com/wp-content/uploads/2013/10/Still-Aftershock4.jpg" alt="">
+						<img src="<?php echo $img['medium'][0] ?>" alt="">
+						<?php 
+							$text = $img['title'];
+							preg_match( '#\((.*?)\)#' , $text , $match );
+							$line1 = preg_replace( "/\([^)]+\)/" , "" , $text );
+						?>
 						<figcaption>
-							<div class="line1">Fontainebleau, Plaza Venezuela</div>
-							<div class="line2">2003, Digital photograph, 125 x 124 cm.</div>
+							<div class="line1"><?php echo $line1; ?></div>
+							<div class="line2"><?php echo $match[0]; ?></div>
 						</figcaption>
 					</figure>
-					<figure>
-						<img src="http://dev.mor-charpentier.com/wp-content/uploads/2013/01/CCC-1024x693.jpg" alt="">
-						<figcaption>
-							<div class="line1">Fontainebleau, Plaza Venezuela</div>
-							<div class="line2">2003, Digital photograph, 125 x 124 cm.</div>
-						</figcaption>
-					</figure>
+					<?php } ?>
 				</div>
 				<div class="gallery-controls"></div>
 			</div>
+			<?php } ?>
+
 			<div class="post-content">
 				<?php the_content(); ?>
 				<div class="post-actions">
