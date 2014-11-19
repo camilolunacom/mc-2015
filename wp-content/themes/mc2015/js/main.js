@@ -1,3 +1,17 @@
+$(window).on('load', function(){
+	if($('.owl-carousel').length > 0){
+		$('.owl-carousel').owlCarousel({
+			autoHeight: true,
+			dots: false,
+			items: 1,
+			loop: true,
+			nav: true,
+			navContainer: '.gallery-controls',
+			navText: ['<i class="icon-left"></i>', '<i class="icon-right"></i>']
+		});
+	}
+});
+
 $(document).on('ready', function(){
 
 	$('#hamburguer').on('click', function(){
@@ -17,18 +31,6 @@ $(document).on('ready', function(){
 			$('ul.artists, li.artist').addClass('list');
 		}
 	});
-
-	if($('.owl-carousel').length > 0){
-		$('.owl-carousel').owlCarousel({
-			autoHeight: true,
-			dots: false,
-			items: 1,
-			loop: true,
-			nav: true,
-			navContainer: '.gallery-controls',
-			navText: ['<i class="icon-left"></i>', '<i class="icon-right"></i>']
-		});
-	}
 
 	if($('.past-exhibition-year').length > 0){
 		$('.past-exhibition-year').on('click', function(e){
