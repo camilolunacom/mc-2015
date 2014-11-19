@@ -97,8 +97,8 @@ $(document).on('ready', function(){
 	$( '.social-network' ).on( 'click', function(e){
 		e.preventDefault();
 
-		var text = $(this).attr('data-text'),
-			url = $(this).attr('data-url');
+		var text = $(e.target).attr('data-text'),
+			url = $(e.target).attr('data-url');
 
 		if( $(this).hasClass('facewindow') ){
 			faceWindow( url, text );
