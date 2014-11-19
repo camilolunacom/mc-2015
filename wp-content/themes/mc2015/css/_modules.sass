@@ -623,6 +623,45 @@ article
 		font-size: 1.5em
 		padding: 0.25em
 
+#the-gallery
+	.contact-info
+		margin: 0 auto
+		text-align: center
+
+	.contact-city-details
+		font-size: 18px
+		font-weight: bold
+		margin: 0
+
+	.contact-city-mail
+		font-size: 14px
+		font-weight: bold
+
+	.contact-city-name
+		font-size: 12px
+		font-weight: bold
+		margin-bottom: 0
+		text-transform: uppercase
+
+		&:after
+			border: 1px solid
+			content: ''
+			display: block
+			height: 3em
+			margin: 0.25em auto
+			width: 0
+
+	.contact-info-city
+		margin: 2em auto
+
+	& > p
+		font-family: 'suisse_works'
+		font-size: 16px
+		font-weight: bold
+		margin: 1em auto
+		max-width: 500px
+		text-align: center
+
 @media screen and (max-width: $tablet)
 	.navigation-menu
 		height: $menu_height
@@ -787,6 +826,12 @@ article
 		.gallery-controls
 			left: -4em
 			right: -4em
+
+	#the-gallery
+		.contact-info-city
+			display: inline-block
+			vertical-align: top
+			width: 250px
 
 @media screen and (min-width: $desktop)
 	.artists

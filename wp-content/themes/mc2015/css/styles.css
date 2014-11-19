@@ -703,6 +703,38 @@ article {
     font-size: 1.5em;
     padding: 0.25em; }
 
+#the-gallery .contact-info {
+  margin: 0 auto;
+  text-align: center; }
+#the-gallery .contact-city-details {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0; }
+#the-gallery .contact-city-mail {
+  font-size: 14px;
+  font-weight: bold; }
+#the-gallery .contact-city-name {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-transform: uppercase; }
+  #the-gallery .contact-city-name:after {
+    border: 1px solid;
+    content: "";
+    display: block;
+    height: 3em;
+    margin: 0.25em auto;
+    width: 0; }
+#the-gallery .contact-info-city {
+  margin: 2em auto; }
+#the-gallery > p {
+  font-family: "suisse_works";
+  font-size: 16px;
+  font-weight: bold;
+  margin: 1em auto;
+  max-width: 500px;
+  text-align: center; }
+
 @media screen and (max-width: 48em) {
   .navigation-menu {
     height: 96px;
@@ -836,7 +868,12 @@ article {
     display: inline-block; }
   .post-gallery .gallery-controls {
     left: -4em;
-    right: -4em; } }
+    right: -4em; }
+
+  #the-gallery .contact-info-city {
+    display: inline-block;
+    vertical-align: top;
+    width: 250px; } }
 @media screen and (min-width: 62.5em) {
   .artists.thumb li {
     width: 250; }
