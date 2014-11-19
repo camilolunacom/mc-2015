@@ -12,7 +12,7 @@
 					<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
 				</nav>
 				<div class="announcements">
-					<span>Open today from 11:00am to 6:00pm</span>
+					<span><?php echo get_the_content(); ?></span>
 				</div>
 			</div>
 			<?php get_template_part('footer-content'); ?>
