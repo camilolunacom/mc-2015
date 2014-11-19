@@ -1,3 +1,12 @@
+// Social Networks Helpers
+var tweetWindow = function(url, text) {
+	window.open( "http://twitter.com/share?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(text) + "&count=none/", "tweet", "height=300,width=550,resizable=1" ); 
+}
+
+var faceWindow = function(url, title) {
+	window.open( "http://www.facebook.com/sharer.php?u=" + encodeURIComponent(url) + "&t=" + encodeURIComponent(title), "facebook", "height=300,width=550,resizable=1" ); 
+}
+
 $(window).on('load', function(){
 	if($('.owl-carousel').length > 0){
 		$('.owl-carousel').owlCarousel({
@@ -13,6 +22,21 @@ $(window).on('load', function(){
 });
 
 $(document).on('ready', function(){
+
+	$( '.social-network' ).on( 'click', function(e){
+		e.preventDefault();
+
+		var text = $(this).data('text'),
+			url = $(this).data('url');
+
+		if( $(this).hasClass('facewindow') ){
+			faceWindow( url, text );
+		}
+
+		if( $(this).hasClass('tweetwindow') ){
+			tweetWindow( url, text );
+		}
+	});
 
 	$('#hamburguer').on('click', function(){
 		$('.navigation-menu').toggleClass('is-visible vertical-align');

@@ -33,7 +33,7 @@
 							</figcaption>
 						</figure>
 					<?php } ?>
-					
+
 				</div>
 				<div class="gallery-controls"></div>
 			</div>
@@ -50,14 +50,9 @@
 						</a>
 					</div>
 					<?php } ?>
-					<div class="post-share">
-						<div class="post-share-text"><?php _e( 'Share', 'mor'); ?></div>
-						<ul class="social-networks">
-							<li class="social-network"><a href="" class="icon-facebook"></a></li>
-							<li class="social-network"><a href="" class="icon-twitter"></a></li>
-							<li class="social-network"><a href="" class="icon-instagram"></a></li>
-						</ul>
-					</div>
+					
+					<?php get_template_part( 'post', 'share' ); ?>
+					
 				</div>
 			</div>
 			<?php $meta_values = get_post_meta( get_the_ID(), '_images', true); ?>
