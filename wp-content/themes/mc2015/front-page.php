@@ -3,7 +3,7 @@
 	$_images = kc_get_option( 'mcg', 'gallery', 'images' );
 	if ( isset($_images['selected']) ) { 
 		$img_count = count( $_images['selected'] );
-		$rand_img = rand( 0, $img_count );
+		$rand_img = rand( 0, $img_count-1 );
 		$img = $_images['selected'][$rand_img];
 		$full = wp_get_attachment_image_src( $img, 'full' );
 	}
@@ -21,8 +21,7 @@
 				$text = get_the_title( $img );
 				preg_match( '#\((.*?)\)#' , $text , $match );
 				$line1 = preg_replace( "/\([^)]+\)/" , "" , $text );
-				$line2 = preg_replace( "/(/" , "" , $match[0] );
-				$line2 = preg_replace( "/)/" , "" , $line2 );
+				$line2 = str_replace(array( '(', ')' ), '', $match[0] );
 			?>
 
 			<div class="picture-credits">
