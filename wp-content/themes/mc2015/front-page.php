@@ -12,7 +12,7 @@
 					<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
 				</nav>
 				<div class="announcements">
-					<span><?php echo get_the_content(); ?></span>
+					<span><?php the_post(); echo get_the_content(); ?></span>
 				</div>
 			</div>
 			<?php get_template_part('footer-content'); ?>
