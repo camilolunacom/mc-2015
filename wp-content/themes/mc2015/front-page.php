@@ -10,7 +10,7 @@
 ?>
 	<div class="wrap index">
 		<main class="index vertical-align" role="main"   style="background:url(<?php echo $full[0] ?>); ?>)">
-		
+
 			<div class="logo">
 				<a class="icon-logo" href="<?php echo home_url(); ?>/" rel="home"></a>
 			</div>
@@ -21,6 +21,8 @@
 				$text = get_the_title( $img );
 				preg_match( '#\((.*?)\)#' , $text , $match );
 				$line1 = preg_replace( "/\([^)]+\)/" , "" , $text );
+				$line2 = preg_replace( "/(/" , "" , $match[0] );
+				$line2 = preg_replace( "/)/" , "" , $line2 );
 			?>
 
 			<div class="picture-credits">
