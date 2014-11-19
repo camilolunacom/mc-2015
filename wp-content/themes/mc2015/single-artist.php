@@ -1,5 +1,8 @@
-<?php get_header(); ?>
-<?php get_template_part('part', 'header'); ?>
+<?php 
+	get_header();
+	get_template_part('part', 'header');
+	$data = MCG::get_artist_data();
+?>
 <div class="wrap">
 	<main role="main">
 		<?php while(have_posts()) : the_post(); ?>
@@ -11,25 +14,31 @@
 		</div>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<h1 class="post-title"><?php the_title(); ?></h1>
+
+			<?php if ( isset($data['images']) ) { ?>
 			<div class="post-gallery">
 				<div class="owl-carousel">
-					<figure>
-						<img src="http://dev.mor-charpentier.com/wp-content/uploads/2014/05/13-1024x731.jpg" alt="">
-						<figcaption>
-							<div class="line1">Fontainebleau, Plaza Venezuela</div>
-							<div class="line2">2003, Digital photograph, 125 x 124 cm.</div>
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="http://dev.mor-charpentier.com/wp-content/uploads/2013/01/CCC-1024x693.jpg" alt="">
-						<figcaption>
-							<div class="line1">Fontainebleau, Plaza Venezuela</div>
-							<div class="line2">2003, Digital photograph, 125 x 124 cm.</div>
-						</figcaption>
-					</figure>
+					<?php foreach ( $data['images'][1] as $c => $i ) { ?>
+
+					<?php 
+						$text = $i['title'];
+						preg_match( '#\((.*?)\)#' , $text , $match );
+						$line1 = preg_replace( "/\([^)]+\)/" , "" , $text );
+					?>
+						<figure>
+							<img src="<?php echo $i['img']['medium'][0] ?>" alt="">
+							<figcaption>
+								<div class="line1"><?php echo $line1; ?></div>
+								<div class="line2"><?php echo $match[0]; ?></div>
+							</figcaption>
+						</figure>
+					<?php } ?>
+					
 				</div>
 				<div class="gallery-controls"></div>
 			</div>
+			<?php } ?>
+
 			<div class="post-content">
 				<?php the_content(); ?>
 				<div class="post-actions">
