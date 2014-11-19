@@ -37,7 +37,7 @@
 					<div class="post-attachment">
 						<a href="<?php echo wp_get_attachment_url( $cv ) ?>" class="post-attachment-link">
 							<div class="icon-download"></div>
-							<div class="post-attachment-text">Download CV</div>
+							<div class="post-attachment-text"><?php _e( 'Download CV', 'mor'); ?></div>
 						</a>
 					</div>
 					<?php } ?>
