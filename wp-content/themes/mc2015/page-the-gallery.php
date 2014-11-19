@@ -25,6 +25,7 @@
 					<li class="social-network"><a href="" class="icon-instagram"></a></li>
 				</ul>
 			</div>
+			<div id="map-canvas"></div>
 		<?php endwhile; ?>
 	</main>
 </div>
