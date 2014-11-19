@@ -1,3 +1,74 @@
+white = [
+  {
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#b8e2e3" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "color": "#fefef0" },
+      { "weight": 2 }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#fffef0" }
+    ]
+  },{
+    "elementType": "labels.text",
+    "stylers": [
+      { "color": "#b21f31" },
+      { "weight": 0.9 }
+    ]
+  },{
+    "featureType": "poi",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#94d0d8" }
+    ]
+  },{
+    "featureType": "road.highway",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#fff3d3" }
+    ]
+  },{
+    "featureType": "poi.park",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#5f8761" }
+    ]
+  },{
+    "featureType": "poi.government",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#ef4a5e" }
+    ]
+  }
+];
+
+function initializeMap() {
+  var belt_hammer = new google.maps.LatLng(4.640448381244751, -74.06079239444273);
+  var mapOptions = {
+    scrollwheel: false,
+    zoom: 17,
+    center: belt_hammer,
+    disableDefaultUI: true,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+  var marker = new google.maps.Marker({
+    position: belt_hammer,
+    map: map,
+    title: ''
+  });
+
+  map.setOptions({styles: white});
+}
+
 // Social Networks Helpers
 var tweetWindow = function(url, text) {
 	window.open( "http://twitter.com/share?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(text) + "&count=none/", "tweet", "height=300,width=550,resizable=1" ); 
@@ -68,5 +139,18 @@ $(document).on('ready', function(){
 			$(this).parent().slideUp();
 			$('.past-exhibition-year').removeClass('active');
 		});
+	}
+
+	/*
+   * GOOGLE MAPS
+   */
+	function loadMapScript() {
+		var script = document.createElement("script");
+		script.type = "text/javascript";
+		script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyCrZ41krw8hACJ_MxtBKPRRzrtCEFyxrpA&sensor=false&callback=initializeMap";
+		document.body.appendChild(script);
+	}
+	if ($('#map-canvas').length > 0) {    
+		loadMapScript();
 	}
 });
