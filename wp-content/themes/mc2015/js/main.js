@@ -51,7 +51,7 @@ white = [
 ];
 
 function initializeMap() {
-  var belt_hammer = new google.maps.LatLng(4.640448381244751, -74.06079239444273);
+  var belt_hammer = new google.maps.LatLng(48.860143, 2.366514);
   var mapOptions = {
     scrollwheel: false,
     zoom: 17,
