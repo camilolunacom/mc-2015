@@ -40,6 +40,12 @@
 				
 			</div>
 		</div>
-	<?php endwhile; ?>
+	<?php 
+		endwhile; 
+		if( $open = true ){
+			echo '</div></div>';
+			$open = false;
+		}
+	?>
 </div>
 <?php endif; ?>
