@@ -25,7 +25,7 @@
 				}
 		?>
 		<div class="past-exhibition-by-year">
-			<h2 class="past-exhibition-year"><a href="#">2014</a></h2>
+			<h2 class="past-exhibition-year"><a href="#"><?php echo $year; ?></a></h2>
 			<div class="exhibition-group">
 				<button class="exhibition-close">x</button>
 		<?php
