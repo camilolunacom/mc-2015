@@ -1,5 +1,5 @@
 <div class="past-exhibitions">
-	<div class="exhibition-type">Past exhibitions</div>
+	<div class="exhibition-type"><?php _e( 'Past exhibitions', 'mor'); ?></div>
 	<div class="past-exhibition-by-year">
 		<h2 class="past-exhibition-year"><a href="#">2014</a></h2>
 		<div class="exhibition-group">
