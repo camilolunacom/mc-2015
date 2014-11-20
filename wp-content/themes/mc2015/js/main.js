@@ -1,4 +1,4 @@
-white = [
+la_carte = [
   {
     "elementType": "geometry.fill",
     "stylers": [
@@ -104,7 +104,7 @@ function initializeMap() {
     title: ''
   });
 
-  map.setOptions({styles: white});
+  map.setOptions({styles: la_carte});
 }
 
 // Social Networks Helpers
