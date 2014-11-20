@@ -2,66 +2,104 @@ white = [
   {
     "elementType": "geometry.fill",
     "stylers": [
-      { "color": "#b8e2e3" }
+      {
+      	"color": "#333333"
+      }
     ]
-  },{
+  },
+  {
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+      	"color": "#111111"
+      }
+    ]
+  },
+  {
     "featureType": "road",
     "elementType": "geometry.stroke",
     "stylers": [
-      { "color": "#fefef0" },
-      { "weight": 2 }
+      {
+      	"color": "#000000"
+      },
+      {
+      	"weight": 2
+      }
     ]
-  },{
+  },
+  {
     "featureType": "road",
     "elementType": "geometry.fill",
     "stylers": [
-      { "color": "#fffef0" }
+      {
+      	"color": "#000000"
+      }
     ]
-  },{
+  },
+  {
+  	"featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+      	"color": "#cccccc"
+      },
+      {
+      	"weight": 0.9
+      }
+    ]
+  },
+  {
     "elementType": "labels.text",
     "stylers": [
-      { "color": "#b21f31" },
-      { "weight": 0.9 }
+      {
+      	"color": "#cccccc"
+      },
+      {
+      	"weight": 0.9
+      }
     ]
-  },{
+  },
+  {
     "featureType": "poi",
     "elementType": "geometry.fill",
     "stylers": [
-      { "color": "#94d0d8" }
+      {
+      	"color": "#444444"
+      }
     ]
-  },{
-    "featureType": "road.highway",
-    "elementType": "geometry.fill",
-    "stylers": [
-      { "color": "#fff3d3" }
-    ]
-  },{
+  },
+  {
     "featureType": "poi.park",
     "elementType": "geometry.fill",
     "stylers": [
-      { "color": "#5f8761" }
+      {
+      	"color": "#333333"
+      }
     ]
-  },{
+  },
+  {
     "featureType": "poi.government",
     "elementType": "geometry.fill",
     "stylers": [
-      { "color": "#ef4a5e" }
+      {
+      	"color": "#444444"
+      }
     ]
   }
 ];
 
 function initializeMap() {
-  var belt_hammer = new google.maps.LatLng(48.860143, 2.366514);
+  var la_galerie = new google.maps.LatLng(48.860143, 2.366514);
   var mapOptions = {
     scrollwheel: false,
     zoom: 17,
-    center: belt_hammer,
+    center: la_galerie,
     disableDefaultUI: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
   var marker = new google.maps.Marker({
-    position: belt_hammer,
+    position: la_galerie,
     map: map,
     title: ''
   });
@@ -150,7 +188,7 @@ $(document).on('ready', function(){
 		script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyCrZ41krw8hACJ_MxtBKPRRzrtCEFyxrpA&sensor=false&callback=initializeMap";
 		document.body.appendChild(script);
 	}
-	if ($('#map-canvas').length > 0) {    
+	if ($('#map-canvas').length > 0) {   
 		loadMapScript();
 	}
 });

@@ -25,9 +25,9 @@
 					<li class="social-network"><a href="" class="icon-instagram"></a></li>
 				</ul>
 			</div>
-			<div id="map-canvas"></div>
 		<?php endwhile; ?>
 	</main>
+	<div id="map-canvas"></div>
 </div>
 <?php get_template_part('part', 'footer'); ?>
 <?php get_footer(); ?>
