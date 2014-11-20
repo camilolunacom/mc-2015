@@ -20,7 +20,7 @@
 				$year = get_the_time('Y');
 
 				if( $open = true ){
-					echo '</div></div>'
+					echo '</div></div>';
 					$open = false;
 				}
 		?>
