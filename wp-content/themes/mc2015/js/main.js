@@ -90,12 +90,17 @@ la_carte = [
 
 function initializeMap() {
   var la_galerie = new google.maps.LatLng(48.860143, 2.366514);
+  var drag = true;
+  if(isTouchDevice()){
+  	drag = false;
+  }
   var mapOptions = {
     scrollwheel: false,
     zoom: 17,
     center: la_galerie,
     disableDefaultUI: true,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    draggable: drag
   }
   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
   var marker = new google.maps.Marker({
@@ -105,6 +110,10 @@ function initializeMap() {
   });
 
   map.setOptions({styles: la_carte});
+}
+
+var isTouchDevice = function(){
+	return (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
 }
 
 // Social Networks Helpers
