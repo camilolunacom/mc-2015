@@ -483,8 +483,8 @@ article {
       outline: none;
       padding: 0.3em 0.5em;
       text-transform: uppercase;
-      -webkit-transition: 0.5 all;
-      transition: 0.5 all; }
+      -webkit-transition: 0.5s all;
+      transition: 0.5s all; }
       .newsletter form input[type="submit"]:hover {
         background: black;
         color: white; }
