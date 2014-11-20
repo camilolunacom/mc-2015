@@ -33,13 +33,13 @@
 			}
 		?>
 				<div class="exhibition-past">
-					<div class="exhibition-img" style="background-image: url(http://dev.mor-charpentier.com/wp-content/uploads/2013/09/mor.charpentier.Palimpsestes.Septembre-2013.jpg)"><a href="http://dev.mor-charpentier.com/exhibition/palimpsestes/"></a></div>
+					<div class="exhibition-img" style="background-image: url(http://dev.mor-charpentier.com/wp-content/uploads/2013/09/mor.charpentier.Palimpsestes.Septembre-2013.jpg)"><a href="<?php the_permalink(); ?>"></a></div>
 					<h2 class="exhibition-title"><a href="http://dev.mor-charpentier.com/exhibition/palimpsestes/"><?php the_title(); ?></a></h2>
 					<h4 class="exhibition-detail">6 Septembre-11 Octobre</h4>
 				</div>
 	<?php 
 		endwhile; 
-		
+
 		if( $open == true ){
 			echo '</div></div>';
 			$open = false;
