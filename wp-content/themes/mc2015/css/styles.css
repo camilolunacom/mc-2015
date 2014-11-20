@@ -443,6 +443,67 @@ article {
 .next-post-link {
   right: 1em; }
 
+.newsletter {
+  padding: 3em 1em 1em 1em;
+  position: relative;
+  text-align: center; }
+  .newsletter form {
+    margin-bottom: 2em; }
+    .newsletter form input[type="email"],
+    .newsletter form input[type="text"] {
+      background: black;
+      border: none;
+      color: white;
+      font-family: "suisse_works";
+      font-size: 14px;
+      font-weight: bold;
+      outline: none;
+      padding: 0.25em 0.5em; }
+      .newsletter form input[type="email"]::-webkit-input-placeholder,
+      .newsletter form input[type="text"]::-webkit-input-placeholder {
+        color: white;
+        text-transform: lowercase; }
+      .newsletter form input[type="email"]::-moz-placeholder,
+      .newsletter form input[type="text"]::-moz-placeholder {
+        color: white;
+        text-transform: lowercase; }
+      .newsletter form input[type="email"]:-moz-placeholder,
+      .newsletter form input[type="text"]:-moz-placeholder {
+        color: white;
+        text-transform: lowercase; }
+      .newsletter form input[type="email"]:-ms-input-placeholder,
+      .newsletter form input[type="text"]:-ms-input-placeholder {
+        color: white;
+        text-transform: lowercase; }
+    .newsletter form input[type="submit"] {
+      background: white;
+      border: 2px solid black;
+      font-size: 12px;
+      font-weight: bold;
+      outline: none;
+      padding: 0.3em 0.5em;
+      text-transform: uppercase;
+      -webkit-transition: 0.5 all;
+      transition: 0.5 all; }
+      .newsletter form input[type="submit"]:hover {
+        background: black;
+        color: white; }
+  .newsletter .events {
+    display: block;
+    position: initial;
+    text-align: initial; }
+  .newsletter .newsletter-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0.5em;
+    text-transform: uppercase; }
+  .newsletter .newsletter-title {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1em;
+    margin: 0;
+    text-transform: lowercase; }
+
 .news-item {
   background-position: left;
   background-repeat: no-repeat;
@@ -863,6 +924,13 @@ article {
     margin-left: 1em; }
   .navigation-menu #hamburguer {
     display: none !important; }
+
+  .newsletter {
+    padding: 6em 1em 1em 1em; }
+    .newsletter .newsletter-title {
+      font-size: 72px;
+      margin: 0 auto;
+      width: 420px; }
 
   .next-post-link,
   .prev-post-link {

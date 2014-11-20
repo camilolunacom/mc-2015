@@ -336,6 +336,61 @@ article
 .next-post-link
 	right: 1em
 
+.newsletter
+	padding: 3em 1em 1em 1em
+	position: relative
+	text-align: center
+
+	form
+		margin-bottom: 2em
+
+		input[type="email"],
+		input[type="text"]
+			background: black
+			border: none
+			color: white
+			font-family: 'suisse_works'
+			font-size: 14px
+			font-weight: bold
+			outline: none
+			padding: 0.25em 0.5em
+
+			+placeholder()
+				color: white
+				text-transform: lowercase
+
+		input[type="submit"]
+			background: white
+			border: 2px solid black
+			font-size: 12px
+			font-weight:  bold
+			outline: none
+			padding: 0.3em 0.5em
+			text-transform: uppercase
+			transition: 0.5 all
+
+			&:hover
+				background: black
+				color: white
+
+	.events
+		display: block
+		position: initial
+		text-align: initial
+
+	.newsletter-subtitle
+		font-size: 14px
+		font-weight: 500
+		margin-top: 0.5em
+		text-transform: uppercase
+
+	.newsletter-title
+		font-size: 36px
+		font-weight: bold
+		line-height: 1em
+		margin: 0
+		text-transform: lowercase
+
 .news-item
 	background-position: left
 	background-repeat: no-repeat
@@ -817,6 +872,14 @@ article
 
 		#hamburguer
 			display: none !important
+
+	.newsletter
+		padding: 6em 1em 1em 1em
+
+		.newsletter-title
+			font-size: 72px
+			margin: 0 auto
+			width: 420px
 
 	.next-post-link,
 	.prev-post-link

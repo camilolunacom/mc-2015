@@ -88,6 +88,14 @@ la_carte = [
   }
 ];
 
+//Gmaps
+function loadMapScript() {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyCrZ41krw8hACJ_MxtBKPRRzrtCEFyxrpA&sensor=false&callback=initializeMap";
+	document.body.appendChild(script);
+}
+
 function initializeMap() {
   var la_galerie = new google.maps.LatLng(48.860143, 2.366514);
   var drag = true;
@@ -188,15 +196,6 @@ $(document).on('ready', function(){
 		});
 	}
 
-	/*
-   * GOOGLE MAPS
-   */
-	function loadMapScript() {
-		var script = document.createElement("script");
-		script.type = "text/javascript";
-		script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyCrZ41krw8hACJ_MxtBKPRRzrtCEFyxrpA&sensor=false&callback=initializeMap";
-		document.body.appendChild(script);
-	}
 	if ($('#map-canvas').length > 0) {   
 		loadMapScript();
 	}

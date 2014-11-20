@@ -28,7 +28,15 @@
 			<div class="arrow"><i class="icon-arrow-down"></i></div>
 		<?php endwhile; ?>
 	</main>
-	<div id="map-canvas"></div>
+	<section class="map">
+		<div id="map-canvas"></div>
+	</section>
+	<section class="newsletter">
+		<h2 class="newsletter-title">The gallery's newsletter</h2>
+		<h4 class="newsletter-subtitle">Monthly.no spam.</h4>
+		<?php echo do_shortcode('[mc4wp_form]'); ?>
+		<?php get_template_part('events'); ?>
+	</section>
 </div>
 <?php get_template_part('part', 'footer'); ?>
 <?php get_footer(); ?>

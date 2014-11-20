@@ -1,0 +1,21 @@
+=fullscreen()
+	&::-webkit-full-screen
+		@content
+	&::-moz-full-screen
+		@content
+	&:-webkit-full-screen
+		@content
+	&:-moz-full-screen
+		@content
+	&:-ms-full-screen
+		@content
+
+=placeholder()
+	&::-webkit-input-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
