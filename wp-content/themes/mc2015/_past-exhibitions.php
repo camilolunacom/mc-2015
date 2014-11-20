@@ -19,7 +19,7 @@
 			if( $year != get_the_time('Y') ){
 				$year = get_the_time('Y');
 
-				if( $open = true ){
+				if( $open == true ){
 					echo '</div></div>';
 					$open = false;
 				}
@@ -38,7 +38,7 @@
 					<h4 class="exhibition-detail">6 Septembre-11 Octobre</h4>
 				</div>
 		<?php 		
-			if( $open = true ){
+			if( $open == true ){
 				echo '</div></div>';
 				$open = false;
 			}	
