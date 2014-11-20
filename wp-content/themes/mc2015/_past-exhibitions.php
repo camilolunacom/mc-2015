@@ -37,11 +37,13 @@
 					<h2 class="exhibition-title"><a href="http://dev.mor-charpentier.com/exhibition/palimpsestes/"><?php the_title(); ?></a></h2>
 					<h4 class="exhibition-detail">6 Septembre-11 Octobre</h4>
 				</div>
-
-			</div>
-		</div>
 	<?php 
 		endwhile; 
+		
+		if( $open == true ){
+			echo '</div></div>';
+			$open = false;
+		}
 	?>
 </div>
 <?php endif; ?>
