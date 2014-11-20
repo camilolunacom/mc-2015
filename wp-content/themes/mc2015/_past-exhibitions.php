@@ -12,7 +12,7 @@
 	<div class="exhibition-type"><?php _e( 'Past exhibitions', 'mor'); ?></div>
 
 	<?php 
-		while( $exhibitions->have_posts() ) : $exhibitions->the_post();
+		while( $past_exhibitions->have_posts() ) : $past_exhibitions->the_post();
 	?>
 
 		<?php 
