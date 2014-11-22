@@ -37,7 +37,7 @@
 				<div class="exhibition-past">
 					<div class="exhibition-img" style="background-image: url(<?php echo $image_attributes[0]; ?>)"><a href="<?php the_permalink(); ?>"></a></div>
 					<h2 class="exhibition-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<h4 class="exhibition-detail"><?php $lafecha = MCG::get_exhibition_date(); echo $lafecha['result']; ?></h4>
+					<h4 class="exhibition-detail"><?php $lafecha = MCG::get_exhibition_date( $post ); echo $lafecha['result']; ?></h4>
 				</div>
 	<?php 
 		endwhile; 
