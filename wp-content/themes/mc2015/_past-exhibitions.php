@@ -13,7 +13,7 @@
 
 	<?php 
 		while( $past_exhibitions->have_posts() ) : $past_exhibitions->the_post();
-
+			global $post;
 			$image_attributes = wp_get_attachment_image_src( get_post_thumbnail_id() , 'medium');
 	?>
 
