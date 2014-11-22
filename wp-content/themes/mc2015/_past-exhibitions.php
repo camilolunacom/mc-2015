@@ -3,7 +3,7 @@
 	$year = 0;
 	$past_exhibitions = new WP_Query( array(
 							'post_type' => 'exhibition',
-							'posts_per_page' => -1,
+							'posts_per_page' => 999999999,
 							'offset' => 1
 						) );
 
