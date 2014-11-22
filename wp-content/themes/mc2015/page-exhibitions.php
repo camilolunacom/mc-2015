@@ -1,30 +1,28 @@
 <?php
-	$args = array( 'post_type' => 'exhibition', 'posts_per_page' => 50 );
+	$args = array( 'post_type' => 'exhibition', 'posts_per_page' => 1 );
 	$loop = new WP_Query( $args );
 ?>
 <?php get_header(); ?>
 <?php get_template_part('part', 'header'); ?>
 <div class="wrap">
 	<main role="main">
-		<div class="exhibition-current" style="background-image: url(http://dev.mor-charpentier.com/wp-content/uploads/2013/10/Still-Aftershock4.jpg)">
+		<?php 
+			if( $loop-> have_posts() ) : $loop->the_post(); 
+				global $post; 
+				$image_attributes = wp_get_attachment_image_src( get_post_thumbnail_id() , 'medium');
+		?>
+		<div class="exhibition-current" style="background-image: url(<?php echo $image_attributes[0]; ?>)">
 			<div class="exhibition-content">
 				<div class="exhibition-type">Current exhibition</div>
-				<h2 class="exhibition-title"><a href="http://dev.mor-charpentier.com/exhibition/illimitee-promesse-davenir/">Illimitée promesse d'avenir</a></h2>
-				<h4 class="exhibition-detail">6 Septembre 2014, 16h-21h Vernissage en présence de l'artiste</h4>
-				<h4 class="exhibition-detail">6 Septembre-11 Octobre 2014 du mardi au samedi, 11h-19h</h4>
+				<h2 class="exhibition-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<h4 class="exhibition-detail"><?php $lafecha = MCG::get_exhibition_date( $post ); echo $lafecha['result']; ?></h4>
 				<div class="exhibition-text">
-					<p>Le déclin collectif de l’URSS d’une part, et des entreprises industrielles du Nord de la France d’autre part, se sont accompagnés d’un déclin individuel qui est au cœur des projets d’Uriel Orlow et de Natacha Nisic. Ce sont en effet les conséquences humaines de ces échecs politiques, sociaux et économiques, et le devenir des personnes qui sont interrogés par les deux artistes.</p>
+					<?php the_content(); ?>
 				</div>
-				<div class="post-share">
-					<div class="post-share-text"><?php _e( 'Share', 'mor'); ?></div>
-					<ul class="social-networks">
-						<li class="social-network"><a href="" class="icon-facebook"></a></li>
-						<li class="social-network"><a href="" class="icon-twitter"></a></li>
-						<li class="social-network"><a href="" class="icon-instagram"></a></li>
-					</ul>
-				</div>
+				<?php get_template_part('post', 'share'); ?>
 			</div>
 		</div>
+		<?php endif; ?>
 		<?php get_template_part('_past', 'exhibitions'); ?>
 	</main>
 </div>
