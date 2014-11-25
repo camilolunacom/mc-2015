@@ -701,6 +701,7 @@ article {
 .post-title {
   font-size: 38px;
   font-weight: bold;
+  margin-top: 0;
   text-align: center; }
 
 .prod-team {
