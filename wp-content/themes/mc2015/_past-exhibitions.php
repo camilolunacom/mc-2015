@@ -3,7 +3,8 @@
 	$year = 0;
 	$past_exhibitions = new WP_Query( array(
 							'post_type' => 'exhibition',
-							'posts_per_page' => -1
+							'posts_per_page' => 999999999,
+							'offset' => 1
 						) );
 
 	if( $past_exhibitions->have_posts() ) :
@@ -13,6 +14,8 @@
 
 	<?php 
 		while( $past_exhibitions->have_posts() ) : $past_exhibitions->the_post();
+			global $post;
+			$image_attributes = wp_get_attachment_image_src( get_post_thumbnail_id() , 'medium');
 	?>
 
 		<?php 
@@ -33,9 +36,9 @@
 			}
 		?>
 				<div class="exhibition-past">
-					<div class="exhibition-img" style="background-image: url(http://dev.mor-charpentier.com/wp-content/uploads/2013/09/mor.charpentier.Palimpsestes.Septembre-2013.jpg)"><a href="<?php the_permalink(); ?>"></a></div>
-					<h2 class="exhibition-title"><a href="http://dev.mor-charpentier.com/exhibition/palimpsestes/"><?php the_title(); ?></a></h2>
-					<h4 class="exhibition-detail">6 Septembre-11 Octobre</h4>
+					<div class="exhibition-img" style="background-image: url(<?php echo $image_attributes[0]; ?>)"><a href="<?php the_permalink(); ?>"></a></div>
+					<h2 class="exhibition-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<h4 class="exhibition-detail"><?php $lafecha = MCG::get_exhibition_date( $post ); echo $lafecha['result']; ?></h4>
 				</div>
 	<?php 
 		endwhile; 
