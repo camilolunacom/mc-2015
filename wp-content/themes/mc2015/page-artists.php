@@ -1,6 +1,6 @@
 <?php
-	$args = array( 'post_type' => 'artist', 'posts_per_page' => 50 );
-	$loop = new WP_Query( $args );
+	$args = array('post_type' => 'artist', 'posts_per_page' => 50, 'orderby' => 'title', 'order' => 'ASC');
+	$loop = new WP_Query($args);
 ?>
 <?php get_header(); ?>
 <?php get_template_part('part', 'header'); ?>
