@@ -138,10 +138,7 @@ main {
   main.index .prod-team {
     display: block !important; }
   main.index .menu {
-    font-size: 66px; }
-
-  .vertical-align:before {
-    margin-right: -0.25em; } }
+    font-size: 66px; } }
 article {
   padding: 0 1em; }
   article.exhibition .post-title {
@@ -295,6 +292,8 @@ article {
   margin: 2em auto 4em auto;
   padding: 1em;
   position: relative; }
+  .exhibition-current .call-to-action {
+    display: block; }
   .exhibition-current .exhibition-content {
     background: white;
     height: 100%;
