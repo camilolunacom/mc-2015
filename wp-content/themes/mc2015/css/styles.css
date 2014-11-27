@@ -900,7 +900,7 @@ article {
     display: inline-block;
     text-align: left; }
     .footer-item:not(:last-of-type) {
-      margin-right: 2em; }
+      margin-right: 4em; }
 
   .footer-items {
     left: 0;
