@@ -705,7 +705,9 @@ article {
   text-align: center; }
 
 .prod-team {
+  color: rgba(0, 0, 0, 0.3);
   font-family: monocromo;
+  font-size: 12px;
   position: absolute;
   right: 0.5rem;
   -webkit-text-orientation: upright;
@@ -719,10 +721,12 @@ article {
   writing-mode: vertical-lr;
   z-index: 1; }
   .prod-team a {
+    color: rgba(0, 0, 0, 0.3);
     display: inline-block;
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s; }
     .prod-team a:hover {
+      color: black;
       -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
       transform: rotate(90deg); }
