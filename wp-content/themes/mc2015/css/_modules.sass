@@ -65,12 +65,16 @@ article
 		text-align: center
 
 		.artist-name
+			display: block
 			font-size: 18px
 			font-weight: bold
 			padding: 6em 0
 			position: relative
 			z-index: 2
 			transition: background-color 0.3s
+
+			&:hover
+				color: initial
 
 		.artist-link
 			display: none
@@ -88,14 +92,6 @@ article
 				height: 4em
 				left: calc(50% - 1px)
 				position: absolute
-
-		& > a
-			height: 100%
-			left: 0
-			position: absolute
-			top: 0
-			width: 100%
-			z-index: 3
 
 		&:before
 			background-color: rgba(255, 255, 255, 0.75)
@@ -645,6 +641,7 @@ article
 .read-more,
 .view-artist
 	background-color: black
+	border: 1px solid black
 	bottom: 3em
 	color: white
 	display: block
@@ -652,10 +649,11 @@ article
 	font-weight: bold
 	padding: 0.25em 0.5em
 	text-transform: uppercase
-	transition: opacity 0.3s
+	transition: all 0.3s
 
 	&:hover
-		color: white
+		background-color: white
+		color: black
 
 .select-display
 	font-size: 12px

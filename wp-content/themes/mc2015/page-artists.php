@@ -16,12 +16,11 @@
 				$image_attributes = wp_get_attachment_image_src($attachment_id, 'large');
 			?>
 			<li class="artist thumb" style="background-image: url(<?php echo $image_attributes[0]; ?>)">
-				<a href="<?php echo the_permalink(); ?>"></a>
-				<div class="artist-name">
+				<a href="<?php echo the_permalink(); ?>" class="artist-name">
 					<span><?php echo the_title(); ?></span>
 					<div class="view-artist"><?php _e( 'View artist', 'mor'); ?></div>
 					<a href="<?php echo the_permalink(); ?>" class="artist-link"><?php echo the_title(); ?></a>
-				</div>
+				</a>
 			</li>
 			<?php endwhile; ?>
 		</ul>
