@@ -6,7 +6,7 @@
 		$rand_img = rand( 0, $img_count-1 );
 		$img = $_images['selected'][$rand_img];
 		//$full = wp_get_attachment_image_src( $img, 'full' );
-		$full = ['http://dev.mor-charpentier.com/wp-content/uploads/2012/04/IMG_64922.jpg', 'full'];
+		$full = array('http://dev.mor-charpentier.com/wp-content/uploads/2012/04/IMG_64922.jpg', 'full');
 	}
 ?>
 	<div class="wrap index">
