@@ -5,11 +5,12 @@
 		$img_count = count( $_images['selected'] );
 		$rand_img = rand( 0, $img_count-1 );
 		$img = $_images['selected'][$rand_img];
-		$full = wp_get_attachment_image_src( $img, 'full' );
+		//$full = wp_get_attachment_image_src( $img, 'full' );
+		$full = ['http://dev.mor-charpentier.com/wp-content/uploads/2012/04/IMG_64922.jpg', 'full'];
 	}
 ?>
 	<div class="wrap index">
-		<main class="index vertical-align" role="main"   style="background:url(<?php echo $full[0] ?>); ?>)">
+		<main class="index vertical-align" role="main"   style="background-image:url(<?php echo $full[0] ?>); ?>)">
 
 			<div class="logo">
 				<a class="icon-logo" href="<?php echo home_url(); ?>/" rel="home"></a>

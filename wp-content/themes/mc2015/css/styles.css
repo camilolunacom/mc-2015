@@ -78,11 +78,12 @@ main {
 main {
   position: relative; }
   main.index {
-    background-attachment: fixed !important;
-    background-position: center !important;
-    -webkit-background-size: cover !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    background-color: black;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
     text-align: center; }
     main.index a {
@@ -117,6 +118,7 @@ main {
         margin-bottom: 0;
         padding: 0; }
     main.index .prod-team {
+      color: white;
       display: none !important; }
   main:not(.index) {
     margin-top: 96px; }
