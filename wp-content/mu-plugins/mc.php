@@ -232,6 +232,30 @@ class MCG {
 						)
 					)
 				)
+			),
+			'post' => array(
+				array(
+					'id'     => 'post-data',
+					'title'  => __('Post data', 'mcg'),
+					'fields' => array(
+						array(
+							'id'    => 'external-link',
+							'title' => __('External link', 'mcg'),
+							'desc'  => 'An optional external link for the read more link (don\'t forget the http://)',
+							'type'  => 'text'
+						),
+						array(
+							'id'    => 'hide-more-link',
+							'title' => __('Hide the "read more" link?', 'mcg'),
+							'type'  => 'checkboxt',
+							'options' => array(
+								'cbox1' => 'No, you\'re crazy!',
+								'cbox2' => 'Yes, I don\'t want it.'
+							),
+							'default'	=> 'cbox1'
+						)
+					)
+				)
 			)
 		);
 
