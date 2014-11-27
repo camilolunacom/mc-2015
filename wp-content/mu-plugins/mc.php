@@ -247,7 +247,7 @@ class MCG {
 						array(
 							'id'    => 'hide-more-link',
 							'title' => __('Hide the "read more" link?', 'mcg'),
-							'type'  => 'checkboxt',
+							'type'  => 'checkbox',
 							'options' => array(
 								'cbox1' => 'No, you\'re crazy!',
 								'cbox2' => 'Yes, I don\'t want it.'
