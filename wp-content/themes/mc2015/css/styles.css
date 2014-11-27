@@ -890,7 +890,8 @@ article {
     width: 50%; }
 
   .exhibition-past {
-    margin: 1em; }
+    margin: 1em;
+    vertical-align: top; }
 
   .index-menu {
     margin-bottom: 0;
