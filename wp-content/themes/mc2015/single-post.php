@@ -29,5 +29,4 @@
 		<?php endwhile; ?>
 	</main>
 </div>
-<?php get_template_part('part', 'footer'); ?>
 <?php get_footer(); ?>
