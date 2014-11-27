@@ -104,6 +104,7 @@ article
 			left: 0
 			position: absolute
 			top: 0
+			transition: 0.3s background-color
 			width: 100%
 			z-index: 1
 
@@ -114,6 +115,9 @@ article
 			.view-artist
 				opacity: 1
 				pointer-events: initial
+
+			&:before
+				background-color: rgba(255, 255, 255, 0)
 
 		&:not(:last-of-type)
 			margin-bottom: 2em

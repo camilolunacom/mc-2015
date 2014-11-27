@@ -237,6 +237,8 @@ article {
       left: 0;
       position: absolute;
       top: 0;
+      -webkit-transition: 0.3s background-color;
+      transition: 0.3s background-color;
       width: 100%;
       z-index: 1; }
     .artist.thumb:hover .artist-name {
@@ -244,6 +246,8 @@ article {
     .artist.thumb:hover .view-artist {
       opacity: 1;
       pointer-events: initial; }
+    .artist.thumb:hover:before {
+      background-color: rgba(255, 255, 255, 0); }
     .artist.thumb:not(:last-of-type) {
       margin-bottom: 2em; }
 
