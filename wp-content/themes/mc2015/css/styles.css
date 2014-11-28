@@ -663,7 +663,8 @@ article {
   position: relative; }
   .post-gallery figcaption {
     letter-spacing: 0.04em;
-    margin-top: 0.5em; }
+    margin-top: 0.5em;
+    text-align: center; }
     .post-gallery figcaption div {
       font-size: 12px;
       text-transform: uppercase; }
@@ -674,7 +675,7 @@ article {
     background-repeat: no-repeat;
     -webkit-background-size: auto 100%;
     background-size: auto 100%;
-    height: 60vh; }
+    height: 67vh; }
   .post-gallery .gallery-controls {
     left: -1em;
     position: absolute;
@@ -1022,7 +1023,7 @@ article {
     top: 6em; }
 
   .post-content {
-    margin: 3em auto 0 auto;
+    margin: 2em auto 0 auto;
     width: 55%; } }
 @media screen and (max-width: 48em) {
   .navigation-menu.is-visible {
