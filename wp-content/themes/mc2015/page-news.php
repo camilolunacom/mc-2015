@@ -21,14 +21,16 @@
 					<?php 
 						$more_link = get_post_meta( get_the_ID(), '_external-link', true );
 						$more_link_active = get_post_meta( get_the_ID(), '_hide-more-link', true );
+						$target = '_blank';
 
 						if( !$more_link ){
 							$more_link = get_permalink();
+							$target = '_self';
 						}
 					?>
-					
+
 					<?php if( $more_link_active[0] != 'cbox2' ){ ?>
-						<a href="<?php echo $more_link; ?>" class="read-more"><?php _e('Read more', 'mor'); ?></a>
+						<a target="<?php echo $target; ?>" href="<?php echo $more_link; ?>" class="read-more"><?php _e('Read more', 'mor'); ?></a>
 					<?php } ?>
 
 				</div>
