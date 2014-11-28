@@ -18,7 +18,19 @@
 					<div class="news-excerpt">
 						<?php echo the_excerpt(); ?>
 					</div>
-					<a href="<?php echo the_permalink(); ?>" class="read-more"><?php _e('Read more', 'mor'); ?></a>
+					<?php 
+						$more_link = get_post_meta( get_the_ID(), '_external-link', true );
+						$more_link_active = get_post_meta( get_the_ID(), '_hide-more-link', true );
+
+						if( !$more_link ){
+							$more_link = get_permalink();
+						}
+					?>
+
+					<?php if( $more_link_active != 'cbox2' ){ ?>
+						<a href="<?php echo $more_link; ?>" class="read-more"><?php _e('Read more', 'mor'); ?></a>
+					<?php } ?>
+					
 				</div>
 			</li>
 			<?php endwhile; ?>
