@@ -136,7 +136,7 @@ var faceWindow = function(url, title) {
 $(window).on('load', function(){
 	if($('.owl-carousel').length > 0){
 		$('.owl-carousel').owlCarousel({
-			autoHeight: true,
+			//autoHeight: true,
 			dots: false,
 			items: 1,
 			loop: true,
