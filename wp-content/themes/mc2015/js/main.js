@@ -223,7 +223,7 @@ $(document).on('ready', function(){
       }
     }
 
-    if($('article.artist').length > 0){
+    if(($('article.artist').length > 0) && !isTouchDevice()){
       //Page bottom detection
       if(ScrollTop + $(window).height() == $(document).height()){
         $('.next-post-link, .prev-post-link').fadeIn();
