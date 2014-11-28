@@ -131,7 +131,7 @@ main {
       color: white;
       display: none !important; }
   main:not(.index) {
-    margin-top: 96px; }
+    margin-top: 70px; }
 
 .vertical-align > * {
   display: inline-block !important;
@@ -835,7 +835,7 @@ article {
 
 @media screen and (max-width: 48em) {
   .navigation-menu {
-    height: 96px;
+    height: 70px;
     -webkit-transition: all 0.3;
     transition: all 0.3;
     width: 100%; }
