@@ -27,6 +27,8 @@
 						}
 					?>
 
+					<pre><?php print_r( $more_link_active ); ?></pre>
+					
 					<?php if( $more_link_active[0] != 'cbox2' ){ ?>
 						<a href="<?php echo $more_link; ?>" class="read-more"><?php _e('Read more', 'mor'); ?></a>
 					<?php } ?>
