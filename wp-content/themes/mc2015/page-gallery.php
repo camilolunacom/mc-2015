@@ -13,10 +13,10 @@
 						<a href="mailto:contact@mor-charpentier.com" class="contact-city-mail">contact@mor-charpentier.com</a>
 					</div>
 					<div class="contact-info-city">
-						<h2 class="contact-city-name">Bogotá</h2>
-						<p class="contact-city-details">+57 (1) 618 2746</p>
+						<h2 class="contact-city-name">Colombia</h2>
+						<p class="contact-city-details">Diana Barbosa</p>
 						<br />
-						<a href="mailto:bogota@mor-charpentier.com" class="contact-city-mail">bogota@mor-charpentier.com</a>
+						<a href="mailto:diana@mor-charpentier.com" class="contact-city-mail">diana@mor-charpentier.com</a>
 					</div>
 				</div>
 				<ul class="social-networks">
