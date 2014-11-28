@@ -199,4 +199,25 @@ $(document).on('ready', function(){
 	if ($('#map-canvas').length > 0) {   
 		loadMapScript();
 	}
+
+  var scrollTimeout;  // global for any pending scrollTimeout
+
+  $(window).scroll(function () {
+    if (scrollTimeout) {
+      // clear the timeout, if one is pending
+      clearTimeout(scrollTimeout);
+      scrollTimeout = null;
+    }
+    scrollTimeout = setTimeout(scrollHandler, 100);
+  });
+
+  scrollHandler = function(){
+    var ScrollTop = $(window).scrollTop();
+    //Page bottom detection
+    if($('article.artist').length > 0){
+      if(ScrollTop + $(window).height() == $(document).height()){
+        $('.next-post-link, .prev-post-link').fadeIn();
+      }
+    }
+  };
 });
