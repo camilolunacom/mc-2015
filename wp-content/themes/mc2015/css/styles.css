@@ -107,7 +107,7 @@ main {
     main.index .menu {
       font-size: 33px;
       font-weight: bold;
-      margin-bottom: 1em;
+      margin-bottom: 0.5em;
       padding: 0;
       text-align: center; }
       main.index .menu li {
@@ -151,14 +151,15 @@ article {
     margin-top: 0.25em; }
 
 .announcements {
-  font-size: 17px;
+  font-size: 15px;
+  font-weight: 300;
   margin: 0 auto;
   text-align: center; }
   .announcements span {
     display: inline-block;
     border: 3px solid;
     line-height: 1em;
-    padding: 0.75em 1em; }
+    padding: 0.5em 0.7em; }
 
 .arrow {
   margin-top: 2em;
@@ -371,8 +372,9 @@ article {
   margin-bottom: 1em; }
 
 .footer-items {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   line-height: 1em;
   list-style-type: none;
   margin-bottom: 0;
@@ -385,10 +387,11 @@ article {
 
 .kc-ml-languages {
   display: none;
+  letter-spacing: 0.1em;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500; }
   .kc-ml-languages li {
     display: inline-block;
@@ -581,9 +584,9 @@ article {
 .picture-credits {
   bottom: 0;
   display: none;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 10px;
   line-height: 1em;
+  margin-right: 0.5em;
   position: absolute;
   right: 0;
   text-align: center;
