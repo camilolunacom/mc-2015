@@ -200,10 +200,10 @@ $(document).on('ready', function(){
 		loadMapScript();
 	}
 
-  var scrollTimeout;  // global for any pending scrollTimeout
+  var scrollTimeout;  // Global for any pending scrollTimeout
 
-  $(window).scroll(function () {
-    if (scrollTimeout) {
+  $(window).scroll(function(){
+    if(scrollTimeout){
       // clear the timeout, if one is pending
       clearTimeout(scrollTimeout);
       scrollTimeout = null;
@@ -213,8 +213,18 @@ $(document).on('ready', function(){
 
   scrollHandler = function(){
     var ScrollTop = $(window).scrollTop();
-    //Page bottom detection
+    
+    if(($('#menu-main').length > 0) && !isTouchDevice()){
+      if(ScrollTop >= 70){
+        $('.kc-ml-languages, .prod-team').fadeOut();
+      }
+      else{
+        $('.kc-ml-languages, .prod-team').fadeIn();
+      }
+    }
+
     if($('article.artist').length > 0){
+      //Page bottom detection
       if(ScrollTop + $(window).height() == $(document).height()){
         $('.next-post-link, .prev-post-link').fadeIn();
       }
