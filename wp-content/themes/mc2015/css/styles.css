@@ -152,6 +152,7 @@ main {
 article {
   padding: 0 1em; }
   article.exhibition .post-title {
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
     max-width: 470px; }
@@ -707,6 +708,7 @@ article {
 .post-subtitle {
   font-size: 20px;
   font-weight: bold;
+  margin: 0 0 1.5em 0;
   text-align: center; }
 
 .post-title {
