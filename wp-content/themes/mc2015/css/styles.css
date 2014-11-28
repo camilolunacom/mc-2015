@@ -75,6 +75,16 @@ main {
   main.index,
   .wrap.index {
     height: 100%; } }
+body:not(.home) {
+  position: relative; }
+  body:not(.home):after {
+    border-bottom: 10px solid black;
+    bottom: 0;
+    content: "";
+    position: fixed;
+    width: 100%;
+    z-index: 99999; }
+
 main {
   position: relative; }
   main.index {
@@ -995,7 +1005,7 @@ article {
     top: 6em; }
 
   .post-content {
-    margin: 0 auto;
+    margin: 3em auto 0 auto;
     width: 55%; } }
 @media screen and (max-width: 48em) {
   .navigation-menu.is-visible {
