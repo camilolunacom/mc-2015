@@ -549,13 +549,14 @@ article {
     font-family: suisse_works;
     font-size: 14px;
     font-weight: bold;
+    line-height: 1.5em;
     margin: 0 auto;
     max-width: 450px; }
   .news-item .news-title {
     font-size: 32px;
     font-weight: bold;
     margin: 0.5em auto;
-    max-width: 370px; }
+    max-width: 400px; }
   .news-item .read-more {
     display: inline-block; }
   .news-item > div {
