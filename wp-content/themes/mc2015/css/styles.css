@@ -63,7 +63,7 @@ footer a {
     color: rgba(0, 0, 0, 0.7); }
 
 header {
-  padding: 1em;
+  padding: 0.5em;
   position: relative; }
 
 main {
@@ -413,6 +413,7 @@ article {
 
 .logo {
   display: inline-block;
+  margin: 0 0.5em;
   position: relative;
   z-index: 2; }
   .logo a {
