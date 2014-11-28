@@ -12,7 +12,7 @@
 			<li class="social-network"><a href="" class="icon-twitter"></a></li>
 			<li class="social-network"><a href="" class="icon-instagram"></a></li>
 		</ul>
-		<?php kc_ml_list_languages(false) ?>
+		<?php kc_ml_list_languages( false, 'language_code' ); ?>
 		<?php get_template_part('prod', 'team'); ?>
 	</div>
 </header>
