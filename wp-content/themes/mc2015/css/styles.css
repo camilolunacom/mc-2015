@@ -308,8 +308,6 @@ article {
   margin: 2em auto 4em auto;
   padding: 1em;
   position: relative; }
-  .exhibition-current .call-to-action {
-    display: block; }
   .exhibition-current .exhibition-content {
     background: white;
     height: 100%;
@@ -331,6 +329,8 @@ article {
     font-weight: bold;
     line-height: 1em;
     margin: 1em auto; }
+  .exhibition-current .read-more {
+    display: inline-block; }
 
 .exhibition-group {
   display: none;
