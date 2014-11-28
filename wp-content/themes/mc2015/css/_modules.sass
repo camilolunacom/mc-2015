@@ -3,16 +3,22 @@ article
 
 	&.exhibition
 		.post-title
+			margin-bottom: 0
 			margin-left: auto
 			margin-right: auto
 			max-width: 470px
 
 	&.post
+		margin-bottom: 7em
+
+		.post-actions
+			top: 0
+
 		.post-attachment-link
 			text-transform: uppercase
 			
 		.post-title
-			margin-top: 0.25em
+			margin-top: 0.1em
 
 .announcements
 	font-size: 15px
@@ -45,7 +51,7 @@ article
 			border-bottom: 2px solid transparent
 			color: black
 			display: inline-block
-			font-size: 19px
+			font-size: 17px
 			font-weight: 500
 			padding-bottom: 0.25em
 			text-decoration: none
@@ -61,7 +67,7 @@ article
 		background-position: center
 		background-repeat: no-repeat
 		background-size: cover
-		padding: 1em
+		padding: 0.7em
 		position: relative
 		text-align: center
 
@@ -81,7 +87,7 @@ article
 			display: none
 
 		.view-artist
-			left: calc(50% - 34px)
+			left: calc(50% - 42.5px)
 			opacity: 0
 			pointer-events: none
 			position: absolute
@@ -130,7 +136,7 @@ article
 	width: 80%
 
 .events
-	bottom: 0
+	bottom: 2em
 	display: none
 	left: 2em
 	position: absolute
@@ -174,9 +180,6 @@ article
 	padding: 1em
 	position: relative
 
-	.call-to-action
-		display: block
-
 	.exhibition-content
 		background: white
 		height: 100%
@@ -202,6 +205,9 @@ article
 		font-weight: bold
 		line-height: 1em
 		margin: 1em auto
+
+	.read-more
+		display: inline-block
 
 .exhibition-group
 	display: none
@@ -295,6 +301,7 @@ article
 
 .logo
 	display: inline-block
+	margin: 0 0.5em
 	position: relative
 	z-index: 2
 	
@@ -366,6 +373,7 @@ article
 			font-weight: bold
 			outline: none
 			padding: 0.25em 0.5em
+			width: 240px
 
 			+placeholder()
 				color: white
@@ -422,6 +430,7 @@ article
 		font-family: suisse_works
 		font-size: 14px
 		font-weight: bold
+		line-height: 1.5em
 		margin: 0 auto
 		max-width: 450px
 
@@ -429,7 +438,7 @@ article
 		font-size: 32px
 		font-weight: bold
 		margin: 0.5em auto
-		max-width: 370px
+		max-width: 400px
 
 	.read-more
 		display: inline-block
@@ -533,11 +542,7 @@ article
 
 	p
 		font-size: 14px
-
-		&:first-of-type
-			font-size: 20px
-			font-weight: bold
-			text-align: center
+		line-height: 1.8em
 
 .post-date
 	font-size: 12px
@@ -550,7 +555,9 @@ article
 	position: relative
 
 	figcaption
+		letter-spacing: 0.04em
 		margin-top: 0.5em
+		text-align: center
 
 		div
 			font-size: 12px
@@ -558,6 +565,12 @@ article
 
 			&.line1
 				font-weight: bold
+
+	.img
+		background-position: center
+		background-repeat: no-repeat
+		background-size: auto 100%
+		height: 67vh
 
 	.gallery-controls
 		left: -1em
@@ -610,6 +623,7 @@ article
 .post-subtitle
 	font-size: 20px
 	font-weight: bold
+	margin: 0 0 1.5em 0
 	text-align: center
 
 .post-title
@@ -651,8 +665,9 @@ article
 	bottom: 3em
 	color: white
 	display: block
-	font-size: 10px
-	font-weight: bold
+	font-size: 9px
+	font-weight: 500
+	letter-spacing: 0.2em
 	padding: 0.25em 0.5em
 	text-transform: uppercase
 	transition: all 0.3s
@@ -662,8 +677,9 @@ article
 		color: black
 
 .select-display
-	font-size: 12px
+	font-size: 11px
 	font-weight: 500
+	letter-spacing: 0.2em
 	list-style-type: none
 	padding: 0
 	text-transform: uppercase
@@ -724,6 +740,7 @@ article
 	.contact-city-name
 		font-size: 12px
 		font-weight: bold
+		letter-spacing: 0.5em
 		margin-bottom: 0
 		text-transform: uppercase
 
@@ -742,6 +759,7 @@ article
 		font-family: 'suisse_works'
 		font-size: 16px
 		font-weight: bold
+		line-height: 1.5em
 		margin: 1em auto
 		max-width: 500px
 		text-align: center
@@ -796,7 +814,7 @@ article
 	article
 		margin: 0 auto
 		max-width: 800px
-		width: 70%
+		width: 75%
 
 	.artists
 		li
@@ -814,7 +832,7 @@ article
 			width: 100%
 
 			li
-				margin: 1em
+				margin: 0.5em
 				width: 250px
 
 			.artist-name
@@ -901,10 +919,6 @@ article
 			margin: 0 auto
 			width: 420px
 
-	.next-post-link,
-	.prev-post-link
-		display: block
-
 	.news-item
 		padding: 2em 4em
 
@@ -956,5 +970,5 @@ article
 		top: 6em
 
 	.post-content
-		margin: 0 auto
+		margin: 2em auto 0 auto
 		width: 55%

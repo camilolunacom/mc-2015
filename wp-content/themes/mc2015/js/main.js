@@ -136,7 +136,7 @@ var faceWindow = function(url, title) {
 $(window).on('load', function(){
 	if($('.owl-carousel').length > 0){
 		$('.owl-carousel').owlCarousel({
-			autoHeight: true,
+			//autoHeight: true,
 			dots: false,
 			items: 1,
 			loop: true,
@@ -199,4 +199,35 @@ $(document).on('ready', function(){
 	if ($('#map-canvas').length > 0) {   
 		loadMapScript();
 	}
+
+  var scrollTimeout;  // Global for any pending scrollTimeout
+
+  $(window).scroll(function(){
+    if(scrollTimeout){
+      // clear the timeout, if one is pending
+      clearTimeout(scrollTimeout);
+      scrollTimeout = null;
+    }
+    scrollTimeout = setTimeout(scrollHandler, 100);
+  });
+
+  scrollHandler = function(){
+    var ScrollTop = $(window).scrollTop();
+    
+    if(($('#menu-main').length > 0) && !isTouchDevice()){
+      if(ScrollTop >= 70){
+        $('.kc-ml-languages, .prod-team').fadeOut();
+      }
+      else{
+        $('.kc-ml-languages, .prod-team').fadeIn();
+      }
+    }
+
+    if(($('article.artist').length > 0) && !isTouchDevice()){
+      //Page bottom detection
+      if(ScrollTop + $(window).height() == $(document).height()){
+        $('.next-post-link, .prev-post-link').fadeIn();
+      }
+    }
+  };
 });

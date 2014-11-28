@@ -14,13 +14,12 @@
 		<div class="exhibition-current" style="background-image: url(<?php echo $image_attributes[0]; ?>)">
 			<div class="exhibition-content">
 				<div class="exhibition-type">Current exhibition</div>
-				<a  href="<?php the_permalink(); ?>" class="call-to-action">
-					<h2 class="exhibition-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<h4 class="exhibition-detail"><?php $lafecha = MCG::get_exhibition_date( $post ); echo $lafecha['result']; ?></h4>
-					<div class="exhibition-text">
-						<?php the_content(); ?>
-					</div>
-				</a>
+				<h2 class="exhibition-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<h4 class="exhibition-detail"><?php $lafecha = MCG::get_exhibition_date( $post ); echo $lafecha['result']; ?></h4>
+				<div class="exhibition-text">
+					<?php the_content(); ?>
+				</div>
+				<a href="<?php the_permalink(); ?>" class="read-more">View more</a>
 				<?php get_template_part('post', 'share'); ?>
 			</div>
 		</div>
