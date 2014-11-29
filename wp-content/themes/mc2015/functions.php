@@ -14,6 +14,9 @@ add_action('wp_enqueue_scripts', 'minimal_jquery_script');
  * Theme setup
  */
 function minimal_theme_setup() {
+	# i18n
+	load_theme_textdomain( 'mor', self::$dir_theme . '/lang' );
+
 	// Adds RSS feed links to <head> for posts and comments.
 	add_theme_support('automatic-feed-links');
 
