@@ -5,6 +5,16 @@
 							'post_type' => 'exhibition',
 							'posts_per_page' => 999999999,
 							'offset' => 1
+							/* 
+							'meta_query' => array(
+									array(
+										'key'     => '_date-end',
+										'value'   => $today,
+										'compare' => '<',
+										'type'    => 'CHAR'
+									)
+								)
+							*/
 						) );
 
 	if( $past_exhibitions->have_posts() ) :
