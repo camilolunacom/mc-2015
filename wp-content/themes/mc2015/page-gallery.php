@@ -32,8 +32,8 @@
 		<div id="map-canvas"></div>
 	</section>
 	<section class="newsletter">
-		<h2 class="newsletter-title">The gallery's newsletter</h2>
-		<h4 class="newsletter-subtitle">Monthly.no spam.</h4>
+		<h2 class="newsletter-title"><?php _e('The gallery\'s newsletter', 'mor'); ?></h2>
+		<h4 class="newsletter-subtitle"><?php _e('Monthly.no spam.', 'mor'); ?></h4>
 		<?php echo do_shortcode('[mc4wp_form]'); ?>
 		<?php get_template_part('events'); ?>
 	</section>
