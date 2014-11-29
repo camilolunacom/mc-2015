@@ -19,7 +19,7 @@
 				<div class="exhibition-text">
 					<?php the_content(); ?>
 				</div>
-				<a href="<?php the_permalink(); ?>" class="read-more"><?php _e('View more'); ?></a>
+				<a href="<?php the_permalink(); ?>" class="read-more"><?php _e('View more', 'mor'); ?></a>
 				<?php get_template_part('post', 'share'); ?>
 			</div>
 		</div>
