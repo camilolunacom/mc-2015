@@ -1,22 +1,18 @@
+<?php 
+	$idioma = kcMultilingual_backend::$lang;
+	if( $idioma == 'fr' ){
+		$field_id = 'events-editor-fr';
+	}else{
+		$field_id = 'events-editor';
+	}
+
+	$contenido = kc_get_option( 'mcg', 'gallery', $field_id );
+?>
+
 <div class="events">
-	<h3><?php _e( 'Next fairs', 'mor' ); ?></h3>
-	<ul>
-		<li>
-			FIAC<br />22-26 October
-		</li>
-		<li>
-			ArtBo<br />23-27 October
-		</li>
-	</ul>
-	<br />
-	<h3><?php _e( 'Current show', 'mor' ); ?></h3>
-	<ul>
-		<li>
-			Illimitée promesse d'avenir
-		</li>
-	</ul>
-	<p>Uriel Orlow<br/>& Natacha Nisic<br />5th of June - 2nd of August</p>
+	<?php echo $contenido ?>
 </div>
+
 <!-- 
 	<?php echo kcMultilingual_backend::$lang ?>
 -->

@@ -55,13 +55,13 @@ class MCG {
 						),
 						array(
 							'id'    => 'events-editor',
-							'title' => 'Events Editor',
+							'title' => 'Events Editor English',
 							'type'  => 'editor'
 						),
 						array(
-							'id'    => 'key1',
-							'title' => 'Single line text',
-							'type'  => 'text'
+							'id'    => 'events-editor-fr',
+							'title' => 'Events Editor Français',
+							'type'  => 'editor'
 						)
 					)
 				)
