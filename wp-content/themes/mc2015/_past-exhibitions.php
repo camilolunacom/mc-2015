@@ -1,10 +1,21 @@
 <?php 
 	$open = false;
 	$year = 0;
+	$today = date( 'Y-m-d' );
 	$past_exhibitions = new WP_Query( array(
 							'post_type' => 'exhibition',
 							'posts_per_page' => 999999999,
-							'offset' => 1
+							'meta_query' => array(
+								array(
+									'key'     => '_date-end',
+									'value'   => $today,
+									'compare' => '<',
+									'type'    => 'CHAR'
+								)
+							),
+							'orderby' => 'meta_value',
+							'meta_key' => '_date-start',
+							'order' => 'DESC'
 						) );
 
 	if( $past_exhibitions->have_posts() ) :
@@ -20,7 +31,9 @@
 
 		<?php 
 			if( $year != get_the_time('Y') ){
-				$year = get_the_time('Y');
+				$start_date = get_post_meta( get_the_ID(), '_date-start', true );
+
+				$year = strtok( $start_date , '-');
 
 				if( $open == true ){
 					echo '</div></div>';

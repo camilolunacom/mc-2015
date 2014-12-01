@@ -52,6 +52,16 @@ class MCG {
 							'title' => __('Images', 'mcg'),
 							'type'  => 'file',
 							'mode'  => 'checkbox'
+						),
+						array(
+							'id'    => 'events-editor',
+							'title' => 'Events Editor',
+							'type'  => 'editor'
+						),
+						array(
+							'id'    => 'key1',
+							'title' => 'Single line text',
+							'type'  => 'text'
 						)
 					)
 				)

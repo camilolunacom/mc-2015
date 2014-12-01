@@ -16,7 +16,7 @@
 			</div>
 
 			<?php 
-				kc_ml_list_languages(false); 
+				kc_ml_list_languages(false, 'language_code'); 
 				get_template_part('prod', 'team');
 				$text = get_the_title( $img );
 				preg_match( '#\((.*?)\)#' , $text , $match );

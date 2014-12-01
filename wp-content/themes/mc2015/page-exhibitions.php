@@ -1,5 +1,24 @@
 <?php
-	$args = array( 'post_type' => 'exhibition', 'posts_per_page' => 1 );
+	$today = date( 'Y-m-d' );
+	$args = array( 
+		'post_type' => 'exhibition', 
+		'posts_per_page' => 1,
+		'meta_query' => array(
+						'relation'=>'AND',
+						array(
+							'key'     => '_date-start',
+							'value'   => $today,
+							'compare' => '<',
+							'type'    => 'CHAR'
+						),
+						array(
+							'key'     => '_date-end',
+							'value'   => $today,
+							'compare' => '>',
+							'type'    => 'CHAR'
+						)
+					)
+	);
 	$loop = new WP_Query( $args );
 ?>
 <?php get_header(); ?>
@@ -13,13 +32,13 @@
 		?>
 		<div class="exhibition-current" style="background-image: url(<?php echo $image_attributes[0]; ?>)">
 			<div class="exhibition-content">
-				<div class="exhibition-type">Current exhibition</div>
+				<div class="exhibition-type"><?php _e('Current exhibition', 'mor'); ?></div>
 				<h2 class="exhibition-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<h4 class="exhibition-detail"><?php $lafecha = MCG::get_exhibition_date( $post ); echo $lafecha['result']; ?></h4>
 				<div class="exhibition-text">
 					<?php the_content(); ?>
 				</div>
-				<a href="<?php the_permalink(); ?>" class="read-more">View more</a>
+				<a href="<?php the_permalink(); ?>" class="read-more"><?php _e('View more', 'mor'); ?></a>
 				<?php get_template_part('post', 'share'); ?>
 			</div>
 		</div>

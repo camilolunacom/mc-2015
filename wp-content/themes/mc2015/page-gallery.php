@@ -28,7 +28,7 @@
 		<div id="map-canvas"></div>
 	</section>
 	<section class="newsletter">
-		<h2 class="newsletter-title">Newsletter</h2>
+		<h2 class="newsletter-title"><?php _e('Newsletter', 'mor'); ?></h2>
 		<?php echo do_shortcode('[mc4wp_form]'); ?>
 		<?php get_template_part('events'); ?>
 	</section>
