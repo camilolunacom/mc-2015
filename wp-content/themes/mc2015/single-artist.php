@@ -16,9 +16,10 @@
 			<h1 class="post-title"><?php the_title(); ?></h1>
 
 			<?php if ( isset($data['images']) ) { ?>
+			<?php $reversed = array_reverse( $data['images'][1] ); ?>
 			<div class="post-gallery">
 				<div class="owl-carousel">
-					<?php foreach ( $data['images'][1] as $c => $i ) { ?>
+					<?php foreach ( $reversed as $c => $i ) { ?>
 
 					<?php 
 						$text = $i['title'];
