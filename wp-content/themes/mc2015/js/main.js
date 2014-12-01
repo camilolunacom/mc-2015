@@ -233,9 +233,22 @@ $(document).on('ready', function(){
 
   //Random position for featured img in news
   if($('.news-item').length > 0){
-    $('.news-item').each(function(i){
-      var position = [0, 20, 40, 60, 80];
-      var random = Math.floor((Math.random() * 50000)/10000);
+    var min = 0;
+    var max = 4;
+    var position = [0, 20, 40, 60, 80];
+    var random, prevRandom;
+    var randomGenerator = function(min, max){
+      var rand = Math.floor((Math.random() * (max - min + 1)) + min);
+      return rand;
+    }
+
+    $('.news-item').each(function(){
+      random = randomGenerator(min, max);
+      while(random === prevRandom){
+        random = randomGenerator(min, max);
+      }
+      prevRandom = random;
+
       $(this).css('background-position', position[random] + '% center');
     });
   }
