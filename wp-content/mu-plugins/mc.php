@@ -54,9 +54,14 @@ class MCG {
 							'mode'  => 'checkbox'
 						),
 						array(
-							'id'    => 'Editor',
-							'title' => 'WP Editor',
+							'id'    => 'events-editor',
+							'title' => 'Events Editor',
 							'type'  => 'editor'
+						),
+						array(
+							'id'    => 'key1',
+							'title' => 'Single line text',
+							'type'  => 'text'
 						)
 					)
 				)
