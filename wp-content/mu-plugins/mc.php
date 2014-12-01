@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Mor. Charpentier
-Version: 1.0
+Version: 2.0
 Description: Mor. Charpentier functionalities
 Author: 8manos
 Author URI: http://8manos.com/
