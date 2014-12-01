@@ -16,7 +16,7 @@
 							'compare' => '>',
 							'type'    => 'CHAR'
 						)
-					);
+					)
 	);
 	$loop = new WP_Query( $args );
 	$today = date( 'Y-m-d' );
