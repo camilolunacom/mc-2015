@@ -15,11 +15,7 @@
 						<p class="contact-city-details">+33 (0) 1 44 54 01 58</p>
 					</div>
 				</div>
-				<ul class="social-networks">
-					<li class="social-network"><a href="" class="icon-facebook"></a></li>
-					<li class="social-network"><a href="" class="icon-twitter"></a></li>
-					<li class="social-network"><a href="" class="icon-instagram"></a></li>
-				</ul>
+				<?php get_template_part('part', 'social'); ?>
 			</div>
 			<div class="arrow"><i class="icon-arrow-down"></i></div>
 		<?php endwhile; ?>
