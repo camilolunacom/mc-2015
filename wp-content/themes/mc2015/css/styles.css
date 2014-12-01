@@ -531,7 +531,6 @@ article {
     text-transform: lowercase; }
 
 .news-item {
-  background-position: left;
   background-repeat: no-repeat;
   -webkit-background-size: auto 60%;
   background-size: auto 60%;
@@ -539,7 +538,7 @@ article {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 2em auto;
-  max-width: 600px;
+  max-width: 700px;
   padding: 1em;
   position: relative;
   text-align: center; }
@@ -563,10 +562,8 @@ article {
   .news-item > div {
     position: relative;
     z-index: 2; }
-  .news-item:nth-child(even) {
-    background-position: right; }
   .news-item:before {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.4);
     content: "";
     height: 100%;
     left: 0;

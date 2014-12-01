@@ -230,4 +230,13 @@ $(document).on('ready', function(){
       }
     }
   };
+
+  //Random position for featured img in news
+  if($('.news-item').length > 0){
+    $('.news-item').each(function(i){
+      var position = [0, 20, 40, 60, 80];
+      var random = Math.floor((Math.random() * 50000)/10000);
+      $(this).css('background-position', position[random] + '% center');
+    });
+  }
 });
