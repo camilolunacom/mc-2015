@@ -151,6 +151,8 @@ main {
     font-size: 66px; } }
 article {
   padding: 0 1em; }
+  article.exhibition .post-actions {
+    top: 0; }
   article.exhibition .post-title {
     margin-bottom: 0;
     margin-left: auto;
@@ -317,7 +319,7 @@ article {
     font-size: 20px;
     font-weight: bold;
     line-height: 1em;
-    margin: 0 auto 0.5em auto; }
+    margin: 0 auto 1em auto; }
   .exhibition-current .exhibition-text {
     font-size: 12px;
     margin: 0 auto; }
@@ -328,7 +330,7 @@ article {
     font-size: 32px;
     font-weight: bold;
     line-height: 1em;
-    margin: 1em auto; }
+    margin: 1em auto 0 auto; }
   .exhibition-current .read-more {
     display: inline-block; }
 
