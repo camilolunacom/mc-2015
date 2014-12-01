@@ -8,15 +8,11 @@
 				<div class="contact-info">
 					<div class="contact-info-city">
 						<h2 class="contact-city-name">Paris</h2>
-						<p class="contact-city-details"><?php _e( 'Tuesday-Saturday / 11am-7pm', 'mor'); ?></p>
-						<p class="contact-city-details">+33 (0) 1 44 54 01 58</p>
+						<p class="contact-city-details">8, Rue Saint-Claude, Paris, France 75003</p>
+						<p class="contact-city-details">M°8, Saint-Sébastien Froissart</p>
+						<p class="contact-city-details"><?php _e( 'Tue/Sat 11am-7pm', 'mor'); ?></p>
 						<a href="mailto:contact@mor-charpentier.com" class="contact-city-mail">contact@mor-charpentier.com</a>
-					</div>
-					<div class="contact-info-city">
-						<h2 class="contact-city-name">Colombia</h2>
-						<p class="contact-city-details">Diana Barbosa</p>
-						<br />
-						<a href="mailto:diana@mor-charpentier.com" class="contact-city-mail">diana@mor-charpentier.com</a>
+						<p class="contact-city-details">+33 (0) 1 44 54 01 58</p>
 					</div>
 				</div>
 				<ul class="social-networks">
@@ -32,8 +28,7 @@
 		<div id="map-canvas"></div>
 	</section>
 	<section class="newsletter">
-		<h2 class="newsletter-title">The gallery's newsletter</h2>
-		<h4 class="newsletter-subtitle">Monthly.no spam.</h4>
+		<h2 class="newsletter-title">Newsletter</h2>
 		<?php echo do_shortcode('[mc4wp_form]'); ?>
 		<?php get_template_part('events'); ?>
 	</section>

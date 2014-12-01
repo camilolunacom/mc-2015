@@ -16,12 +16,13 @@
 				<div class="owl-carousel">
 					<?php foreach ( $data['images'] as $c => $img ) { ?>
 					<figure>
-						<img src="<?php echo $img['medium'][0] ?>" alt="">
+						<!--<img src="<?php echo $img['medium'][0] ?>" alt="">-->
 						<?php 
 							$text = $img['title'];
 							preg_match( '#\((.*?)\)#' , $text , $match );
 							$line1 = preg_replace( "/\([^)]+\)/" , "" , $text );
 						?>
+						<div class="img" style="background-image: url('<?php echo $img['medium'][0] ?>')"></div>
 						<figcaption>
 							<div class="line1"><?php echo $line1; ?></div>
 							<div class="line2"><?php echo $match[0]; ?></div>
