@@ -527,7 +527,7 @@ article {
     font-size: 36px;
     font-weight: bold;
     line-height: 1em;
-    margin: 0;
+    margin: 0.25em auto;
     text-transform: lowercase; }
 
 .news-item {
@@ -974,7 +974,6 @@ article {
     padding: 6em 1em 1em 1em; }
     .newsletter .newsletter-title {
       font-size: 72px;
-      margin: 0 auto;
       width: 420px; }
 
   .news-item {
