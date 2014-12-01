@@ -31,7 +31,9 @@
 
 		<?php 
 			if( $year != get_the_time('Y') ){
-				$year = get_the_time('Y');
+				$start_date = get_post_meta( get_the_ID(), '_date-start', true );
+
+				$year = strtok( $start_date , '-');
 
 				if( $open == true ){
 					echo '</div></div>';
