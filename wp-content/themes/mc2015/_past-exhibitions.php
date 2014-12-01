@@ -1,20 +1,18 @@
 <?php 
 	$open = false;
 	$year = 0;
+	$today = date( 'Y-m-d' );
 	$past_exhibitions = new WP_Query( array(
 							'post_type' => 'exhibition',
 							'posts_per_page' => 999999999,
-							'offset' => 1
-							/* 
 							'meta_query' => array(
-									array(
-										'key'     => '_date-end',
-										'value'   => $today,
-										'compare' => '<',
-										'type'    => 'CHAR'
-									)
+								array(
+									'key'     => '_date-end',
+									'value'   => $today,
+									'compare' => '<',
+									'type'    => 'CHAR'
 								)
-							*/
+							)
 						) );
 
 	if( $past_exhibitions->have_posts() ) :
