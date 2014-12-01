@@ -898,9 +898,12 @@ article {
     display: inline-block;
     width: 49%; }
   .artists.list {
-    width: 60%; }
+    width: 50%; }
     .artists.list li {
-      padding-left: 0; }
+      /*padding: 0 1em */
+      padding-left: 0;
+      /*&:nth-of-type(odd)
+       * text-align: right */ }
   .artists.thumb {
     text-align: center;
     width: 100%; }
