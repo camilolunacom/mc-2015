@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MC2015\n"
-"POT-Creation-Date: 2014-11-29 17:18-0500\n"
-"PO-Revision-Date: 2014-11-29 17:29-0500\n"
-"Last-Translator: 8manos i18n <i18n@8manos.com>\n"
+"POT-Creation-Date: 2014-12-01 09:40-0500\n"
+"PO-Revision-Date: 2014-12-01 09:40-0500\n"
+"Last-Translator: 8manos i18n team <i18n@8manos.com>\n"
 "Language-Team: 8manos l18n <l18n@8manos.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -16,9 +16,18 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../mc2015/_past-exhibitions.php:13 _past-exhibitions.php:13
+#: ../mc2015/_past-exhibitions.php:24 _past-exhibitions.php:24
 msgid "Past exhibitions"
 msgstr "Archives"
+
+#: ../mc2015/events.php:2 events.php:2
+msgid "Next fairs"
+msgstr ""
+
+#: ../mc2015/events.php:12 events.php:12
+#, fuzzy
+msgid "Current show"
+msgstr "Vue exposition"
 
 #: ../mc2015/page-artists.php:10 page-artists.php:10
 msgid "Thumbnail"
@@ -32,11 +41,11 @@ msgstr "Liste"
 msgid "View artist"
 msgstr "Vue artiste"
 
-#: ../mc2015/page-exhibitions.php:16 page-exhibitions.php:16
+#: ../mc2015/page-exhibitions.php:35 page-exhibitions.php:35
 msgid "Current exhibition"
 msgstr "Vue exposition"
 
-#: ../mc2015/page-exhibitions.php:22 page-exhibitions.php:22
+#: ../mc2015/page-exhibitions.php:41 page-exhibitions.php:41
 msgid "View more"
 msgstr "Voir"
 

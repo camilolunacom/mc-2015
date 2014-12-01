@@ -1,5 +1,5 @@
 <div class="events">
-	<h3>Next fairs</h3>
+	<h3><?php _e( 'Next fairs', 'mor' ); ?></h3>
 	<ul>
 		<li>
 			FIAC<br />22-26 October
@@ -9,7 +9,7 @@
 		</li>
 	</ul>
 	<br />
-	<h3>Current show</h3>
+	<h3><?php _e( 'Current show', 'mor' ); ?></h3>
 	<ul>
 		<li>
 			Illimitée promesse d'avenir
