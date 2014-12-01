@@ -12,7 +12,10 @@
 									'compare' => '<',
 									'type'    => 'CHAR'
 								)
-							)
+							),
+							'orderby' => 'meta_value',
+							'meta_key' => '_date-start',
+							'order' => 'DESC'
 						) );
 
 	if( $past_exhibitions->have_posts() ) :
