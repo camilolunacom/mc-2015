@@ -17,3 +17,6 @@
 	</ul>
 	<p>Uriel Orlow<br/>& Natacha Nisic<br />5th of June - 2nd of August</p>
 </div>
+<!-- 
+	<?php echo kcMultilingual_backend::$lang ?>
+-->
