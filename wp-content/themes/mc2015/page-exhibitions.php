@@ -1,5 +1,23 @@
 <?php
-	$args = array( 'post_type' => 'exhibition', 'posts_per_page' => 1 );
+	$args = array( 
+		'post_type' => 'exhibition', 
+		'posts_per_page' => 1,
+		'meta_query' => array(
+						'relation'=>'AND',
+						array(
+							'key'     => '_date-start',
+							'value'   => $today,
+							'compare' => '<',
+							'type'    => 'CHAR'
+						),
+						array(
+							'key'     => '_date-end',
+							'value'   => $today,
+							'compare' => '>',
+							'type'    => 'CHAR'
+						)
+					);
+	);
 	$loop = new WP_Query( $args );
 	$today = date( 'Y-m-d' );
 ?>
