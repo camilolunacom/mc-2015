@@ -1,4 +1,5 @@
 <?php
+	$today = date( 'Y-m-d' );
 	$args = array( 
 		'post_type' => 'exhibition', 
 		'posts_per_page' => 1,
@@ -19,7 +20,6 @@
 					)
 	);
 	$loop = new WP_Query( $args );
-	$today = date( 'Y-m-d' );
 ?>
 <?php get_header(); ?>
 <?php get_template_part('part', 'header'); ?>
