@@ -52,6 +52,11 @@ class MCG {
 							'title' => __('Images', 'mcg'),
 							'type'  => 'file',
 							'mode'  => 'checkbox'
+						),
+						array(
+							'id'    => 'Editor Test',
+							'title' => 'WP Editor',
+							'type'  => 'editor'
 						)
 					)
 				)
@@ -249,7 +254,7 @@ class MCG {
 							'title' => __('Hide the "read more" link?', 'mcg'),
 							'type'  => 'checkbox',
 							'options' => array(
-								'cbox1' => 'No, you\'re crazy!',
+								'cbox1' => 'No, you\'re crazy!',nm       yu
 								'cbox2' => 'Yes, I don\'t want it.'
 							),
 							'default'	=> 'cbox1'
