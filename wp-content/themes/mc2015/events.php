@@ -12,7 +12,3 @@
 <div class="events">
 	<?php echo $contenido ?>
 </div>
-
-<!-- 
-	<?php echo kcMultilingual_backend::$lang ?>
--->
