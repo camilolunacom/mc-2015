@@ -49,7 +49,7 @@ class MCG {
 					'fields' => array(
 						array(
 							'id'    => 'images',
-							'title' => __('Images', 'mcg'),
+							'title' => __('Images for Homepage Background', 'mcg'),
 							'type'  => 'file',
 							'mode'  => 'checkbox'
 						),
