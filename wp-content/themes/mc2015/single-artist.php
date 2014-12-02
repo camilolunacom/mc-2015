@@ -27,8 +27,9 @@
 						$line1 = preg_replace( "/\([^)]+\)/" , "" , $text );
 					?>
 						<figure>
-							<!--<img src="<?php echo $i['img']['medium'][0] ?>" alt="">-->
-							<div class="img" style="background-image: url('<?php echo $i['img']['medium'][0] ?>')"></div>
+							<div class="img">
+								<img src="<?php echo $i['img']['medium'][0] ?>" alt="">
+							</div>
 							<figcaption>
 								<div class="line1"><?php echo $line1; ?></div>
 								<div class="line2"><?php echo $match[0]; ?></div>
