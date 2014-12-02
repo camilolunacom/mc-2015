@@ -133,6 +133,21 @@ var faceWindow = function(url, title) {
 	window.open( "http://www.facebook.com/sharer.php?u=" + encodeURIComponent(url) + "&t=" + encodeURIComponent(title), "facebook", "height=300,width=550,resizable=1" ); 
 }
 
+var isVertical = function($pic){
+  var w = $pic.innerWidth();
+  var h = $pic.innerHeight();
+  
+  if(w > h){
+    return 'horizontal';
+  }
+  else if(w < h){
+    return 'vertical';
+  }
+  else if(w == h){
+    return 'square';
+  }
+}
+
 $(window).on('load', function(){
 	if($('.owl-carousel').length > 0){
 		$('.owl-carousel').owlCarousel({
@@ -144,6 +159,28 @@ $(window).on('load', function(){
 			navContainer: '.gallery-controls',
 			navText: ['<i class="icon-left"></i>', '<i class="icon-right"></i>']
 		});
+
+    $('.owl-carousel figure .img img').each(function(){
+      if(isVertical($(this)) == 'horizontal'){
+        $(this).css({
+          'height': 'auto',
+          'width': '100%'
+        });
+      }
+      else if(isVertical($(this)) == 'vertical'){
+        $(this).css({
+          'height': '100%',
+          'width': 'auto'
+        });
+      }
+
+      if($(this).innerHeight() > $(this).parent().innerHeight()){
+        $(this).css({
+          'height': '100%',
+          'width': 'auto'
+        });
+      }
+    });
 	}
 });
 
