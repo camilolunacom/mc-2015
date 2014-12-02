@@ -1,7 +1,7 @@
 article
 	padding: 0 1em
 
-	&.exhibition
+	&posexhibition
 		.post-actions
 			top: 0
 
@@ -513,15 +513,19 @@ article
 	text-align: center
 
 	[class^="icon-"]
-		background: black
-		border: 1px solid black
 		border-radius: 50%
 		color: black
 		display: inline-block
 		font-size: x-large
-		height: 25px
+		height: 26px
+		padding: 1px
 		transition: all 0.3s
-		width: 25.5px
+		width: 26px
+
+		&:before
+			border-radius: 50%
+			display: block
+			margin-top: 1px
 
 	.post-attachment-link
 		display: inline-block
@@ -530,6 +534,7 @@ article
 
 		&:hover
 			[class^="icon-"]
+				background: black
 				color: white
 
 	.post-attachment-text

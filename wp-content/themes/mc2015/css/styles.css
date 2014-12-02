@@ -151,9 +151,9 @@ main {
     font-size: 66px; } }
 article {
   padding: 0 1em; }
-  article.exhibition .post-actions {
+  articleposexhibition .post-actions {
     top: 0; }
-  article.exhibition .post-title {
+  articleposexhibition .post-title {
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -624,22 +624,27 @@ article {
 .post-actions {
   text-align: center; }
   .post-actions [class^="icon-"] {
-    background: black;
-    border: 1px solid black;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     color: black;
     display: inline-block;
     font-size: x-large;
-    height: 25px;
+    height: 26px;
+    padding: 1px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    width: 25.5px; }
+    width: 26px; }
+    .post-actions [class^="icon-"]:before {
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      display: block;
+      margin-top: 1px; }
   .post-actions .post-attachment-link {
     display: inline-block;
     padding: 0.5em;
     width: 100px; }
     .post-actions .post-attachment-link:hover [class^="icon-"] {
+      background: black;
       color: white; }
   .post-actions .post-attachment-text {
     font-size: 14px;
