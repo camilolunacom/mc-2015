@@ -275,6 +275,7 @@ article {
 .events {
   bottom: 2em;
   display: none;
+  font-size: 12px;
   left: 2em;
   position: absolute;
   width: 120px; }
@@ -284,7 +285,7 @@ article {
     margin-bottom: 0.5em;
     margin-top: 0; }
   .events h3 {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 500;
     text-transform: uppercase; }
   .events p {
@@ -293,13 +294,13 @@ article {
     list-style-type: none;
     padding: 0; }
     .events ul li {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: bold; }
       .events ul li:not(:first-of-type):not(:nth-child(2)):before, .events ul li:first-of-type:after {
         border: 1px solid;
         content: "";
         display: block;
-        margin: 0.25em 0;
+        margin: 0.5em 0;
         width: 30%; }
 
 .exhibition-current {
