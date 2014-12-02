@@ -32,7 +32,10 @@ add_action('after_setup_theme', 'minimal_theme_setup');
 
 function mor_adjacent_post_sort( $orderby )
 {
-    return "ORDER BY p.menu_order ASC LIMIT 1";
+    $pattern = '/post_date/';
+    $replacement = 'menu_order';
+
+    return preg_replace( $pattern, $replacement, $sql );
 }
 add_filter( 'get_previous_post_sort', 'mor_adjacent_post_sort' );
 add_filter( 'get_next_post_sort', 'mor_adjacent_post_sort' );
