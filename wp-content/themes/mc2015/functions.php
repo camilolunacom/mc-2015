@@ -30,12 +30,35 @@ function minimal_theme_setup() {
 add_action('after_setup_theme', 'minimal_theme_setup');
 
 
-function mor_adjacent_post_sort( $orderby )
-{
-    return "ORDER BY p.menu_order ASC LIMIT 1";
+/**
+ * Customize Adjacent Post Link Order
+ */
+function wpse73190_gist_adjacent_post_where($sql) {
+  if ( !is_main_query() || !is_singular() )
+    return $sql;
+
+  $the_post = get_post( get_the_ID() );
+  $patterns = array();
+  $patterns[] = '/post_date/';
+  $patterns[] = '/\'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}\'/';
+  $replacements = array();
+  $replacements[] = 'menu_order';
+  $replacements[] = $the_post->menu_order;
+  return preg_replace( $patterns, $replacements, $sql );
 }
-add_filter( 'get_previous_post_sort', 'mor_adjacent_post_sort' );
-add_filter( 'get_next_post_sort', 'mor_adjacent_post_sort' );
+add_filter( 'get_next_post_where', 'wpse73190_gist_adjacent_post_where' );
+add_filter( 'get_previous_post_where', 'wpse73190_gist_adjacent_post_where' );
+
+function wpse73190_gist_adjacent_post_sort($sql) {
+  if ( !is_main_query() || !is_singular() )
+    return $sql;
+
+  $pattern = '/post_date/';
+  $replacement = 'menu_order';
+  return preg_replace( $pattern, $replacement, $sql );
+}
+add_filter( 'get_next_post_sort', 'wpse73190_gist_adjacent_post_sort' );
+add_filter( 'get_previous_post_sort', 'wpse73190_gist_adjacent_post_sort' );
 
 /**
  * Remove code from the <head>
