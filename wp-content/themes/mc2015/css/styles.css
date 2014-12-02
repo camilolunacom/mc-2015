@@ -260,7 +260,7 @@ article {
     .artist.thumb:hover:before {
       background-color: rgba(255, 255, 255, 0); }
     .artist.thumb:not(:last-of-type) {
-      margin-bottom: 2em; }
+      margin-bottom: 0.9em; }
 
 .artists,
 .news {
