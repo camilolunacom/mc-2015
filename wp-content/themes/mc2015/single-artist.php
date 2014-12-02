@@ -18,6 +18,7 @@
 			<?php if ( isset($data['images']) ) { ?>
 			<?php $reversed = array_reverse( $data['images'][1] ); ?>
 			<div class="post-gallery">
+				<button type="button" class="icon-expand"></button>
 				<div class="owl-carousel">
 					<?php foreach ( $reversed as $c => $i ) { ?>
 

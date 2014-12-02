@@ -664,6 +664,15 @@ article {
 .post-gallery {
   margin: 0 auto;
   position: relative; }
+  .post-gallery button {
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    padding: 0.25em;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 999; }
   .post-gallery figcaption {
     letter-spacing: 0.04em;
     margin-top: 0.5em;
@@ -673,6 +682,8 @@ article {
       text-transform: uppercase; }
       .post-gallery figcaption div.line1 {
         font-weight: bold; }
+  .post-gallery figure {
+    position: relative; }
   .post-gallery .img {
     height: 67vh;
     line-height: 67vh;
@@ -1027,6 +1038,57 @@ article {
   .post-content {
     margin: 2em auto 0 auto;
     width: 55%; } }
+.post-gallery::-webkit-full-screen {
+  border: 10px solid black;
+  padding: 2em;
+  width: 100%; }
+  .post-gallery::-webkit-full-screen .gallery-controls {
+    left: 1em;
+    right: 1em; }
+  .post-gallery::-webkit-full-screen .img {
+    line-height: 90vh;
+    height: 90vh; }
+.post-gallery::-moz-full-screen {
+  border: 10px solid black;
+  padding: 2em;
+  width: 100%; }
+  .post-gallery::-moz-full-screen .gallery-controls {
+    left: 1em;
+    right: 1em; }
+  .post-gallery::-moz-full-screen .img {
+    line-height: 90vh;
+    height: 90vh; }
+.post-gallery:-webkit-full-screen {
+  border: 10px solid black;
+  padding: 2em;
+  width: 100%; }
+  .post-gallery:-webkit-full-screen .gallery-controls {
+    left: 1em;
+    right: 1em; }
+  .post-gallery:-webkit-full-screen .img {
+    line-height: 90vh;
+    height: 90vh; }
+.post-gallery:-moz-full-screen {
+  border: 10px solid black;
+  padding: 2em;
+  width: 100%; }
+  .post-gallery:-moz-full-screen .gallery-controls {
+    left: 1em;
+    right: 1em; }
+  .post-gallery:-moz-full-screen .img {
+    line-height: 90vh;
+    height: 90vh; }
+.post-gallery:-ms-full-screen {
+  border: 10px solid black;
+  padding: 2em;
+  width: 100%; }
+  .post-gallery:-ms-full-screen .gallery-controls {
+    left: 1em;
+    right: 1em; }
+  .post-gallery:-ms-full-screen .img {
+    line-height: 90vh;
+    height: 90vh; }
+
 @media screen and (max-width: 48em) {
   .navigation-menu.is-visible {
     background: #222;

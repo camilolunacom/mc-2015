@@ -148,6 +148,30 @@ var isVertical = function($pic){
   }
 }
 
+var adjustImgs = function(){
+  $('.owl-carousel figure .img img').each(function(){
+    if(isVertical($(this)) == 'horizontal'){
+      $(this).css({
+        'height': 'auto',
+        'width': '100%'
+      });
+    }
+    else if(isVertical($(this)) == 'vertical'){
+      $(this).css({
+        'height': '100%',
+        'width': 'auto'
+      });
+    }
+
+    if($(this).innerHeight() > $(this).parent().innerHeight()){
+      $(this).css({
+        'height': '100%',
+        'width': 'auto'
+      });
+    }
+  });
+}
+
 $(window).on('load', function(){
 	if($('.owl-carousel').length > 0){
 		$('.owl-carousel').owlCarousel({
@@ -157,31 +181,11 @@ $(window).on('load', function(){
 			loop: true,
 			nav: true,
 			navContainer: '.gallery-controls',
-			navText: ['<i class="icon-left"></i>', '<i class="icon-right"></i>']
+			navText: ['<i class="icon-left"></i>', '<i class="icon-right"></i>'],
+      onChage: console.log('resized')
 		});
-
-    $('.owl-carousel figure .img img').each(function(){
-      if(isVertical($(this)) == 'horizontal'){
-        $(this).css({
-          'height': 'auto',
-          'width': '100%'
-        });
-      }
-      else if(isVertical($(this)) == 'vertical'){
-        $(this).css({
-          'height': '100%',
-          'width': 'auto'
-        });
-      }
-
-      if($(this).innerHeight() > $(this).parent().innerHeight()){
-        $(this).css({
-          'height': '100%',
-          'width': 'auto'
-        });
-      }
-    });
 	}
+  adjustImgs();
 });
 
 $(document).on('ready', function(){
@@ -287,6 +291,20 @@ $(document).on('ready', function(){
       prevRandom = random;
 
       $(this).css('background-position', position[random] + '% center');
+    });
+  }
+
+  //Fullscreen for pictures
+  if($('.post-gallery .icon-expand').length > 0){
+    $('.post-gallery .icon-expand').on('click', function(){
+      var $el = $(this).parent()[0];
+      if(screenfull.enabled){
+        screenfull.request($el);
+        setTimeout(function(){
+          $('.owl-carousel').trigger('refresh.owl.carousel');
+          adjustImgs();
+        }, 1000);
+      }
     });
   }
 });

@@ -8,6 +8,7 @@
 	</script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/owl.carousel.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/screenfull.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
 </body>
 </html>
