@@ -151,9 +151,9 @@ main {
     font-size: 66px; } }
 article {
   padding: 0 1em; }
-  articleposexhibition .post-actions {
+  article.exhibition .post-actions {
     top: 0; }
-  articleposexhibition .post-title {
+  article.exhibition .post-title {
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
