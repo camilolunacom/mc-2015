@@ -154,6 +154,7 @@ $(window).on('load', function(){
 			//autoHeight: true,
 			dots: false,
 			items: 1,
+      //lazyLoad: true,
 			loop: true,
 			nav: true,
 			navContainer: '.gallery-controls',
