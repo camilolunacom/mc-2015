@@ -419,6 +419,11 @@ article {
       display: inline-block;
       margin-right: 0.2em; }
 
+.loader {
+  background: url(ajax-loader.gif) center no-repeat;
+  height: 100%;
+  width: 100%; }
+
 .logo {
   display: inline-block;
   margin: 0 0.5em;
@@ -668,6 +673,7 @@ article {
   text-align: center; }
 
 .post-gallery {
+  height: 67vh;
   margin: 0 auto;
   position: relative; }
   .post-gallery figcaption {

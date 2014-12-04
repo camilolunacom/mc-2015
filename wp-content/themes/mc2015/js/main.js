@@ -183,6 +183,7 @@ $(window).on('load', function(){
       }
     });
 	}
+  $('.loader').remove();
 });
 
 $(document).on('ready', function(){
