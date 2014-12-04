@@ -901,8 +901,6 @@ article {
     margin: 0 auto;
     max-width: 800px;
     width: 75%; }
-    article.post {
-      margin-bottom: 14em; }
 
   .artists li {
     display: inline-block;
@@ -1007,6 +1005,9 @@ article {
     vertical-align: top;
     width: 250px; } }
 @media screen and (min-width: 62.5em) {
+  article.post {
+    margin-bottom: 14em; }
+
   .artists.thumb li {
     width: 250; }
 
