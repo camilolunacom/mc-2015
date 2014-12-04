@@ -12,7 +12,7 @@ article
 			max-width: 470px
 
 	&.post
-		margin-bottom: 7em
+		margin-bottom: 1em
 
 		.post-actions
 			top: 0
@@ -126,7 +126,7 @@ article
 				background-color: rgba(255, 255, 255, 0)
 
 		&:not(:last-of-type)
-			margin-bottom: 2em
+			margin-bottom: 0.9em
 
 .artists,
 .news
@@ -141,6 +141,7 @@ article
 .events
 	bottom: 2em
 	display: none
+	font-size: 12px
 	left: 2em
 	position: absolute
 	width: 120px
@@ -152,7 +153,7 @@ article
 		margin-top: 0
 
 	h3
-		font-size: 11px
+		font-size: 10px
 		font-weight: 500
 		text-transform: uppercase
 
@@ -164,7 +165,7 @@ article
 		padding: 0
 
 		li
-			font-size: 14px
+			font-size: 12px
 			font-weight: bold
 
 			&:not(:first-of-type):not(:nth-child(2)):before,
@@ -172,7 +173,7 @@ article
 				border: 1px solid
 				content: ''
 				display: block
-				margin: 0.25em 0
+				margin: 0.5em 0
 				width: 30%
 
 .exhibition-current
@@ -513,15 +514,19 @@ article
 	text-align: center
 
 	[class^="icon-"]
-		background: black
-		border: 1px solid black
 		border-radius: 50%
 		color: black
 		display: inline-block
 		font-size: x-large
-		height: 25px
+		height: 26px
+		padding: 1px
 		transition: all 0.3s
-		width: 25.5px
+		width: 26px
+
+		&:before
+			border-radius: 50%
+			display: block
+			margin-top: 1px
 
 	.post-attachment-link
 		display: inline-block
@@ -530,6 +535,7 @@ article
 
 		&:hover
 			[class^="icon-"]
+				background: black
 				color: white
 
 	.post-attachment-text
@@ -963,6 +969,10 @@ article
 			width: 250px
 
 @media screen and (min-width: $desktop)
+	article
+		&.post
+			margin-bottom: 14em
+
 	.artists
 		&.thumb
 			li
