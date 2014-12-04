@@ -183,7 +183,6 @@ $(window).on('load', function(){
 			nav: true,
 			navContainer: '.gallery-controls',
 			navText: ['<i class="icon-left"></i>', '<i class="icon-right"></i>'],
-      onChage: console.log('resized')
 		});
 	}
   adjustImgs();
@@ -301,11 +300,21 @@ $(document).on('ready', function(){
       var $el = $(this).parent()[0];
       if(screenfull.enabled){
         screenfull.request($el);
-        setTimeout(function(){
-          $('.owl-carousel').trigger('refresh.owl.carousel');
-          adjustImgs();
-        }, 1000);
+      }
+    });
+    $('.post-gallery .exit-fs').on('click', function(){
+      if(screenfull.enabled){
+        screenfull.exit();
       }
     });
   }
+
+  $(document).on(screenfull.raw.fullscreenchange, function(){
+    setTimeout(function(){
+      $('.owl-carousel').trigger('refresh.owl.carousel');
+      //$('.owl-carousel').trigger('destroy.owl.carousel');
+      //$('.owl-carousel').trigger('initialize.owl.carousel');
+      adjustImgs();
+    }, 200);
+  });
 });

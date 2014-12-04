@@ -4,6 +4,13 @@
 		padding: 2em
 		width: 100%
 
+		button
+			&.exit-fs
+				display: block
+
+			&.icon-expand
+				display: none
+
 		.gallery-controls
 			left: 1em
 			right: 1em
@@ -11,6 +18,10 @@
 		.img
 			line-height: $carousel_height_fs
 			height: $carousel_height_fs
+
+		.owl-carousel
+			margin: 0 auto
+			width: 95%
 
 @media screen and (max-width: $tablet)
 	.navigation-menu.is-visible
