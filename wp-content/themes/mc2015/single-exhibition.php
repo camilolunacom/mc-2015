@@ -13,6 +13,7 @@
 
 			<?php if ( $data['images'] ) { ?>
 			<div class="post-gallery">
+				<div class="loader"></div>
 				<div class="owl-carousel">
 					<?php foreach ( $data['images'] as $c => $img ) { ?>
 					<figure>
