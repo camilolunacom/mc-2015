@@ -159,7 +159,7 @@ article {
     margin-right: auto;
     max-width: 470px; }
   article.post {
-    margin-bottom: 7em; }
+    margin-bottom: 1em; }
     article.post .post-actions {
       top: 0; }
     article.post .post-attachment-link {
@@ -901,6 +901,8 @@ article {
     margin: 0 auto;
     max-width: 800px;
     width: 75%; }
+    article.post {
+      margin-bottom: 14em; }
 
   .artists li {
     display: inline-block;
