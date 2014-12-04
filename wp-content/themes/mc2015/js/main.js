@@ -186,6 +186,7 @@ $(window).on('load', function(){
 		});
 	}
   adjustImgs();
+  $('.loader').remove();
 });
 
 $(document).on('ready', function(){
