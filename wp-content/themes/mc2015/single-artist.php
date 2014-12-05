@@ -25,6 +25,7 @@
 						preg_match( '#\((.*?)\)#' , $text , $match );
 						$line1 = preg_replace( "/\([^)]+\)/" , "" , $text );
 					?>
+						<!-- <?php print_r( $i ); ?> -->
 						<figure>
 							<div class="img">
 								<img src="<?php echo $i['img']['medium'][0] ?>" alt="">
