@@ -541,7 +541,7 @@ class MCG {
 					$images[] = array(
 						'title' => get_the_title( $img ),
 						'img'   => array(
-							'medium' => wp_get_attachment_image_src( $img, 'mcg-medium' ),
+							'medium' => wp_get_attachment_image_src( $img, 'large' ),
 							'full'   => wp_get_attachment_image_src( $img, 'full' )
 						)
 					);
