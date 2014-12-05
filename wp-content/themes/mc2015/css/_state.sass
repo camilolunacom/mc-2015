@@ -1,5 +1,6 @@
 .post-gallery
 	+fullscreen()
+		background-color: white
 		border: 10px solid black
 		padding: 2em
 		width: 100%
@@ -11,11 +12,15 @@
 			&.icon-expand
 				display: none
 
+		figure
+			background-color: white
+
 		.gallery-controls
 			left: 1em
 			right: 1em
 		
 		.img
+			background: white
 			line-height: $carousel_height_fs
 			height: $carousel_height_fs
 
