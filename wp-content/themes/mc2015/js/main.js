@@ -191,7 +191,7 @@ $(window).on('load', function(){
 
 $(document).on('ready', function(){
 
-	$( '.social-network' ).on( 'click', function(e){
+	$( '.post-share .social-network' ).on( 'click', function(e){
 		e.preventDefault();
 
 		var text = $(e.target).attr('data-text'),
@@ -313,8 +313,6 @@ $(document).on('ready', function(){
   $(document).on(screenfull.raw.fullscreenchange, function(){
     setTimeout(function(){
       $('.owl-carousel').trigger('refresh.owl.carousel');
-      //$('.owl-carousel').trigger('destroy.owl.carousel');
-      //$('.owl-carousel').trigger('initialize.owl.carousel');
       adjustImgs();
     }, 200);
   });

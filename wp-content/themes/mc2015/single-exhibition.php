@@ -32,7 +32,9 @@
 					</figure>
 					<?php } ?>
 				</div>
-				<div class="gallery-controls"></div>
+				<?php if(count($data['images']) > 1){ ?>
+					<div class="gallery-controls"></div>
+				<?php } ?>
 			</div>
 			<?php } ?>
 

@@ -26,6 +26,10 @@ function minimal_theme_setup() {
 
 	// Most themes need featured images.
 	add_theme_support('post-thumbnails' );
+  add_image_size( 'mcg-thumb',   70,  70, true );
+  add_image_size( 'mcg-grid-thumb',   280,  185, true );
+  add_image_size( 'mcg-medium',   1000, 565, false );
+  add_image_size( 'mcg-news',   150);
 }
 add_action('after_setup_theme', 'minimal_theme_setup');
 
