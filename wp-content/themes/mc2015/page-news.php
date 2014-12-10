@@ -1,6 +1,26 @@
 <?php
-	$args = array( 'post_type' => 'post', 'posts_per_page' => 50 );
-	$loop = new WP_Query( $args );
+	//Protect against arbitrary paged values
+	$paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+
+	$args = array('post_type' => 'post', 'posts_per_page' => 5, 'paged' => $paged);
+	$loop = new WP_Query($args);
+
+	$big = 999999999;
+	$p_args = array(
+		'base'         => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+		'format'       => '?paged=%#%',
+		'total'        => $loop->max_num_pages,
+		'current'      => max(1, get_query_var('paged')),
+		'show_all'     => True,
+		'prev_next'    => True,
+		'prev_text'    => __('« Previous'),
+		'next_text'    => __('Next »'),
+		'type'         => 'list',
+		'add_args'     => False,
+		'add_fragment' => '',
+		'before_page_number' => '',
+		'after_page_number' => ''
+	);
 ?>
 <?php get_header(); ?>
 <?php get_template_part('part', 'header'); ?>
@@ -37,6 +57,7 @@
 			</li>
 			<?php endwhile; ?>
 		</ul>
+		<?php echo paginate_links($p_args); ?>
 	</main>
 </div>
 <?php get_footer(); ?>
