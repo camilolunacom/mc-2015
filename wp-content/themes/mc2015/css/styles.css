@@ -724,6 +724,8 @@ article {
       text-transform: uppercase; }
       .post-gallery button.exit-fs span {
         font-weight: bold; }
+    .post-gallery button.icon-expand {
+      display: none; }
   .post-gallery figcaption {
     letter-spacing: 0.04em;
     margin-top: 0.5em;
@@ -1052,6 +1054,8 @@ article {
   .picture-credits {
     display: block; }
 
+  .post-gallery button.icon-expand {
+    display: block; }
   .post-gallery figcaption div {
     display: inline-block; }
   .post-gallery .gallery-controls {
