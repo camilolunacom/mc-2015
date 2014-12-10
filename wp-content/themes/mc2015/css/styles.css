@@ -538,6 +538,36 @@ article {
     margin: 0.25em auto;
     text-transform: lowercase; }
 
+.news-filter {
+  display: none;
+  position: absolute;
+  right: 5vw;
+  text-align: center;
+  text-transform: uppercase;
+  top: 4em; }
+  .news-filter .news-filter-title {
+    font-size: 12px;
+    font-weight: bold; }
+    .news-filter .news-filter-title:after {
+      border: 1px solid;
+      content: "";
+      display: block;
+      height: 3em;
+      margin: 0.5em auto;
+      width: 0; }
+  .news-filter .filter {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .news-filter .filter-item {
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0.5em; }
+    .news-filter .filter-item a {
+      color: rgba(0, 0, 0, 0.3); }
+      .news-filter .filter-item a.active, .news-filter .filter-item a:hover {
+        color: black; }
+
 .news-item {
   background-repeat: no-repeat;
   -webkit-background-size: auto 60%;
@@ -1047,6 +1077,9 @@ article {
     .newsletter .newsletter-title {
       font-size: 72px;
       width: 420px; }
+
+  .news-filter {
+    display: block; }
 
   .news-item {
     padding: 2em 4em; }

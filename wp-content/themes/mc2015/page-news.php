@@ -23,6 +23,17 @@
 <?php get_template_part('part', 'header'); ?>
 <div class="wrap">
 	<main role="main">
+		<div class="news-filter">
+			<div class="news-filter-title"><?php _e('Filter', 'mor'); ?></div>
+			<ul class="filter">
+				<li class="filter-item"><a class="active" href=""><?php _e('News', 'mor'); ?></a></li>
+				<li class="filter-item"><a href=""><?php _e('Art', 'mor'); ?></a></li>
+				<li class="filter-item"><a href=""><?php _e('Exhibition', 'mor'); ?></a></li>
+				<li class="filter-item"><a href=""><?php _e('Fair', 'mor'); ?></a></li>
+				<li class="filter-item"><a href=""><?php _e('Artist', 'mor'); ?></a></li>
+				<li class="filter-item"><a href=""><?php _e('Date', 'mor'); ?></a></li>
+			</ul>
+		</div>
 		<ul class="news">
 			<?php while ( $loop->have_posts() ) : $loop->the_post();
 				$attachment_id = get_post_thumbnail_id($post_id);
