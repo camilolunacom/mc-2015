@@ -2,7 +2,7 @@
 	//Protect against arbitrary paged values
 	$paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 
-	$args = array('post_type' => 'post', 'posts_per_page' => 5, 'paged' => $paged);
+	$args = array('post_type' => 'post', 'posts_per_page' => 10, 'paged' => $paged);
 	$loop = new WP_Query($args);
 
 	$big = 999999999;
@@ -13,13 +13,10 @@
 		'current'      => max(1, get_query_var('paged')),
 		'show_all'     => True,
 		'prev_next'    => True,
-		'prev_text'    => __('« Previous'),
-		'next_text'    => __('Next »'),
+		'prev_text'    => __('<span class="icon-page-prev"></span>'),
+		'next_text'    => __('<span class="icon-page-next"></span>'),
 		'type'         => 'list',
 		'add_args'     => False,
-		'add_fragment' => '',
-		'before_page_number' => '',
-		'after_page_number' => ''
 	);
 ?>
 <?php get_header(); ?>
@@ -29,7 +26,7 @@
 		<ul class="news">
 			<?php while ( $loop->have_posts() ) : $loop->the_post();
 				$attachment_id = get_post_thumbnail_id($post_id);
-				$image_attributes = wp_get_attachment_image_src($attachment_id, 'large');
+				$image_attributes = wp_get_attachment_image_src($attachment_id, 'medium');
 			?>
 			<li class="news-item" style="background-image: url(<?php echo $image_attributes[0]; ?>)">
 				<div>

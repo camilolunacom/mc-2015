@@ -580,6 +580,39 @@ article {
     width: 100%;
     z-index: 1; }
 
+.page-numbers {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  width: auto; }
+  .page-numbers li {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 0.5em;
+    vertical-align: middle; }
+  .page-numbers .page-numbers {
+    display: block;
+    padding: 0.5em;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    .page-numbers .page-numbers.next, .page-numbers .page-numbers.prev {
+      background-color: white;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      font-size: 22px;
+      height: 24px;
+      padding: 0;
+      width: 24px; }
+      .page-numbers .page-numbers.next:hover, .page-numbers .page-numbers.prev:hover {
+        background-color: black;
+        color: white; }
+    .page-numbers .page-numbers:not(.prev):not(.next) {
+      color: rgba(0, 0, 0, 0.3); }
+      .page-numbers .page-numbers:not(.prev):not(.next).current, .page-numbers .page-numbers:not(.prev):not(.next):hover {
+        color: black; }
+
 .past-exhibitions {
   margin-top: 8em;
   position: relative;
