@@ -18,7 +18,7 @@
 			<div class="post-gallery">
 				<div class="loader"></div>
 				<button type="button" class="icon-expand"></button>
-				<button type="button" class="exit-fs">close <span>x</span></button>
+				<button type="button" class="exit-fs"><?php _e( 'Close', 'mor'); ?> <span>x</span></button>
 				<div class="owl-carousel">
 					<?php foreach($reversed as $c => $i){
 						$text = $i['title'];

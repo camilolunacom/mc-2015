@@ -153,6 +153,8 @@ article {
   padding: 0 1em; }
   article.artist {
     margin-top: 2.5em; }
+    article.artist .post-title {
+      text-shadow: 1px 1px white; }
   article.exhibition .post-actions {
     top: 0; }
   article.exhibition .post-title {
