@@ -27,7 +27,7 @@
 					?>
 						<figure>
 							<div class="img">
-								<img src="<?php echo $i['img']['medium'][0] ?>" alt="">
+								<img class="owl-lazy" data-src="<?php echo $i['img']['medium'][0] ?>" alt="">
 							</div>
 							<figcaption>
 								<div class="line1"><?php echo $line1; ?></div>
