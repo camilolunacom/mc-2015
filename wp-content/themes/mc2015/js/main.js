@@ -175,14 +175,14 @@ var adjustImgs = function(){
 $(window).on('load', function(){
 	if($('.owl-carousel').length > 0){
 		$('.owl-carousel').owlCarousel({
-			//autoHeight: true,
 			dots: false,
 			items: 1,
-      //lazyLoad: true,
+      lazyLoad: true,
 			loop: true,
 			nav: true,
 			navContainer: '.gallery-controls',
 			navText: ['<i class="icon-left"></i>', '<i class="icon-right"></i>'],
+      onLoadedLazy: adjustImgs
 		});
 	}
   adjustImgs();

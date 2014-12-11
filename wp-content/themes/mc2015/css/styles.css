@@ -1158,14 +1158,16 @@ article {
 
   .the-gallery-pic {
     display: block; } }
-article.artist.sticky .post-content {
-  margin-top: -0.5em; }
-article.artist.sticky .post-title {
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 2.5em;
-  z-index: 2; }
+article.artist.sticky {
+  margin-top: 5em; }
+  article.artist.sticky .post-content {
+    margin-top: 0; }
+  article.artist.sticky .post-title {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 2.5em;
+    z-index: 2; }
 
 .post-gallery::-webkit-full-screen {
   background-color: white;
