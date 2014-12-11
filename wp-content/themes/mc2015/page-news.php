@@ -2,7 +2,13 @@
 	//Protect against arbitrary paged values
 	$paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 
-	$args = array('post_type' => 'post', 'posts_per_page' => 10, 'paged' => $paged);
+	if ( is_category() ) {
+		global $wp_query;
+		$args = array_merge( $wp_query->query_vars, array( 'posts_per_page' => 10, 'paged' => $paged ) );
+	} else {
+		$args = array('post_type' => 'post', 'posts_per_page' => 10, 'paged' => $paged);
+	}
+
 	$loop = new WP_Query($args);
 
 	$big = 999999999;
@@ -26,12 +32,24 @@
 		<div class="news-filter">
 			<div class="news-filter-title"><?php _e('Filter', 'mor'); ?></div>
 			<ul class="filter">
-				<li class="filter-item"><a class="active" href=""><?php _e('News', 'mor'); ?></a></li>
-				<li class="filter-item"><a href=""><?php _e('Art', 'mor'); ?></a></li>
-				<li class="filter-item"><a href=""><?php _e('Exhibition', 'mor'); ?></a></li>
-				<li class="filter-item"><a href=""><?php _e('Fair', 'mor'); ?></a></li>
-				<li class="filter-item"><a href=""><?php _e('Artist', 'mor'); ?></a></li>
-				<li class="filter-item"><a href=""><?php _e('Date', 'mor'); ?></a></li>
+				<?php
+
+				$args = array(
+					'orderby' => 'count',
+					'order' => 'DESC'
+				);
+				$categories = get_categories($args);
+
+				foreach ($categories as $cat) {
+					$link_class = '';
+					if ( is_category() && $wp_query->query['category_name'] == $cat->slug ) {
+						$link_class .= 'active ';
+					}
+					?>
+					<li class="filter-item"><a class="<?php echo $link_class; ?>" href="<?php echo get_category_link( $cat->term_id ); ?>"><?php echo $cat->name ?></a></li>
+					<?php
+				}
+				?>
 			</ul>
 		</div>
 		<ul class="news">
@@ -46,7 +64,7 @@
 					<div class="news-excerpt">
 						<?php echo the_excerpt(); ?>
 					</div>
-					<?php 
+					<?php
 						$more_link = get_post_meta( get_the_ID(), '_external-link', true );
 						$more_link_active = get_post_meta( get_the_ID(), '_hide-more-link', true );
 						$target = '_blank';
