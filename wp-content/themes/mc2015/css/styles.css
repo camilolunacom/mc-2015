@@ -151,6 +151,8 @@ main {
     font-size: 66px; } }
 article {
   padding: 0 1em; }
+  article.artist {
+    margin-top: 2.5em; }
   article.exhibition .post-actions {
     top: 0; }
   article.exhibition .post-title {
@@ -720,7 +722,9 @@ article {
     font-weight: 500; }
 
 .post-content {
-  position: relative; }
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
   .post-content h2 {
     font-size: 20px;
     font-weight: bold;
@@ -908,6 +912,26 @@ article {
     display: inline-block;
     font-size: 1.5em;
     padding: 0.25em; }
+
+.the-gallery-pic {
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 60%;
+  background-size: auto 60%;
+  display: none;
+  margin: 0 2em;
+  padding-top: 80vh;
+  position: relative; }
+  .the-gallery-pic:before {
+    background-color: rgba(255, 255, 255, 0.4);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+  .the-gallery-pic:first-of-type {
+    background-position: right center; }
 
 #map-canvas {
   height: 500px;
@@ -1130,7 +1154,19 @@ article {
 
   .post-content {
     margin: 2em auto 0 auto;
-    width: 55%; } }
+    width: 55%; }
+
+  .the-gallery-pic {
+    display: block; } }
+article.artist.sticky .post-content {
+  margin-top: -0.5em; }
+article.artist.sticky .post-title {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 2.5em;
+  z-index: 2; }
+
 .post-gallery::-webkit-full-screen {
   background-color: white;
   border: 10px solid black;
@@ -1236,6 +1272,12 @@ article {
   .post-gallery:-ms-full-screen .owl-carousel {
     margin: 0 auto;
     width: 95%; }
+
+#the-gallery.sticky {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 10em; }
 
 @media screen and (max-width: 48em) {
   .navigation-menu.is-visible {

@@ -1,6 +1,9 @@
 article
 	padding: 0 1em
 
+	&.artist
+		margin-top: 2.5em
+
 	&.exhibition
 		.post-actions
 			top: 0
@@ -38,6 +41,7 @@ article
 .arrow
 	margin-top: 2em
 	text-align: center
+	//transition: all 0.3s
 
 .artist
 	box-sizing: border-box
@@ -625,6 +629,7 @@ article
 
 .post-content
 	position: relative
+	transition: all 0.3s
 
 	h2
 		font-size: 20px
@@ -835,6 +840,27 @@ article
 		display: inline-block
 		font-size: 1.5em
 		padding: 0.25em
+
+.the-gallery-pic
+	background-position: center
+	background-repeat: no-repeat
+	background-size: auto 60%
+	display: none
+	margin: 0 2em
+	padding-top: 80vh
+	position: relative
+
+	&:before
+		background-color: rgba(255, 255, 255, 0.4)
+		content: ''
+		height: 100%
+		left: 0
+		position: absolute
+		top: 0
+		width: 100%
+
+	&:first-of-type
+		background-position: right center
 
 #map-canvas
 	height: 500px
@@ -1106,3 +1132,6 @@ article
 	.post-content
 		margin: 2em auto 0 auto
 		width: 55%
+
+	.the-gallery-pic
+		display: block

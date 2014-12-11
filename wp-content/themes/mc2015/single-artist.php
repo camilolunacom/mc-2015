@@ -10,11 +10,9 @@
 			<?php previous_post_link('%link', '%title<i class="icon-arrow-right"></i>'); ?>
 		</div>
 		<div class="next-post-link">
-			<?php next_post_link('%link', '<i class="icon-arrow-right"></i>%title'); ?>	
+			<?php next_post_link('%link', '<i class="icon-arrow-right"></i>%title'); ?>
 		</div>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<h1 class="post-title"><?php the_title(); ?></h1>
-
 			<?php if ( isset($data['images']) ) { ?>
 			<?php $reversed = array_reverse( $data['images'][1] ); ?>
 			<div class="post-gallery">
@@ -44,7 +42,7 @@
 				<?php } ?>
 			</div>
 			<?php } ?>
-
+			<h1 class="post-title"><?php the_title(); ?></h1>
 			<div class="post-content">
 				<?php the_content(); ?>
 				<div class="post-actions">

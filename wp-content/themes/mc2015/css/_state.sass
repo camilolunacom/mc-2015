@@ -1,3 +1,15 @@
+article.artist.sticky
+
+	.post-content
+		margin-top: -0.5em
+
+	.post-title
+		left: 0
+		position: fixed
+		right: 0
+		top: 2.5em
+		z-index: 2
+
 .post-gallery
 	+fullscreen()
 		background-color: white
@@ -27,6 +39,12 @@
 		.owl-carousel
 			margin: 0 auto
 			width: 95%
+
+#the-gallery.sticky
+	left: 0
+	position: fixed
+	right: 0
+	top: 10em
 
 @media screen and (max-width: $tablet)
 	.navigation-menu.is-visible

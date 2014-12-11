@@ -3,6 +3,8 @@
 <div class="wrap">
 	<main role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
+			<div class="the-gallery-pic" style="background-image:url(http://dev.mor-charpentier.com/wp-content/uploads/2014/02/Mor_Charpentier_2014jan-212.jpg)"></div>
+			<div class="the-gallery-pic" style="background-image:url(http://dev.mor-charpentier.com/wp-content/uploads/2012/04/IMG_00621-847x565.jpg)"></div>
 			<div <?php post_class(); ?> id="the-gallery">
 				<?php the_content(); ?>
 				<div class="contact-info">

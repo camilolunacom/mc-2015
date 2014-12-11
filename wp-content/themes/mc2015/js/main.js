@@ -250,7 +250,7 @@ $(document).on('ready', function(){
       clearTimeout(scrollTimeout);
       scrollTimeout = null;
     }
-    scrollTimeout = setTimeout(scrollHandler, 100);
+    scrollTimeout = setTimeout(scrollHandler, 50);
   });
 
   scrollHandler = function(){
@@ -270,8 +270,37 @@ $(document).on('ready', function(){
       if(ScrollTop + $(window).height() == $(document).height()){
         $('.next-post-link, .prev-post-link').fadeIn();
       }
+
+      var sticky_trigger = $('.post-gallery').offset().top + $('.post-gallery').innerHeight() - $('header').innerHeight() - $('.post-title').innerHeight();
+      if(ScrollTop >= sticky_trigger){
+        $('article.artist').removeClass('sticky');
+      }
+      else{
+        $('article.artist').addClass('sticky');
+      }
+    }
+
+    if(($('#the-gallery').length > 0) && !isTouchDevice()){
+      var sticky_trigger = $('.the-gallery-pic').innerHeight()*2;
+      if(ScrollTop >= sticky_trigger){
+        $('#the-gallery').removeClass('sticky');
+        $('.arrow').removeAttr('style');
+      }
+      else{
+        $('#the-gallery').addClass('sticky');
+        $('.arrow').css('margin-top', $('#the-gallery').innerHeight() + 32);
+      }
     }
   };
+
+  if($('article.artist').length > 0){
+    $('article.artist').addClass('sticky');
+  }
+
+  if(($('#the-gallery').length > 0) && !isTouchDevice()){
+    $('#the-gallery').addClass('sticky');
+    $('.arrow').css('margin-top', $('#the-gallery').innerHeight() + 32);
+  }
 
   //Random position for featured img in news
   if($('.news-item').length > 0){
