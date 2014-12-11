@@ -20,7 +20,7 @@
 					<?php foreach ( $data['images'] as $c => $img ) { ?>
 					<figure>
 						<div class="img">
-							<img src="<?php echo $img['medium'][0] ?>" alt="">	
+							<img class="owl-lazy" data-src="<?php echo $img['medium'][0] ?>" alt="">	
 						</div>
 						<?php 
 							$text = $img['title'];
