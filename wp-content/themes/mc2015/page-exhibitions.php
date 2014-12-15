@@ -38,13 +38,13 @@
 				);
 		?>
 		<div class="exhibition-current" style="background-image: url(<?php echo $image_attributes[0]; ?>)">
-			<a href="<?php the_permalink(); ?>" class="exhibition-current-link"></a>
+			<a href="<?php the_permalink(); ?>" class="exhibition-link"></a>
 			<div class="exhibition-content">
 				<div class="exhibition-type"><?php _e('Current exhibition', 'mor'); ?></div>
 				<?php foreach ($artists as $artist) { ?>
 					<h2 class="exhibition-artist"><?php echo $artist->post_title ?></h2>
 				<?php } ?>
-				<h2 class="exhibition-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<h2 class="exhibition-title"><?php the_title(); ?></h2>
 				<div class="exhibition-text">
 					<?php the_content(); ?>
 				</div>

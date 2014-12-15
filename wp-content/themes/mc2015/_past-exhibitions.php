@@ -51,8 +51,9 @@
 			}
 		?>
 				<div class="exhibition-past">
-					<div class="exhibition-img" style="background-image: url(<?php echo $image_attributes[0]; ?>)"><a href="<?php the_permalink(); ?>"></a></div>
-					<h2 class="exhibition-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<a href="<?php the_permalink(); ?>" class="exhibition-link"></a>
+					<div class="exhibition-img" style="background-image: url(<?php echo $image_attributes[0]; ?>)"></div>
+					<h2 class="exhibition-title"><?php the_title(); ?></h2>
 					<?php if(count($post->connected) > 1){ ?>
 						<h2 class="exhibition-artist"><?php _e( 'Group exhibition', 'mor'); ?></h2>
 					<?php }
