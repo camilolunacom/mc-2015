@@ -255,8 +255,7 @@ article {
     .artist.thumb:hover .artist-name {
       background-color: rgba(255, 255, 255, 0.8); }
     .artist.thumb:hover .view-artist {
-      opacity: 1;
-      pointer-events: initial; }
+      opacity: 1; }
     .artist.thumb:hover:before {
       background-color: rgba(255, 255, 255, 0); }
     .artist.thumb:not(:last-of-type) {
