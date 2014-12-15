@@ -29,17 +29,25 @@
 			if( $loop-> have_posts() ) : $loop->the_post(); 
 				global $post; 
 				$image_attributes = wp_get_attachment_image_src( get_post_thumbnail_id() , 'medium');
+				$artists = get_posts(array(
+			  		'connected_type' => 'exhibitions_to_artists',
+			  		'connected_items' => $post,
+			  		'nopaging' => true,
+			  		'suppress_filters' => false
+			  		)
+				);
 		?>
 		<div class="exhibition-current" style="background-image: url(<?php echo $image_attributes[0]; ?>)">
+			<a href="<?php the_permalink(); ?>" class="exhibition-current-link"></a>
 			<div class="exhibition-content">
 				<div class="exhibition-type"><?php _e('Current exhibition', 'mor'); ?></div>
+				<?php foreach ($artists as $artist) { ?>
+					<h2 class="exhibition-artist"><?php echo $artist->post_title ?></h2>
+				<?php } ?>
 				<h2 class="exhibition-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<h4 class="exhibition-detail"><?php $lafecha = MCG::get_exhibition_date( $post ); echo $lafecha['result']; ?></h4>
 				<div class="exhibition-text">
 					<?php the_content(); ?>
 				</div>
-				<a href="<?php the_permalink(); ?>" class="read-more"><?php _e('View more', 'mor'); ?></a>
-				<?php get_template_part('post', 'share'); ?>
 			</div>
 		</div>
 		<?php endif; ?>

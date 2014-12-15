@@ -18,6 +18,8 @@
 							'order' => 'DESC'
 						) );
 
+	p2p_type('exhibitions_to_artists')->each_connected($past_exhibitions);
+
 	if( $past_exhibitions->have_posts() ) :
 ?>
 <div class="past-exhibitions">
@@ -51,6 +53,13 @@
 				<div class="exhibition-past">
 					<div class="exhibition-img" style="background-image: url(<?php echo $image_attributes[0]; ?>)"><a href="<?php the_permalink(); ?>"></a></div>
 					<h2 class="exhibition-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<?php if(count($post->connected) > 1){ ?>
+						<h2 class="exhibition-artist"><?php _e( 'Group exhibition', 'mor'); ?></h2>
+					<?php }
+						else if(count($post->connected) == 1){ ?>
+						<h2 class="exhibition-artist"><?php echo $post->connected[0]->post_title; ?></h2>
+					<?php } ?>
+					<h2 class="exhibition-artist"></h2>
 					<h4 class="exhibition-detail"><?php $lafecha = MCG::get_exhibition_date( $post ); echo $lafecha['result']; ?></h4>
 				</div>
 	<?php 

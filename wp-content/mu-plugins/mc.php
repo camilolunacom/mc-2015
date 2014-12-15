@@ -18,7 +18,7 @@ class MCG {
 
 	public static function init() {
 		add_action( 'init', array(__CLASS__, 'register_post_types') );
-		add_action( 'wp_loaded', array(__CLASS__, 'connection') );
+		add_action( 'p2p_init', array(__CLASS__, 'connection') );
 
 		add_filter( 'kc_plugin_settings', array(__CLASS__, 'site_settings') );
 		add_filter( 'kc_post_settings', array(__CLASS__, 'metadata_post') );
