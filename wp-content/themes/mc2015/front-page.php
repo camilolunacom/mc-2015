@@ -18,16 +18,20 @@
 			<?php 
 				kc_ml_list_languages(false, 'language_code'); 
 				get_template_part('prod', 'team');
-				$text = get_the_title( $img );
-				preg_match( '#\((.*?)\)#' , $text , $match );
-				$line1 = preg_replace( "/\([^)]+\)/" , "" , $text );
-				$line2 = str_replace(array( '(', ')' ), '', $match[0] );
+				if( $img ){
+					$text = get_the_title( $img );
+					preg_match( '#\((.*?)\)#' , $text , $match );
+					$line1 = preg_replace( "/\([^)]+\)/" , "" , $text );
+					$line2 = str_replace(array( '(', ')' ), '', $match[0] );
+				}
 			?>
 
+			<?php if( $img ){ ?>
 			<div class="picture-credits">
 				<span class="picture-artist"><?php echo $line1; ?></span>
 				<span class="picture-title"><?php echo $line2; ?></span>
 			</div>
+			<?php } ?>
 
 			<div class="index-menu">
 				<nav role="navigation">
