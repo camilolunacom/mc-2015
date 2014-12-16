@@ -172,15 +172,17 @@ article {
       margin-top: 0.1em; }
 
 .announcements {
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
   .announcements span {
     display: inline-block;
     border: 3px solid;
     line-height: 1em;
-    padding: 0.5em 0.7em; }
+    padding: 0.7em 1em; }
 
 .arrow {
   margin-top: 2em;
@@ -200,10 +202,12 @@ article {
       border-bottom: 2px solid transparent;
       color: black;
       display: inline-block;
-      font-size: 17px;
+      font-size: 12px;
       font-weight: 500;
+      letter-spacing: 0.1em;
       padding-bottom: 0.25em;
       text-decoration: none;
+      text-transform: uppercase;
       -webkit-transition: border-color 0.3s;
       transition: border-color 0.3s; }
       .artist.list .artist-link:hover {
@@ -471,7 +475,8 @@ article {
   width: 100%;
   z-index: 999999999999999; }
   .navigation-menu .menu {
-    font-weight: bold; }
+    font-weight: bold;
+    text-transform: uppercase; }
   .navigation-menu .social-networks {
     display: none;
     margin: 0; }
@@ -699,12 +704,14 @@ article {
 .picture-credits {
   bottom: 0;
   display: none;
-  font-size: 10px;
+  font-size: 9px;
+  letter-spacing: 0.2em;
   line-height: 1em;
   margin-right: 0.5em;
   position: absolute;
   right: 0;
   text-align: center;
+  text-transform: uppercase;
   top: 0;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -1045,7 +1052,7 @@ article {
 
   .artists li {
     display: inline-block;
-    width: 49%; }
+    width: 45%; }
   .artists.list {
     width: 60%; }
     .artists.list li {
@@ -1155,7 +1162,7 @@ article {
     margin-bottom: 14em; }
 
   .artists.thumb li {
-    width: 250; }
+    width: 250px; }
 
   .events {
     display: block; }
