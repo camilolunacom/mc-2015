@@ -700,19 +700,19 @@ article
 	position: relative
 	
 	button
-		background: rgba(255, 255, 255, 0.4)
-		border-radius: 2px
-		padding: 0.25em
 		position: absolute
 		right: 1em
 		top: 1em
 		z-index: 999
 
 		&.exit-fs
+			background: rgba(255, 255, 255, 0.4)
+			border-radius: 2px
 			display: none
 			font-size: x-small
 			font-weight: bold
 			letter-spacing: 0.1em
+			padding: 0.25em
 			text-transform: uppercase
 
 			span
@@ -732,7 +732,18 @@ article
 				color: white
 
 		&.icon-expand
+			background-color: black
+			border-radius: 50%
+			box-shadow: 0 0 0 1px black
+			color: white
 			display: none
+			opacity: 0
+			padding: 0.3em
+			transition: 0.3s all
+
+			&:hover
+				background-color: white
+				color: black
 
 	figcaption
 		letter-spacing: 0.04em
@@ -1156,6 +1167,9 @@ article
 		.gallery-controls
 			left: -4em
 			right: -4em
+
+		&:hover button.icon-expand
+			opacity: 1
 
 	#the-gallery
 		.contact-info-city

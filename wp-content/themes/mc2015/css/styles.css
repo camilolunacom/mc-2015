@@ -784,19 +784,19 @@ article {
   margin: 0 auto;
   position: relative; }
   .post-gallery button {
-    background: rgba(255, 255, 255, 0.4);
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    padding: 0.25em;
     position: absolute;
     right: 1em;
     top: 1em;
     z-index: 999; }
     .post-gallery button.exit-fs {
+      background: rgba(255, 255, 255, 0.4);
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
       display: none;
       font-size: x-small;
       font-weight: bold;
       letter-spacing: 0.1em;
+      padding: 0.25em;
       text-transform: uppercase; }
       .post-gallery button.exit-fs span {
         vertical-align: middle; }
@@ -816,7 +816,20 @@ article {
         box-shadow: 0 0 0 1px black;
         color: white; }
     .post-gallery button.icon-expand {
-      display: none; }
+      background-color: black;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 0 1px black;
+      box-shadow: 0 0 0 1px black;
+      color: white;
+      display: none;
+      opacity: 0;
+      padding: 0.3em;
+      -webkit-transition: 0.3s all;
+      transition: 0.3s all; }
+      .post-gallery button.icon-expand:hover {
+        background-color: white;
+        color: black; }
   .post-gallery figcaption {
     letter-spacing: 0.04em;
     margin-top: 0.5em;
@@ -1180,6 +1193,8 @@ article {
   .post-gallery .gallery-controls {
     left: -4em;
     right: -4em; }
+  .post-gallery:hover button.icon-expand {
+    opacity: 1; }
 
   #the-gallery .contact-info-city {
     display: inline-block;
