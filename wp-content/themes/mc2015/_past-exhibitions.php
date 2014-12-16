@@ -18,7 +18,17 @@
 							'order' => 'DESC'
 						) );
 
-	p2p_type('exhibitions_to_artists')->each_connected($past_exhibitions);
+	$connected = new WP_Query( array(
+	  'connected_type' => 'exhibitions_to_artists',
+	  'connected_items' => $past_exhibitions->posts,
+	  'nopaging' => true,
+	  'post_status' => array(
+			'publish',
+			'draft'
+		)
+	) );
+
+	p2p_distribute_connected($past_exhibitions->posts, $connected->posts, 'connected');
 
 	if( $past_exhibitions->have_posts() ) :
 ?>

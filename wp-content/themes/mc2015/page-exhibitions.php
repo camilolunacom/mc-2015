@@ -33,7 +33,11 @@
 			  		'connected_type' => 'exhibitions_to_artists',
 			  		'connected_items' => $post,
 			  		'nopaging' => true,
-			  		'suppress_filters' => false
+			  		'suppress_filters' => false, 
+			  		'post_status' => array(
+			  				'publish',
+			  				'draft'
+			  			)
 			  		)
 				);
 		?>

@@ -7,10 +7,10 @@
 	<main role="main">
 		<?php while(have_posts()) : the_post(); ?>
 		<div class="prev-post-link">
-			<?php previous_post_link('%link', '%title<i class="icon-arrow-right"></i>'); ?>
+			<?php previous_post_link('%link', '%title<br /><i class="icon-arrow-right"></i><br />'); ?>
 		</div>
 		<div class="next-post-link">
-			<?php next_post_link('%link', '<i class="icon-arrow-right"></i>%title'); ?>
+			<?php next_post_link('%link', '%title<br /><i class="icon-arrow-right"></i><br />%title'); ?>
 		</div>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<?php if ( isset($data['images']) ) { ?>

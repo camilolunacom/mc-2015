@@ -250,7 +250,7 @@ $(document).on('ready', function(){
       clearTimeout(scrollTimeout);
       scrollTimeout = null;
     }
-    scrollTimeout = setTimeout(scrollHandler, 50);
+    scrollTimeout = setTimeout(scrollHandler, 1);
   });
 
   scrollHandler = function(){
@@ -269,6 +269,9 @@ $(document).on('ready', function(){
       //Page bottom detection
       if(ScrollTop + $(window).height() == $(document).height()){
         $('.next-post-link, .prev-post-link').fadeIn();
+      }
+      else {
+        $('.next-post-link, .prev-post-link').fadeOut();
       }
 
       var sticky_trigger = $('.post-gallery').offset().top + $('.post-gallery').innerHeight() - $('header').innerHeight() - $('.post-title').innerHeight();

@@ -9,11 +9,11 @@
   box-sizing: border-box; }
 
 ::-moz-selection {
-  background: #222;
+  background: black;
   color: white; }
 
 ::selection {
-  background: #222;
+  background: black;
   color: white; }
 
 a {
@@ -286,6 +286,12 @@ article {
   left: 2em;
   position: absolute;
   width: 120px; }
+  .events a {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 1px; }
+    .events a:hover {
+      border-bottom: 2px solid;
+      color: initial; }
   .events h3,
   .events p,
   .events ul {
@@ -489,6 +495,7 @@ article {
   display: none;
   position: fixed;
   text-align: center;
+  text-transform: uppercase;
   top: 0;
   -webkit-writing-mode: vertical-lr;
   -moz-writing-mode: vertical-lr;
@@ -788,7 +795,8 @@ article {
     .post-gallery button.exit-fs {
       display: none;
       font-size: x-small;
-      font-weight: 500;
+      font-weight: bold;
+      letter-spacing: 0.1em;
       text-transform: uppercase; }
       .post-gallery button.exit-fs span {
         font-weight: bold; }
@@ -817,7 +825,7 @@ article {
     left: -1em;
     position: absolute;
     right: -1em;
-    top: 45%;
+    top: 42.5%;
     z-index: 2; }
     .post-gallery .gallery-controls div {
       cursor: pointer;
@@ -973,39 +981,41 @@ article {
   padding: 0;
   width: 100%; }
 
-#the-gallery .contact-info {
-  margin: 0 auto;
-  text-align: center; }
-#the-gallery .contact-city-details {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0; }
-#the-gallery .contact-city-mail {
-  font-size: 14px;
-  font-weight: bold; }
-#the-gallery .contact-city-name {
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 0.5em;
-  margin-bottom: 0;
-  text-transform: uppercase; }
-  #the-gallery .contact-city-name:after {
-    border: 1px solid;
-    content: "";
-    display: block;
-    height: 3em;
-    margin: 0.25em auto;
-    width: 0; }
-#the-gallery .contact-info-city {
-  margin: 2em auto; }
-#the-gallery > p {
-  font-family: "suisse_works";
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.5em;
-  margin: 1em auto;
-  max-width: 500px;
-  text-align: center; }
+#the-gallery {
+  text-shadow: 1px 1px white; }
+  #the-gallery .contact-info {
+    margin: 0 auto;
+    text-align: center; }
+  #the-gallery .contact-city-details {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0; }
+  #the-gallery .contact-city-mail {
+    font-size: 14px;
+    font-weight: bold; }
+  #the-gallery .contact-city-name {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+    margin-bottom: 0;
+    text-transform: uppercase; }
+    #the-gallery .contact-city-name:after {
+      border: 1px solid;
+      content: "";
+      display: block;
+      height: 3em;
+      margin: 0.25em auto;
+      width: 0; }
+  #the-gallery .contact-info-city {
+    margin: 2em auto; }
+  #the-gallery > p {
+    font-family: "suisse_works";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin: 1em auto;
+    max-width: 500px;
+    text-align: center; }
 
 @media screen and (max-width: 48em) {
   .navigation-menu {
@@ -1074,6 +1084,9 @@ article {
         bottom: 2.5em;
         height: 2em; }
 
+  .events {
+    left: 5em; }
+
   .exhibition-current .exhibition-detail {
     width: 45%; }
   .exhibition-current .exhibition-text {
@@ -1131,7 +1144,7 @@ article {
     display: none !important; }
 
   .newsletter {
-    padding: 6em 1em 1em 1em; }
+    padding: 16em 1em 1em 1em; }
     .newsletter .newsletter-title {
       font-size: 72px;
       width: 420px; }
