@@ -333,7 +333,9 @@ article {
     background: rgba(255, 255, 255, 0.8);
     height: 100%;
     padding: 7em 1em;
-    text-align: center; }
+    text-align: center;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all; }
     .exhibition-current .exhibition-content .exhibition-type:after {
       bottom: -9.5em;
       height: 9em; }
@@ -360,6 +362,8 @@ article {
     text-transform: uppercase; }
   .exhibition-current .read-more {
     display: inline-block; }
+  .exhibition-current:hover .exhibition-content {
+    background-color: white; }
 
 .exhibition-group {
   display: none;
