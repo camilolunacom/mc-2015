@@ -716,7 +716,20 @@ article
 			text-transform: uppercase
 
 			span
-				font-weight: bold
+				vertical-align: middle
+
+			.icon-close
+				border-radius: 50%
+				box-shadow: 0 0 0 1px white
+				display: inline-block
+				font-size: medium
+				margin: 0 0.2em
+				transition: 0.3s all
+
+			&:hover .icon-close
+				background-color: black
+				box-shadow: 0 0 0 1px black
+				color: white
 
 		&.icon-expand
 			display: none

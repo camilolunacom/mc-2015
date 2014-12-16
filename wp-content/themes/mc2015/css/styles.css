@@ -799,7 +799,22 @@ article {
       letter-spacing: 0.1em;
       text-transform: uppercase; }
       .post-gallery button.exit-fs span {
-        font-weight: bold; }
+        vertical-align: middle; }
+      .post-gallery button.exit-fs .icon-close {
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-box-shadow: 0 0 0 1px white;
+        box-shadow: 0 0 0 1px white;
+        display: inline-block;
+        font-size: medium;
+        margin: 0 0.2em;
+        -webkit-transition: 0.3s all;
+        transition: 0.3s all; }
+      .post-gallery button.exit-fs:hover .icon-close {
+        background-color: black;
+        -webkit-box-shadow: 0 0 0 1px black;
+        box-shadow: 0 0 0 1px black;
+        color: white; }
     .post-gallery button.icon-expand {
       display: none; }
   .post-gallery figcaption {
