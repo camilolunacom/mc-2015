@@ -735,28 +735,23 @@ article {
 
 .post-actions {
   text-align: center; }
-  .post-actions [class^="icon-"] {
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    color: black;
-    display: inline-block;
-    font-size: x-large;
-    height: 26px;
-    padding: 1px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    width: 26px; }
-    .post-actions [class^="icon-"]:before {
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      display: block;
-      margin-top: 1px; }
   .post-actions .post-attachment-link {
     display: inline-block;
     padding: 0.5em;
     width: 100px; }
+    .post-actions .post-attachment-link [class^="icon-"] {
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 0 1px transparent;
+      box-shadow: 0 0 0 1px transparent;
+      display: inline-block;
+      font-size: x-large;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
     .post-actions .post-attachment-link:hover [class^="icon-"] {
       background: black;
+      -webkit-box-shadow: 0 0 0 1px black;
+      box-shadow: 0 0 0 1px black;
       color: white; }
   .post-actions .post-attachment-text {
     font-size: 14px;
@@ -866,15 +861,6 @@ article {
 .post-share {
   margin-top: 1em;
   text-align: center; }
-  .post-share [class^="icon-"] {
-    background: white;
-    border-color: white;
-    -webkit-border-radius: 50%;
-    border-radius: 50%; }
-    .post-share [class^="icon-"]:hover {
-      background: black;
-      border-color: black;
-      color: white; }
   .post-share .post-share-text {
     font-size: 14px;
     font-weight: 500;
@@ -982,6 +968,17 @@ article {
     display: inline-block;
     font-size: 1.5em;
     padding: 0.25em; }
+    .social-networks .social-network a {
+      background-color: white;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 0 1px transparent;
+      box-shadow: 0 0 0 1px transparent; }
+      .social-networks .social-network a:hover {
+        background-color: black;
+        -webkit-box-shadow: 0 0 0 1px black;
+        box-shadow: 0 0 0 1px black;
+        color: white; }
 
 .the-gallery-pic {
   background-position: center;
@@ -1009,41 +1006,45 @@ article {
   padding: 0;
   width: 100%; }
 
-#the-gallery {
+#the-gallery .contact-info {
+  margin: 0 auto;
+  text-align: center;
   text-shadow: 1px 1px white; }
-  #the-gallery .contact-info {
-    margin: 0 auto;
-    text-align: center; }
-  #the-gallery .contact-city-details {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0; }
-  #the-gallery .contact-city-mail {
-    font-size: 14px;
-    font-weight: bold; }
-  #the-gallery .contact-city-name {
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 0.5em;
-    margin-bottom: 0;
-    text-transform: uppercase; }
-    #the-gallery .contact-city-name:after {
-      border: 1px solid;
-      content: "";
-      display: block;
-      height: 3em;
-      margin: 0.25em auto;
-      width: 0; }
-  #the-gallery .contact-info-city {
-    margin: 2em auto; }
-  #the-gallery > p {
-    font-family: "suisse_works";
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.5em;
-    margin: 1em auto;
-    max-width: 500px;
-    text-align: center; }
+#the-gallery .contact-city-details {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 1px 1px white; }
+#the-gallery .contact-city-mail {
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 1px 1px white; }
+#the-gallery .contact-city-name {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5em;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  text-shadow: 1px 1px white; }
+  #the-gallery .contact-city-name:after {
+    border: 1px solid;
+    content: "";
+    display: block;
+    height: 3em;
+    margin: 0.25em auto;
+    width: 0; }
+#the-gallery .contact-info-city {
+  margin: 2em auto;
+  text-shadow: 1px 1px white; }
+#the-gallery > p {
+  font-family: "suisse_works";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5em;
+  margin: 1em auto;
+  max-width: 500px;
+  text-align: center;
+  text-shadow: 1px 1px white; }
 
 @media screen and (max-width: 48em) {
   .navigation-menu {

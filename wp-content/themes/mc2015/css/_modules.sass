@@ -647,29 +647,22 @@ article
 .post-actions
 	text-align: center
 
-	[class^="icon-"]
-		border-radius: 50%
-		color: black
-		display: inline-block
-		font-size: x-large
-		height: 26px
-		padding: 1px
-		transition: all 0.3s
-		width: 26px
-
-		&:before
-			border-radius: 50%
-			display: block
-			margin-top: 1px
-
 	.post-attachment-link
 		display: inline-block
 		padding: 0.5em
 		width: 100px
 
+		[class^="icon-"]
+			border-radius: 50%
+			box-shadow: 0 0 0 1px transparent
+			display: inline-block
+			font-size: x-large
+			transition: all 0.3s
+
 		&:hover
 			[class^="icon-"]
 				background: black
+				box-shadow: 0 0 0 1px black
 				color: white
 
 	.post-attachment-text
@@ -791,16 +784,6 @@ article
 	margin-top: 1em
 	text-align: center
 
-	[class^="icon-"]
-		background: white
-		border-color: white
-		border-radius: 50%
-
-		&:hover
-			background: black
-			border-color: black
-			color: white
-
 	.post-share-text
 		font-size: 14px
 		font-weight: 500
@@ -915,6 +898,16 @@ article
 		font-size: 1.5em
 		padding: 0.25em
 
+		a
+			background-color: white
+			border-radius: 50%
+			box-shadow: 0 0 0 1px transparent
+
+			&:hover
+				background-color: black
+				box-shadow: 0 0 0 1px black
+				color: white
+
 .the-gallery-pic
 	background-position: center
 	background-repeat: no-repeat
@@ -943,20 +936,21 @@ article
 	width: 100%
 
 #the-gallery
-	text-shadow: 1px 1px white
-
 	.contact-info
 		margin: 0 auto
 		text-align: center
+		text-shadow: 1px 1px white
 
 	.contact-city-details
 		font-size: 18px
 		font-weight: bold
 		margin: 0
+		text-shadow: 1px 1px white
 
 	.contact-city-mail
 		font-size: 14px
 		font-weight: bold
+		text-shadow: 1px 1px white
 
 	.contact-city-name
 		font-size: 12px
@@ -964,6 +958,7 @@ article
 		letter-spacing: 0.5em
 		margin-bottom: 0
 		text-transform: uppercase
+		text-shadow: 1px 1px white
 
 		&:after
 			border: 1px solid
@@ -975,6 +970,7 @@ article
 
 	.contact-info-city
 		margin: 2em auto
+		text-shadow: 1px 1px white
 
 	& > p
 		font-family: 'suisse_works'
@@ -984,6 +980,7 @@ article
 		margin: 1em auto
 		max-width: 500px
 		text-align: center
+		text-shadow: 1px 1px white
 
 @media screen and (max-width: $tablet)
 	.navigation-menu
