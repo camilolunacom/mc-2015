@@ -13,7 +13,7 @@
 		<ul class="artists thumb">
 			<?php while ( $loop->have_posts() ) : $loop->the_post();
 				$attachment_id = get_post_thumbnail_id($post_id);
-				$image_attributes = wp_get_attachment_image_src($attachment_id, 'thumbnail');
+				$image_attributes = wp_get_attachment_image_src($attachment_id, 'medium');
 			?>
 			<li class="artist thumb" style="background-image: url(<?php echo $image_attributes[0]; ?>)">
 				<a href="<?php echo the_permalink(); ?>" class="artist-name">
