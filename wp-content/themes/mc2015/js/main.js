@@ -279,9 +279,8 @@ $(document).on('ready', function(){
         $('.next-post-link, .prev-post-link').fadeOut();
       }
 
-      var sticky_trigger = $('.post-gallery').offset().top + $('.post-gallery').outerHeight(true) - $('header').outerHeight(true) - $('.post-title').outerHeight(true);
+      var sticky_trigger = $('.post-gallery').offset().top + $('.post-gallery').outerHeight(true) - $('header').outerHeight(true) - $('.post-title').outerHeight(true) + 60;
       if(ScrollTop >= sticky_trigger){
-        //console.log(ScrollTop)
         $('article.artist').removeClass('sticky');
       }
       else{
