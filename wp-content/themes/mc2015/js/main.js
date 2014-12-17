@@ -182,7 +182,8 @@ $(window).on('load', function(){
 			nav: true,
 			navContainer: '.gallery-controls',
 			navText: ['<i class="icon-left"></i>', '<i class="icon-right"></i>'],
-      onLoadedLazy: adjustImgs
+      onLoadedLazy: adjustImgs,
+      smartSpeed: 1000
 		});
 	}
   adjustImgs();
