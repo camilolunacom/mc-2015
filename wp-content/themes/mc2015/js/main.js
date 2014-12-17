@@ -176,6 +176,7 @@ $(window).on('load', function(){
 	if($('.owl-carousel').length > 0){
 		$('.owl-carousel').owlCarousel({
 			dots: false,
+      fluidSpeed: true,
 			items: 1,
       lazyLoad: true,
 			loop: true,
