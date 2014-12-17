@@ -48,7 +48,7 @@
 				<div class="post-actions">
 					<?php if ( $cv = get_post_meta(get_the_ID(), '_cv', true) ) { ?>
 					<div class="post-attachment">
-						<a href="<?php echo wp_get_attachment_url( $cv ) ?>" class="post-attachment-link">
+						<a href="<?php echo wp_get_attachment_url( $cv ) ?>" class="post-attachment-link" target="_blank">
 							<div class="icon-download"></div>
 							<div class="post-attachment-text"><?php _e( 'Download CV', 'mor'); ?></div>
 						</a>

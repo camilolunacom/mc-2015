@@ -6,10 +6,25 @@
 ?>
 <div class="wrap">
 	<main role="main">
-		<?php while(have_posts()) : the_post(); ?>
+		<?php while(have_posts()) : the_post();
+			$artists = get_posts(array(
+		  		'connected_type' => 'exhibitions_to_artists',
+		  		'connected_items' => $post,
+		  		'nopaging' => true,
+		  		'suppress_filters' => false, 
+		  		'post_status' => array(
+		  				'publish',
+		  				'draft'
+		  			)
+		  		)
+			);
+		?>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<h1 class="post-title"><?php the_title(); ?></h1>
-			<h2 class="post-subtitle"><?php echo MCG::$exhibition_data['date']['result']; ?></h2>
+			<?php foreach ($artists as $artist) { ?>
+				<h2 class="post-title"><?php echo $artist->post_title ?></h2>
+			<?php } ?>
+			<h1 class="post-subtitle"><?php the_title(); ?></h1>
+			<div class="post-info"><?php the_content(); ?></div>
 
 			<?php if ( $data['images'] ) { ?>
 			<div class="post-gallery">
@@ -39,13 +54,11 @@
 				<?php } ?>
 			</div>
 			<?php } ?>
-
 			<div class="post-content">
-				<?php the_content(); ?>
 				<div class="post-actions">
 					<?php if ( $pr = get_post_meta(get_the_ID(), '_press-release', true) ) { ?>
 					<div class="post-attachment">
-						<a href="<?php echo wp_get_attachment_url( $pr ) ?>" class="post-attachment-link">
+						<a href="<?php echo wp_get_attachment_url( $pr ) ?>" class="post-attachment-link" target="_blank">
 							<div class="icon-doc"></div>
 							<div class="post-attachment-text"><?php _e( 'Press release', 'mor'); ?></div>
 						</a>
