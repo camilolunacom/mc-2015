@@ -227,13 +227,18 @@ $(document).on('ready', function(){
 	if($('.past-exhibition-year').length > 0){
 		$('.past-exhibition-year').on('click', function(e){
 			e.preventDefault();
-			$('.past-exhibition-year').removeClass('active');
-			$('.exhibition-group').slideUp();
-			$(this).addClass('active').siblings('.exhibition-group').slideDown();
+      if($(this).hasClass('active')){
+        $(this).removeClass('active').siblings('.exhibition-group').slideUp(500);
+      }
+      else{
+        $('.past-exhibition-year').removeClass('active');
+        $('.exhibition-group').slideUp();
+        $(this).addClass('active').siblings('.exhibition-group').slideDown(500);
+      }
 		});
 		$('.exhibition-close').on('click', function(e){
 			e.preventDefault();
-			$(this).parent().slideUp();
+			$(this).parent().slideUp(500);
 			$('.past-exhibition-year').removeClass('active');
 		});
 	}

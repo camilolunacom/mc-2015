@@ -62,7 +62,11 @@
 		?>
 				<div class="exhibition-past">
 					<a href="<?php the_permalink(); ?>" class="exhibition-link"></a>
-					<div class="exhibition-img" style="background-image: url(<?php echo $image_attributes[0]; ?>)"></div>
+					<div class="exhibition-img" style="background-image: url(<?php echo $image_attributes[0]; ?>)">
+						<div>
+							<span class="read-more"><?php _e( 'View exhibition', 'mor'); ?></span>
+						</div>
+					</div>
 					<h2 class="exhibition-title"><?php the_title(); ?></h2>
 					<?php if(count($post->connected) > 1){ ?>
 						<h2 class="exhibition-artist"><?php _e( 'Group exhibition', 'mor'); ?></h2>

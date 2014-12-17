@@ -367,7 +367,9 @@ article {
 
 .exhibition-group {
   display: none;
-  position: relative; }
+  position: relative;
+  /*&.visible
+   * opacity: 1 */ }
   .exhibition-group .exhibition-close {
     font-weight: bold;
     line-height: 1em;
@@ -401,16 +403,31 @@ article {
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
-    height: 180px; }
+    height: 180px;
+    padding: 1em; }
     .exhibition-past .exhibition-img a {
       display: block;
       height: 100%;
       width: 100%; }
+    .exhibition-past .exhibition-img > div {
+      background-color: rgba(255, 255, 255, 0.7);
+      height: 100%;
+      line-height: 142px;
+      opacity: 0;
+      text-align: center;
+      -webkit-transition: 0.3s all;
+      transition: 0.3s all; }
+      .exhibition-past .exhibition-img > div .read-more {
+        display: inline;
+        padding: 0.5em 0.75em;
+        pointer-events: none; }
   .exhibition-past .exhibition-title {
     font-size: 18px;
     font-weight: bold;
     margin: 0;
     margin-top: 0.25em; }
+  .exhibition-past:hover .exhibition-img > div {
+    opacity: 1; }
 
 .exhibition-type {
   font-size: 12px;
