@@ -279,8 +279,9 @@ $(document).on('ready', function(){
         $('.next-post-link, .prev-post-link').fadeOut();
       }
 
-      var sticky_trigger = $('.post-gallery').offset().top + $('.post-gallery').innerHeight() - $('header').innerHeight() - $('.post-title').innerHeight();
+      var sticky_trigger = $('.post-gallery').offset().top + $('.post-gallery').outerHeight(true) - $('header').outerHeight(true) - $('.post-title').outerHeight(true);
       if(ScrollTop >= sticky_trigger){
+        //console.log(ScrollTop)
         $('article.artist').removeClass('sticky');
       }
       else{
@@ -289,14 +290,14 @@ $(document).on('ready', function(){
     }
 
     if(($('#the-gallery').length > 0) && !isTouchDevice()){
-      var sticky_trigger = $('.the-gallery-pic').innerHeight()*2 + 32;
+      var sticky_trigger = $('.the-gallery-pic').outerHeight(true)*2 - $('header').outerHeight(true);
       if(ScrollTop >= sticky_trigger){
         $('#the-gallery').removeClass('sticky');
         $('.map').removeAttr('style');
       }
       else{
         $('#the-gallery').addClass('sticky');
-        $('.map').css('margin-top', $('#the-gallery').innerHeight() + 32);
+        $('.map').css('margin-top', $('#the-gallery').outerHeight(true));
       }
     }
   };
@@ -307,7 +308,7 @@ $(document).on('ready', function(){
 
   if(($('#the-gallery').length > 0) && !isTouchDevice()){
     $('#the-gallery').addClass('sticky');
-    $('.map').css('margin-top', $('#the-gallery').innerHeight() + 32);
+    $('.map').css('margin-top', $('#the-gallery').outerHeight(true));
   }
 
   //Random position for featured img in news
