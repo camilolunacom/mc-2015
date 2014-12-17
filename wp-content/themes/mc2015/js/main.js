@@ -289,14 +289,14 @@ $(document).on('ready', function(){
     }
 
     if(($('#the-gallery').length > 0) && !isTouchDevice()){
-      var sticky_trigger = $('.the-gallery-pic').innerHeight()*2;
+      var sticky_trigger = $('.the-gallery-pic').innerHeight()*2 + 32;
       if(ScrollTop >= sticky_trigger){
         $('#the-gallery').removeClass('sticky');
-        $('.arrow').removeAttr('style');
+        $('.map').removeAttr('style');
       }
       else{
         $('#the-gallery').addClass('sticky');
-        $('.arrow').css('margin-top', $('#the-gallery').innerHeight() + 32);
+        $('.map').css('margin-top', $('#the-gallery').innerHeight() + 32);
       }
     }
   };
@@ -307,7 +307,7 @@ $(document).on('ready', function(){
 
   if(($('#the-gallery').length > 0) && !isTouchDevice()){
     $('#the-gallery').addClass('sticky');
-    $('.arrow').css('margin-top', $('#the-gallery').innerHeight() + 32);
+    $('.map').css('margin-top', $('#the-gallery').innerHeight() + 32);
   }
 
   //Random position for featured img in news

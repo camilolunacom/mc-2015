@@ -18,8 +18,8 @@
 					</div>
 				</div>
 				<?php get_template_part('part', 'social'); ?>
+				<div class="arrow"><i class="icon-arrow-down"></i></div>
 			</div>
-			<div class="arrow"><i class="icon-arrow-down"></i></div>
 		<?php endwhile; ?>
 	</main>
 	<section class="map">
