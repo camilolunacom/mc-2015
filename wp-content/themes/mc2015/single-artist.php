@@ -10,7 +10,7 @@
 			<?php previous_post_link('%link', '%title<br /><i class="icon-arrow-right"></i><br />'); ?>
 		</div>
 		<div class="next-post-link">
-			<?php next_post_link('%link', '%title<br /><i class="icon-arrow-right"></i><br />%title'); ?>
+			<?php next_post_link('%link', '%title<br /><i class="icon-arrow-right"></i><br />'); ?>
 		</div>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<?php if ( isset($data['images']) ) { ?>

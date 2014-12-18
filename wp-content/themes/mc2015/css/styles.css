@@ -1071,7 +1071,7 @@ article {
     margin: 0.25em auto;
     width: 0; }
 #the-gallery .contact-info-city {
-  margin: 2em auto;
+  margin: 0 auto 2em auto;
   text-shadow: 1px 1px white; }
 #the-gallery > p {
   font-family: "suisse_works";
@@ -1130,10 +1130,10 @@ article {
     display: inline-block;
     width: 45%; }
   .artists.list {
-    width: 60%; }
+    width: 50%; }
     .artists.list li {
       /*padding: 0 1em */
-      padding-left: 15%;
+      padding-left: 12%;
       /*&:nth-of-type(odd)
        * text-align: right */ }
   .artists.thumb {
