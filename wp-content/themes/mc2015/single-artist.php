@@ -22,7 +22,7 @@
 				<div class="owl-carousel">
 					<?php foreach($reversed as $c => $i){
 						$text = $i['title'];
-						preg_match( '#\((.*?)\)#' , $text , $match );
+						preg_match( '#\((.*)\)#' , $text , $match );
 						$line1 = preg_replace( "/\([^)]+\)/" , "" , $text );
 					?>
 						<figure>
