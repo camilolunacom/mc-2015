@@ -274,7 +274,7 @@ $(document).on('ready', function(){
 
     if(($('article.artist').length > 0) && !isTouchDevice()){
       //Page bottom detection
-      if(ScrollTop + ($(window).height()*0.95) == $(document).height()){
+      if(ScrollTop + $(window).height() - 20 == $(document).height()){
         $('.next-post-link, .prev-post-link').fadeIn();
       }
       else {
