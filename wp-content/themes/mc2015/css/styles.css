@@ -542,8 +542,9 @@ article {
   .next-post-link a,
   .prev-post-link a {
     color: rgba(0, 0, 0, 0.3);
-    font-size: 14px;
-    font-weight: 500; }
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.2em; }
     .next-post-link a:hover,
     .prev-post-link a:hover {
       color: black; }
