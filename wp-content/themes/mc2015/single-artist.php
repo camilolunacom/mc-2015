@@ -24,6 +24,11 @@
 						$text = $i['title'];
 						preg_match( '#\((.*)\)#' , $text , $match );
 						$line1 = preg_replace( "/\([^)]+\)/" , "" , $text );
+						$line1 = str_replace("[", "(", $line1 );
+						$line1 = str_replace("]", ")", $line1 );
+						$line2 = $match[0];
+						$line2 = str_replace("[", "(", $line2 );
+						$line2 = str_replace("]", ")", $line2 );
 					?>
 						<figure>
 							<div class="img">
@@ -31,7 +36,7 @@
 							</div>
 							<figcaption>
 								<div class="line1"><?php echo $line1; ?></div>
-								<div class="line2"><?php echo $match[0]; ?></div>
+								<div class="line2"><?php echo $line2; ?></div>
 							</figcaption>
 						</figure>
 					<?php } ?>
