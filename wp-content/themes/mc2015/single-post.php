@@ -14,12 +14,14 @@
 			<div class="post-content">
 				<?php the_content(); ?>
 				<div class="post-actions">
+					<?php if ( $pr = get_post_meta(get_the_ID(), '_press-release', true) ) { ?>
 					<div class="post-attachment">
-						<a href="" class="post-attachment-link">
+						<a href="<?php echo wp_get_attachment_url( $pr ) ?>" class="post-attachment-link" target="_blank">
 							<div class="icon-doc"></div>
-							<div class="post-attachment-text">Press release</div>
+							<div class="post-attachment-text"><?php _e( 'Press release', 'mor'); ?></div>
 						</a>
 					</div>
+					<?php } ?>
 					<?php get_template_part( 'post', 'share' ); ?>
 				</div>
 			</div>
