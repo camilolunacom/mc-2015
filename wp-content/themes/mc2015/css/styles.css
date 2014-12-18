@@ -518,6 +518,7 @@ article {
   z-index: 999999999999999; }
   .navigation-menu .menu {
     font-weight: bold;
+    letter-spacing: 0.1em;
     text-transform: uppercase; }
   .navigation-menu .social-networks {
     display: none;
