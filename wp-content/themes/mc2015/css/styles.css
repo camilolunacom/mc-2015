@@ -185,7 +185,7 @@ article {
       margin-top: 0.1em; }
 
 .announcements {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.2em;
   margin: 0 auto;
@@ -518,6 +518,7 @@ article {
   z-index: 999999999999999; }
   .navigation-menu .menu {
     font-weight: bold;
+    letter-spacing: 0.1em;
     text-transform: uppercase; }
   .navigation-menu .social-networks {
     display: none;
@@ -753,7 +754,7 @@ article {
   font-size: 9px;
   letter-spacing: 0.2em;
   line-height: 1em;
-  margin-right: 0.5em;
+  margin-right: 1em;
   position: absolute;
   right: 0;
   text-align: center;
