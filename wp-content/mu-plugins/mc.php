@@ -126,7 +126,7 @@ class MCG {
 		$groups[] = array(
 			'page' => array(
 				array(
-					'id'     => 'page-data',
+					'id'     => 'more-page-data',
 					'title'  => __('Page data', 'mcg'),
 					'fields' => array(
 						array(
