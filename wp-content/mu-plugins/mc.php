@@ -124,33 +124,6 @@ class MCG {
 
 	public static function metadata_post( $groups ) {
 		$groups[] = array(
-			'page' => array(
-				array(
-					'id'     => 'more-page-data',
-					'title'  => __('Page data', 'mcg'),
-					'fields' => array(
-						array(
-							'id'    => 'pimages',
-							'title' => __('Images', 'mcg'),
-							'type'  => 'file',
-							'mode'  => 'checkbox'
-						),
-						array(
-							'id'      => 'sample_text',
-							'title'   => 'Text input',
-							'desc'    => 'Just a simple text field',
-							'type'    => 'text',
-							'default' => 'Default value',
-							/**
-							 * Optional. Uncomment this to only display the metabox for
-							 * certain mime types.
-							 * Accepts string / array.
-							 */
-							//'post_mime_types' => array( 'image', 'audio' ),
-						)
-					)
-				)
-			),
 			'artist' => array(
 				array(
 					'id'     => 'artist-data',
@@ -195,6 +168,33 @@ class MCG {
 							'title' => __('Images', 'mcg'),
 							'type'  => 'file',
 							'mode'  => 'checkbox'
+						)
+					)
+				)
+			),
+			'page' => array(
+				array(
+					'id'     => 'more-page-data',
+					'title'  => __('Page data', 'mcg'),
+					'fields' => array(
+						array(
+							'id'    => 'pimages',
+							'title' => __('Images', 'mcg'),
+							'type'  => 'file',
+							'mode'  => 'checkbox'
+						),
+						array(
+							'id'      => 'sample_text',
+							'title'   => 'Text input',
+							'desc'    => 'Just a simple text field',
+							'type'    => 'text',
+							'default' => 'Default value',
+							/**
+							 * Optional. Uncomment this to only display the metabox for
+							 * certain mime types.
+							 * Accepts string / array.
+							 */
+							//'post_mime_types' => array( 'image', 'audio' ),
 						)
 					)
 				)
