@@ -1,3 +1,4 @@
+@import url(normalize.css);
 @import url(fontface.css);
 @import url(owl.carousel.min.css);
 @import url(owl.theme.default.min.css);
@@ -649,12 +650,12 @@ article {
 
 .news-item {
   background-repeat: no-repeat;
-  -webkit-background-size: auto 60%;
-  background-size: auto 60%;
+  -webkit-background-size: auto 70%;
+  background-size: auto 70%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 2em auto 4em auto;
+  margin: 2em auto 6em auto;
   max-width: 700px;
   padding: 1em;
   position: relative;
@@ -888,7 +889,7 @@ article {
     left: -1em;
     position: absolute;
     right: -1em;
-    top: 42.5%;
+    top: 44%;
     z-index: 2; }
     .post-gallery .gallery-controls div {
       cursor: pointer;
@@ -1127,7 +1128,8 @@ article {
     display: inline-block;
     width: 45%; }
   .artists.list {
-    width: 50%; }
+    margin-top: 3em;
+    width: 55%; }
     .artists.list li {
       /*padding: 0 1em */
       padding-left: 12%;
