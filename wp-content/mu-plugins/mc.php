@@ -564,6 +564,8 @@ class MCG {
 					$data['images'] = array( __('Images', 'mcg'), $images );
 			}
 		}
+
+		return $data;
 	}
 
 
