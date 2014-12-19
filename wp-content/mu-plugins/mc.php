@@ -124,6 +124,20 @@ class MCG {
 
 	public static function metadata_post( $groups ) {
 		$groups[] = array(
+			'page' => array(
+				array(
+					'id'     => 'page-data',
+					'title'  => __('Page data', 'mcg'),
+					'fields' => array(
+						array(
+							'id'    => 'images',
+							'title' => __('Images', 'mcg'),
+							'type'  => 'file',
+							'mode'  => 'checkbox'
+						)
+					)
+				)
+			),
 			'artist' => array(
 				array(
 					'id'     => 'artist-data',
@@ -523,6 +537,33 @@ class MCG {
 			return;
 
 		return '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.$src.'&amp;output=embed"></iframe>';
+	}
+
+
+	public static function get_page_data() {
+		if ( !is_singular('page') )
+			return;
+
+		$data = array();
+		global $post;
+
+		# 0. Images
+		if ( $_images = get_post_meta($post->ID, '_images', true) ) {
+			if ( isset($_images['selected'])) {
+				$images = array();
+				foreach ( $_images['selected'] as $img ) {
+					$images[] = array(
+						'title' => get_the_title( $img ),
+						'img'   => array(
+							'medium' => wp_get_attachment_image_src( $img, 'large' ),
+							'full'   => wp_get_attachment_image_src( $img, 'full' )
+						)
+					);
+				}
+				if ( $images )
+					$data['images'] = array( __('Images', 'mcg'), $images );
+			}
+		}
 	}
 
 

@@ -1,10 +1,19 @@
-<?php get_header(); ?>
-<?php get_template_part('part', 'header'); ?>
+<?php 
+	get_header(); 
+	get_template_part('part', 'header'); 
+	$data = MCG::get_page_data();
+?>
 <div class="wrap">
 	<main role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<div class="the-gallery-pic" style="background-image:url(http://dev.mor-charpentier.com/wp-content/uploads/2014/02/Mor_Charpentier_2014jan-212.jpg)"></div>
-			<div class="the-gallery-pic" style="background-image:url(http://dev.mor-charpentier.com/wp-content/uploads/2012/04/IMG_00621-847x565.jpg)"></div>
+			
+			<?php if ( isset($data['images']) ) { ?>
+			<?php $reversed = array_reverse( $data['images'][1] ); ?>
+				<?php foreach($reversed as $c => $i){ ?>
+					<div class="the-gallery-pic" style="background-image:url(<?php echo $i['img']['medium'][0] ?>)"></div>
+				<?php } ?>
+			<?php } ?>
+
 			<div <?php post_class(); ?> id="the-gallery">
 				<?php the_content(); ?>
 				<div class="contact-info">
