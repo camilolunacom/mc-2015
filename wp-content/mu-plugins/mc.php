@@ -130,7 +130,7 @@ class MCG {
 					'title'  => __('Page data', 'mcg'),
 					'fields' => array(
 						array(
-							'id'    => 'images',
+							'id'    => 'pimages',
 							'title' => __('Images', 'mcg'),
 							'type'  => 'file',
 							'mode'  => 'checkbox'
@@ -548,7 +548,7 @@ class MCG {
 		global $post;
 
 		# 0. Images
-		if ( $_images = get_post_meta($post->ID, '_images', true) ) {
+		if ( $_images = get_post_meta($post->ID, '_pimages', true) ) {
 			if ( isset($_images['selected'])) {
 				$images = array();
 				foreach ( $_images['selected'] as $img ) {
