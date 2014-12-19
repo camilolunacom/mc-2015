@@ -16,8 +16,7 @@ $lang_attr = ob_get_clean();
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/normalize.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/styles.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/styles.min.css">
 
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
