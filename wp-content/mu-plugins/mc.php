@@ -174,7 +174,7 @@ class MCG {
 			),
 			'page' => array(
 				array(
-					'id'     => 'more-page-data',
+					'id'     => 'data-gallery',
 					'title'  => __('Page data', 'mcg'),
 					'fields' => array(
 						array(
