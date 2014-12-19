@@ -134,7 +134,7 @@ class MCG {
 							'title' => __('Images', 'mcg'),
 							'type'  => 'file',
 							'mode'  => 'checkbox'
-						)
+						),
 					)
 				)
 			),
@@ -182,6 +182,19 @@ class MCG {
 							'title' => __('Images', 'mcg'),
 							'type'  => 'file',
 							'mode'  => 'checkbox'
+						),
+						array(
+							'id'      => 'sample_text',
+							'title'   => 'Text input',
+							'desc'    => 'Just a simple text field',
+							'type'    => 'text',
+							'default' => 'Default value',
+							/**
+							 * Optional. Uncomment this to only display the metabox for
+							 * certain mime types.
+							 * Accepts string / array.
+							 */
+							//'post_mime_types' => array( 'image', 'audio' ),
 						)
 					)
 				)
