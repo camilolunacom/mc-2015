@@ -7,6 +7,8 @@
 		<?php $date_field = get_post_meta( get_the_ID(), '_date-field', true ); ?>
 		<?php if( $date_field ){ ?>
 			<h3 class="post-date"><?php echo $date_field; // the_date(); ?></h3>
+		<?php }else{ ?>
+			<h3 class="post-date"><?php echo the_date(); ?></h3>
 		<?php } ?>
 			<h1 class="post-title"><?php the_title(); ?></h1>
 			<div class="post-gallery">
