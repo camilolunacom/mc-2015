@@ -59,7 +59,7 @@
 			?>
 			<li class="news-item" style="background-image: url(<?php echo $image_attributes[0]; ?>)">
 				<div>
-					<?php $date_field = get_post_meta( '_date-field', get_the_ID(), true ); ?>
+					<?php $date_field = get_post_meta( get_the_ID(), '_date-field', true ); ?>
 					<?php if( $date_field ){ ?>
 						<span class="news-date"><?php echo $date_field; // the_date('d/m/Y'); ?></span>
 					<?php } ?>
