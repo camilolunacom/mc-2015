@@ -250,11 +250,9 @@ article {
     .artist.thumb .artist-link {
       display: none; }
     .artist.thumb .view-artist {
-      left: -webkit-calc(50% - 42.5px);
-      left: calc(50% - 42.5px);
+      display: inline-block;
       opacity: 0;
-      pointer-events: none;
-      position: absolute; }
+      pointer-events: none; }
       .artist.thumb .view-artist:before {
         border: 1px solid black;
         bottom: 3em;
@@ -263,6 +261,11 @@ article {
         left: -webkit-calc(50% - 1px);
         left: calc(50% - 1px);
         position: absolute; }
+    .artist.thumb .view-artist-cont {
+      bottom: 0.5em;
+      left: 0;
+      position: absolute;
+      right: 0; }
     .artist.thumb:before {
       background-color: rgba(255, 255, 255, 0.75);
       content: "";

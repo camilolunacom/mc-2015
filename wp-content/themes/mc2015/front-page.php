@@ -5,11 +5,11 @@
 		$img_count = count( $_images['selected'] );
 		$rand_img = rand( 0, $img_count-1 );
 		$img = $_images['selected'][$rand_img];
-		$image = wp_get_attachment_image_src( $img, 'large' );
+		$image = array(wp_get_attachment_image_src( $img, 'medium' ), wp_get_attachment_image_src( $img, 'large' ));
 	}
 ?>
 	<div class="wrap index">
-		<main class="index vertical-align" role="main"   style="background-image:url(<?php echo $image[0] ?>); ?>)">
+		<main class="index vertical-align" role="main"   style="background-image:url(<?php echo $image[1][0] ?>); ?>)">
 
 			<div class="logo">
 				<a class="icon-logo" href="<?php echo home_url(); ?>/" rel="home"></a>
