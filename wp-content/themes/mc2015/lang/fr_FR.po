@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MC2015\n"
-"POT-Creation-Date: 2014-12-11 15:39-0500\n"
-"PO-Revision-Date: 2014-12-19 13:47-0500\n"
-"Last-Translator: 8manos i18n <i18n@8manos.com>\n"
+"POT-Creation-Date: 2014-12-23 15:08-0500\n"
+"PO-Revision-Date: 2014-12-23 15:08-0500\n"
+"Last-Translator: Carlos Sosa <carlos@8manos.com>\n"
 "Language-Team: 8manos l18n <l18n@8manos.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-Basepath: ../\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: __;_e\n"
@@ -20,35 +20,41 @@ msgstr ""
 msgid "Share"
 msgstr "Partager"
 
-#: page-gallery.php:15 ../mc2015/page-gallery.php:15
+#: page-gallery.php:24 ../mc2015/page-gallery.php:24
 msgid "Tue/Sat 11am-7pm"
 msgstr ""
 
-#: page-gallery.php:29 ../mc2015/page-gallery.php:29
+#: page-gallery.php:38 ../mc2015/page-gallery.php:38
 msgid "Newsletter"
 msgstr ""
 
-#: page-exhibitions.php:35 ../mc2015/page-exhibitions.php:35
+#: single-post.php:26 single-exhibition.php:63 ../mc2015/single-post.php:26
+#: ../mc2015/single-exhibition.php:63 ../mcg/functions.php:242
+#: ../mcg/functions.php:397
+msgid "Press release"
+msgstr "Communiqué"
+
+#: page-exhibitions.php:47 ../mc2015/page-exhibitions.php:47
 msgid "Current exhibition"
 msgstr "Exposition en cours"
 
-#: page-exhibitions.php:41 ../mc2015/page-exhibitions.php:41
-msgid "View more"
-msgstr "Voir"
-
-#: _past-exhibitions.php:24 ../mc2015/_past-exhibitions.php:24
+#: _past-exhibitions.php:36 ../mc2015/_past-exhibitions.php:36
 msgid "Past exhibitions"
 msgstr "Archives"
 
-#: single-exhibition.php:18 single-artist.php:21
-#: ../mc2015/single-exhibition.php:18 ../mc2015/single-artist.php:21
+#: _past-exhibitions.php:67 ../mc2015/_past-exhibitions.php:67
+#: ../mcg/functions.php:367
+msgid "View exhibition"
+msgstr "Voir"
+
+#: _past-exhibitions.php:72 ../mc2015/_past-exhibitions.php:72
+msgid "Group exhibition"
+msgstr "Exposition collective"
+
+#: single-exhibition.php:33 single-artist.php:21
+#: ../mc2015/single-exhibition.php:33 ../mc2015/single-artist.php:21
 msgid "Close"
 msgstr "Fermer"
-
-#: single-exhibition.php:50 ../mc2015/single-exhibition.php:50
-#: ../mcg/functions.php:242 ../mcg/functions.php:397
-msgid "Press release"
-msgstr "Communiqué"
 
 #: page-news.php:22 ../mc2015/page-news.php:22
 msgid "<span class=\"icon-page-prev\"></span>"
@@ -62,7 +68,7 @@ msgstr ""
 msgid "Filter"
 msgstr "Filtre"
 
-#: page-news.php:79 ../mc2015/page-news.php:79
+#: page-news.php:84 ../mc2015/page-news.php:84
 msgid "Read more"
 msgstr "Voir"
 
@@ -74,11 +80,11 @@ msgstr "Mosaïque"
 msgid "List"
 msgstr "Liste"
 
-#: page-artists.php:21 ../mc2015/page-artists.php:21
+#: page-artists.php:22 ../mc2015/page-artists.php:22
 msgid "View artist"
 msgstr "Voir"
 
-#: single-artist.php:53 ../mc2015/single-artist.php:53
+#: single-artist.php:58 ../mc2015/single-artist.php:58
 msgid "Download CV"
 msgstr "CV"
 
@@ -153,10 +159,6 @@ msgstr ""
 #: ../mcg/functions.php:253
 msgid "Artist info"
 msgstr ""
-
-#: ../mcg/functions.php:367
-msgid "View exhibition"
-msgstr "Voir"
 
 #: ../mcg/functions.php:378
 msgid "Site settings"
@@ -315,6 +317,9 @@ msgstr ""
 #: ../mcg/p/krr.php:452
 msgid "Before footer"
 msgstr ""
+
+#~ msgid "View more"
+#~ msgstr "Voir"
 
 #, fuzzy
 #~ msgid "Current show"

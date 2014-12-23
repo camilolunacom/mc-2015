@@ -18,7 +18,9 @@
 			<li class="artist thumb" style="background-image: url(<?php echo $image_attributes[0]; ?>)">
 				<a href="<?php echo the_permalink(); ?>" class="artist-name">
 					<span><?php echo the_title(); ?></span>
-					<div class="view-artist"><?php _e( 'View artist', 'mor'); ?></div>
+					<div class="view-artist-cont">
+						<span class="view-artist"><?php _e( 'View artist', 'mor'); ?></span>
+					</div>
 					<a href="<?php echo the_permalink(); ?>" class="artist-link"><?php echo the_title(); ?></a>
 				</a>
 			</li>

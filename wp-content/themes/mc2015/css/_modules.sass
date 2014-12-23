@@ -117,10 +117,11 @@ article
 			display: none
 
 		.view-artist
-			left: calc(50% - 42.5px)
+			display: inline-block
+			//left: calc(50% - 42.5px)
 			opacity: 0
 			pointer-events: none
-			position: absolute
+			//position: absolute
 
 			&:before
 				border: 1px solid black
@@ -129,6 +130,12 @@ article
 				height: 4em
 				left: calc(50% - 1px)
 				position: absolute
+
+		.view-artist-cont
+			bottom: 0.5em
+			left: 0
+			position: absolute
+			right: 0
 
 		&:before
 			background-color: rgba(255, 255, 255, 0.75)
@@ -701,17 +708,19 @@ article
 		width: 100px
 
 		[class^="icon-"]
+			background-color: black
 			border-radius: 50%
-			box-shadow: 0 0 0 1px transparent
+			box-shadow: 0 0 0 1px
+			color: white
 			display: inline-block
-			font-size: x-large
+			font-size: medium
+			padding: 0.5em
 			transition: all 0.3s
 
 		&:hover
 			[class^="icon-"]
-				background: black
-				box-shadow: 0 0 0 1px black
-				color: white
+				background-color: white
+				color: black
 
 	.post-attachment-text
 		font-size: 14px
@@ -760,17 +769,19 @@ article
 				vertical-align: middle
 
 			.icon-close
+				background-color: black
 				border-radius: 50%
-				box-shadow: 0 0 0 1px white
+				box-shadow: 0 0 0 1px black
+				color: white
 				display: inline-block
-				font-size: medium
+				font-size: xx-small
 				margin: 0 0.2em
+				padding: 0.5em
 				transition: 0.3s all
 
 			&:hover .icon-close
-				background-color: black
-				box-shadow: 0 0 0 1px black
-				color: white
+				background-color: white
+				color: black
 
 		&.icon-expand
 			background-color: black
@@ -948,14 +959,16 @@ article
 		padding: 0.25em
 
 		a
-			background-color: white
+			background-color: black
 			border-radius: 50%
-			box-shadow: 0 0 0 1px transparent
+			box-shadow: 0 0 0 1px black
+			color: white
+			font-size: medium
+			padding: 0.5em
 
 			&:hover
-				background-color: black
-				box-shadow: 0 0 0 1px black
-				color: white
+				background-color: white
+				color: black
 
 .the-gallery-pic
 	background-position: center

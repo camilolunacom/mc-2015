@@ -20,8 +20,8 @@
 a {
   color: black;
   text-decoration: none;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s; }
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
   a:hover {
     color: rgba(0, 0, 0, 0.7); }
 
@@ -250,11 +250,9 @@ article {
     .artist.thumb .artist-link {
       display: none; }
     .artist.thumb .view-artist {
-      left: -webkit-calc(50% - 42.5px);
-      left: calc(50% - 42.5px);
+      display: inline-block;
       opacity: 0;
-      pointer-events: none;
-      position: absolute; }
+      pointer-events: none; }
       .artist.thumb .view-artist:before {
         border: 1px solid black;
         bottom: 3em;
@@ -263,6 +261,11 @@ article {
         left: -webkit-calc(50% - 1px);
         left: calc(50% - 1px);
         position: absolute; }
+    .artist.thumb .view-artist-cont {
+      bottom: 0.5em;
+      left: 0;
+      position: absolute;
+      right: 0; }
     .artist.thumb:before {
       background-color: rgba(255, 255, 255, 0.75);
       content: "";
@@ -782,19 +785,20 @@ article {
     padding: 0.5em;
     width: 100px; }
     .post-actions .post-attachment-link [class^="icon-"] {
+      background-color: black;
       -webkit-border-radius: 50%;
       border-radius: 50%;
-      -webkit-box-shadow: 0 0 0 1px transparent;
-      box-shadow: 0 0 0 1px transparent;
+      -webkit-box-shadow: 0 0 0 1px;
+      box-shadow: 0 0 0 1px;
+      color: white;
       display: inline-block;
-      font-size: x-large;
+      font-size: medium;
+      padding: 0.5em;
       -webkit-transition: all 0.3s;
       transition: all 0.3s; }
     .post-actions .post-attachment-link:hover [class^="icon-"] {
-      background: black;
-      -webkit-box-shadow: 0 0 0 1px black;
-      box-shadow: 0 0 0 1px black;
-      color: white; }
+      background-color: white;
+      color: black; }
   .post-actions .post-attachment-text {
     font-size: 14px;
     font-weight: 500; }
@@ -836,20 +840,21 @@ article {
       .post-gallery button.exit-fs span {
         vertical-align: middle; }
       .post-gallery button.exit-fs .icon-close {
+        background-color: black;
         -webkit-border-radius: 50%;
         border-radius: 50%;
-        -webkit-box-shadow: 0 0 0 1px white;
-        box-shadow: 0 0 0 1px white;
+        -webkit-box-shadow: 0 0 0 1px black;
+        box-shadow: 0 0 0 1px black;
+        color: white;
         display: inline-block;
-        font-size: medium;
+        font-size: xx-small;
         margin: 0 0.2em;
+        padding: 0.5em;
         -webkit-transition: 0.3s all;
         transition: 0.3s all; }
       .post-gallery button.exit-fs:hover .icon-close {
-        background-color: black;
-        -webkit-box-shadow: 0 0 0 1px black;
-        box-shadow: 0 0 0 1px black;
-        color: white; }
+        background-color: white;
+        color: black; }
     .post-gallery button.icon-expand {
       background-color: black;
       -webkit-border-radius: 50%;
@@ -1010,16 +1015,17 @@ article {
     font-size: 1.5em;
     padding: 0.25em; }
     .social-networks .social-network a {
-      background-color: white;
+      background-color: black;
       -webkit-border-radius: 50%;
       border-radius: 50%;
-      -webkit-box-shadow: 0 0 0 1px transparent;
-      box-shadow: 0 0 0 1px transparent; }
+      -webkit-box-shadow: 0 0 0 1px black;
+      box-shadow: 0 0 0 1px black;
+      color: white;
+      font-size: medium;
+      padding: 0.5em; }
       .social-networks .social-network a:hover {
-        background-color: black;
-        -webkit-box-shadow: 0 0 0 1px black;
-        box-shadow: 0 0 0 1px black;
-        color: white; }
+        background-color: white;
+        color: black; }
 
 .the-gallery-pic {
   background-position: center;
