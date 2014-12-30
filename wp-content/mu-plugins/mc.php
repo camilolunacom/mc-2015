@@ -80,7 +80,7 @@ class MCG {
 			),
 			'public'       => true,
 			'hierarchical' => true,
-			'supports'     => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+			'supports'     => array( 'author', 'title', 'editor', 'thumbnail', 'page-attributes' ),
 			'rewrite'      => array( 'with_front' => false )
 		) );
 
@@ -92,7 +92,7 @@ class MCG {
 			'public'       => true,
 			'hierarchical' => true,
 			'has_archive'  => true,
-			'supports'     => array( 'title', 'editor', 'thumbnail' ),
+			'supports'     => array( 'author', 'title', 'editor', 'thumbnail' ),
 			'rewrite'      => array( 'with_front' => false )
 		) );
 
