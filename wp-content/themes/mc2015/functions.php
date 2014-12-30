@@ -64,6 +64,13 @@ function wpse73190_gist_adjacent_post_sort($sql) {
 add_filter( 'get_next_post_sort', 'wpse73190_gist_adjacent_post_sort' );
 add_filter( 'get_previous_post_sort', 'wpse73190_gist_adjacent_post_sort' );
 
+add_filter( 'get_the_content_limit_allowedtags', 'get_the_content_limit_custom_allowedtags' );
+
+function get_the_content_limit_custom_allowedtags() {
+  // Add custom tags to this string
+  return '<br>,<em>,<i>,<ul>,<ol>,<li>,<a>'; 
+}
+
 /**
  * Remove code from the <head>
  */
