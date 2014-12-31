@@ -169,6 +169,13 @@ var adjustImgs = function(){
         'width': 'auto'
       });
     }
+
+    else if($(this).innerWidth() > $(this).parent().innerWidth()){
+      $(this).css({
+        'height': 'auto',
+        'width': '100%'
+      });
+    }
   });
 }
 
