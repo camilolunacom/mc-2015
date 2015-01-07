@@ -1332,6 +1332,28 @@ article.artist.sticky .post-title {
   .post-gallery::-moz-full-screen .owl-carousel {
     margin: 0 auto;
     width: 95%; }
+.post-gallery::-ms-full-screen {
+  background-color: white;
+  border: 10px solid black;
+  height: 100%;
+  padding: 2em;
+  width: 100%; }
+  .post-gallery::-ms-full-screen button.exit-fs {
+    display: block; }
+  .post-gallery::-ms-full-screen button.icon-expand {
+    display: none; }
+  .post-gallery::-ms-full-screen figure {
+    background-color: white; }
+  .post-gallery::-ms-full-screen .gallery-controls {
+    left: 1em;
+    right: 1em; }
+  .post-gallery::-ms-full-screen .img {
+    background: white;
+    line-height: 88vh;
+    height: 88vh; }
+  .post-gallery::-ms-full-screen .owl-carousel {
+    margin: 0 auto;
+    width: 95%; }
 .post-gallery:-webkit-full-screen {
   background-color: white;
   border: 10px solid black;
