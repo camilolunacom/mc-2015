@@ -1291,6 +1291,7 @@ article.artist.sticky .post-title {
 .post-gallery::-webkit-full-screen {
   background-color: white;
   border: 10px solid black;
+  height: 100%;
   padding: 2em;
   width: 100%; }
   .post-gallery::-webkit-full-screen button.exit-fs {
@@ -1312,6 +1313,7 @@ article.artist.sticky .post-title {
 .post-gallery::-moz-full-screen {
   background-color: white;
   border: 10px solid black;
+  height: 100%;
   padding: 2em;
   width: 100%; }
   .post-gallery::-moz-full-screen button.exit-fs {
@@ -1333,6 +1335,7 @@ article.artist.sticky .post-title {
 .post-gallery:-webkit-full-screen {
   background-color: white;
   border: 10px solid black;
+  height: 100%;
   padding: 2em;
   width: 100%; }
   .post-gallery:-webkit-full-screen button.exit-fs {
@@ -1354,6 +1357,7 @@ article.artist.sticky .post-title {
 .post-gallery:-moz-full-screen {
   background-color: white;
   border: 10px solid black;
+  height: 100%;
   padding: 2em;
   width: 100%; }
   .post-gallery:-moz-full-screen button.exit-fs {
@@ -1375,6 +1379,7 @@ article.artist.sticky .post-title {
 .post-gallery:-ms-full-screen {
   background-color: white;
   border: 10px solid black;
+  height: 100%;
   padding: 2em;
   width: 100%; }
   .post-gallery:-ms-full-screen button.exit-fs {
