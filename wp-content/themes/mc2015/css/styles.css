@@ -945,14 +945,8 @@ article {
   position: absolute;
   right: 0.5rem;
   -webkit-text-orientation: upright;
-  -moz-text-orientation: upright;
-  -ms-text-orientation: upright;
-  text-orientation: upright;
   top: 0.5rem;
   -webkit-writing-mode: vertical-lr;
-  -moz-writing-mode: vertical-lr;
-  -ms-writing-mode: vertical-lr;
-  writing-mode: vertical-lr;
   z-index: 1; }
   .prod-team a {
     color: rgba(0, 0, 0, 0.3);
@@ -1093,8 +1087,8 @@ article {
 @media screen and (max-width: 48em) {
   .navigation-menu {
     height: 70px;
-    -webkit-transition: all 0.3;
-    transition: all 0.3;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     width: 100%; }
     .navigation-menu nav,
     .navigation-menu .kc-ml-languages,
