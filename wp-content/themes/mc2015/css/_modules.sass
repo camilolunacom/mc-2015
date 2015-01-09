@@ -442,19 +442,16 @@ article
 .prev-post-link
 	bottom: 0
 	display: none
+	font-size: 12px
 	position: fixed
 	text-align: center
 	text-transform: uppercase
-	top: 0
-	-webkit-writing-mode: vertical-lr
-	-moz-writing-mode: vertical-lr
-	-ms-writing-mode: vertical-lr
-	writing-mode: vertical-lr
+	//-webkit-writing-mode: vertical-lr
+	width: 100vh
 	z-index: 0
 
 	a
 		color: rgba(0, 0, 0, 0.3)
-		font-size: 12px
 		font-weight: bold
 		letter-spacing: 0.2em
 
@@ -466,6 +463,8 @@ article
 
 .next-post-link
 	right: 1em
+	transform: rotate(90deg) translate(2.5em, 0.75em)
+	transform-origin: top right
 
 .newsletter
 	padding: 3em 1em 1em 1em
@@ -672,7 +671,8 @@ article
 
 .prev-post-link
 	left: 1em
-	transform: rotate(180deg)
+	transform: rotate(-90deg) translate(-2.5em, 0.75em)
+	transform-origin: top left
 
 .picture-credits
 	display: none

@@ -534,19 +534,15 @@ article {
 .prev-post-link {
   bottom: 0;
   display: none;
+  font-size: 12px;
   position: fixed;
   text-align: center;
   text-transform: uppercase;
-  top: 0;
-  -webkit-writing-mode: vertical-lr;
-  -moz-writing-mode: vertical-lr;
-  -ms-writing-mode: vertical-lr;
-  writing-mode: vertical-lr;
+  width: 100vh;
   z-index: 0; }
   .next-post-link a,
   .prev-post-link a {
     color: rgba(0, 0, 0, 0.3);
-    font-size: 12px;
     font-weight: bold;
     letter-spacing: 0.2em; }
     .next-post-link a:hover,
@@ -557,7 +553,13 @@ article {
     margin: 0.2em 0; }
 
 .next-post-link {
-  right: 1em; }
+  right: 1em;
+  -webkit-transform: rotate(90deg) translate(2.5em, 0.75em);
+  -ms-transform: rotate(90deg) translate(2.5em, 0.75em);
+  transform: rotate(90deg) translate(2.5em, 0.75em);
+  -webkit-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right; }
 
 .newsletter {
   padding: 3em 1em 1em 1em;
@@ -749,9 +751,12 @@ article {
 
 .prev-post-link {
   left: 1em;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg); }
+  -webkit-transform: rotate(-90deg) translate(-2.5em, 0.75em);
+  -ms-transform: rotate(-90deg) translate(-2.5em, 0.75em);
+  transform: rotate(-90deg) translate(-2.5em, 0.75em);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left; }
 
 .picture-credits {
   display: none;
