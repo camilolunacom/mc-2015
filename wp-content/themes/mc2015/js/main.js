@@ -281,7 +281,9 @@ $(document).on('ready', function(){
 
     if(($('article.artist').length > 0) && !isTouchDevice()){
       //Page bottom detection
-      if(ScrollTop + $(window).height() == $(document).height()){
+      var bottom_threshold = ScrollTop + $(window).height();
+      var bottom_trigger = $(document).height() - $(window).height()/6;
+      if(bottom_threshold >= bottom_trigger){
         $('.next-post-link, .prev-post-link').fadeIn();
       }
       else {
