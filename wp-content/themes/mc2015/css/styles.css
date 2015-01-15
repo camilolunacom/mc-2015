@@ -824,6 +824,9 @@ article {
     font-size: 20px;
     font-weight: bold;
     text-align: center; }
+  .post-content img {
+    height: auto;
+    max-width: 100%; }
   .post-content p {
     font-size: 14px;
     line-height: 1.8em; }
@@ -897,6 +900,8 @@ article {
         font-weight: bold; }
   .post-gallery figure {
     background-color: white;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
     position: relative; }
   .post-gallery .img {
     background-color: white;
@@ -905,20 +910,18 @@ article {
     text-align: center; }
     .post-gallery .img img {
       display: inline-block; }
-  .post-gallery .gallery-controls {
-    left: -1em;
+  .post-gallery .gallery-controls div {
+    cursor: pointer;
     position: absolute;
-    right: -1em;
-    top: -webkit-calc(50% - 10px);
-    top: calc(50% - 10px);
-    z-index: 2; }
-    .post-gallery .gallery-controls div {
-      cursor: pointer;
-      display: inline-block; }
-      .post-gallery .gallery-controls div.owl-next {
-        float: right; }
-      .post-gallery .gallery-controls div.owl-prev {
-        float: left; }
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1; }
+    .post-gallery .gallery-controls div.owl-next {
+      right: -1.5em; }
+    .post-gallery .gallery-controls div.owl-prev {
+      left: -1.5em; }
 
 .post-share {
   margin-top: 1em;
@@ -1243,9 +1246,6 @@ article {
     display: block; }
   .post-gallery figcaption div {
     display: inline-block; }
-  .post-gallery .gallery-controls {
-    left: -4em;
-    right: -4em; }
   .post-gallery:hover button.icon-expand {
     opacity: 1; }
 
@@ -1308,10 +1308,12 @@ article.artist.sticky .post-title {
   .post-gallery::-webkit-full-screen button.icon-expand {
     display: none; }
   .post-gallery::-webkit-full-screen figure {
-    background-color: white; }
-  .post-gallery::-webkit-full-screen .gallery-controls {
-    left: 1em;
+    background-color: white;
+    cursor: default; }
+  .post-gallery::-webkit-full-screen .gallery-controls .owl-next {
     right: 1em; }
+  .post-gallery::-webkit-full-screen .gallery-controls .owl-prev {
+    left: 1em; }
   .post-gallery::-webkit-full-screen .img {
     background: white;
     line-height: 88vh;
@@ -1330,10 +1332,12 @@ article.artist.sticky .post-title {
   .post-gallery::-moz-full-screen button.icon-expand {
     display: none; }
   .post-gallery::-moz-full-screen figure {
-    background-color: white; }
-  .post-gallery::-moz-full-screen .gallery-controls {
-    left: 1em;
+    background-color: white;
+    cursor: default; }
+  .post-gallery::-moz-full-screen .gallery-controls .owl-next {
     right: 1em; }
+  .post-gallery::-moz-full-screen .gallery-controls .owl-prev {
+    left: 1em; }
   .post-gallery::-moz-full-screen .img {
     background: white;
     line-height: 88vh;
@@ -1352,10 +1356,12 @@ article.artist.sticky .post-title {
   .post-gallery::-ms-fullscreen button.icon-expand {
     display: none; }
   .post-gallery::-ms-fullscreen figure {
-    background-color: white; }
-  .post-gallery::-ms-fullscreen .gallery-controls {
-    left: 1em;
+    background-color: white;
+    cursor: default; }
+  .post-gallery::-ms-fullscreen .gallery-controls .owl-next {
     right: 1em; }
+  .post-gallery::-ms-fullscreen .gallery-controls .owl-prev {
+    left: 1em; }
   .post-gallery::-ms-fullscreen .img {
     background: white;
     line-height: 88vh;
@@ -1374,10 +1380,12 @@ article.artist.sticky .post-title {
   .post-gallery:-webkit-full-screen button.icon-expand {
     display: none; }
   .post-gallery:-webkit-full-screen figure {
-    background-color: white; }
-  .post-gallery:-webkit-full-screen .gallery-controls {
-    left: 1em;
+    background-color: white;
+    cursor: default; }
+  .post-gallery:-webkit-full-screen .gallery-controls .owl-next {
     right: 1em; }
+  .post-gallery:-webkit-full-screen .gallery-controls .owl-prev {
+    left: 1em; }
   .post-gallery:-webkit-full-screen .img {
     background: white;
     line-height: 88vh;
@@ -1396,10 +1404,12 @@ article.artist.sticky .post-title {
   .post-gallery:-moz-full-screen button.icon-expand {
     display: none; }
   .post-gallery:-moz-full-screen figure {
-    background-color: white; }
-  .post-gallery:-moz-full-screen .gallery-controls {
-    left: 1em;
+    background-color: white;
+    cursor: default; }
+  .post-gallery:-moz-full-screen .gallery-controls .owl-next {
     right: 1em; }
+  .post-gallery:-moz-full-screen .gallery-controls .owl-prev {
+    left: 1em; }
   .post-gallery:-moz-full-screen .img {
     background: white;
     line-height: 88vh;
@@ -1418,10 +1428,12 @@ article.artist.sticky .post-title {
   .post-gallery:-ms-fullscreen button.icon-expand {
     display: none; }
   .post-gallery:-ms-fullscreen figure {
-    background-color: white; }
-  .post-gallery:-ms-fullscreen .gallery-controls {
-    left: 1em;
+    background-color: white;
+    cursor: default; }
+  .post-gallery:-ms-fullscreen .gallery-controls .owl-next {
     right: 1em; }
+  .post-gallery:-ms-fullscreen .gallery-controls .owl-prev {
+    left: 1em; }
   .post-gallery:-ms-fullscreen .img {
     background: white;
     line-height: 88vh;
@@ -1470,25 +1482,33 @@ article.artist.sticky .post-title {
   .post-gallery:fullscreen button.icon-expand {
     display: none; }
   .post-gallery:-webkit-full-screen figure {
-    background-color: white; }
+    background-color: white;
+    cursor: default; }
   .post-gallery:-moz-full-screen figure {
-    background-color: white; }
+    background-color: white;
+    cursor: default; }
   .post-gallery:-ms-fullscreen figure {
-    background-color: white; }
+    background-color: white;
+    cursor: default; }
   .post-gallery:fullscreen figure {
-    background-color: white; }
-  .post-gallery:-webkit-full-screen .gallery-controls {
-    left: 1em;
+    background-color: white;
+    cursor: default; }
+  .post-gallery:-webkit-full-screen .gallery-controls .owl-next {
     right: 1em; }
-  .post-gallery:-moz-full-screen .gallery-controls {
-    left: 1em;
+  .post-gallery:-moz-full-screen .gallery-controls .owl-next {
     right: 1em; }
-  .post-gallery:-ms-fullscreen .gallery-controls {
-    left: 1em;
+  .post-gallery:-ms-fullscreen .gallery-controls .owl-next {
     right: 1em; }
-  .post-gallery:fullscreen .gallery-controls {
-    left: 1em;
+  .post-gallery:fullscreen .gallery-controls .owl-next {
     right: 1em; }
+  .post-gallery:-webkit-full-screen .gallery-controls .owl-prev {
+    left: 1em; }
+  .post-gallery:-moz-full-screen .gallery-controls .owl-prev {
+    left: 1em; }
+  .post-gallery:-ms-fullscreen .gallery-controls .owl-prev {
+    left: 1em; }
+  .post-gallery:fullscreen .gallery-controls .owl-prev {
+    left: 1em; }
   .post-gallery:-webkit-full-screen .img {
     background: white;
     line-height: 88vh;

@@ -17,7 +17,6 @@
 			<?php $reversed = array_reverse( $data['images'][1] ); ?>
 			<div class="post-gallery">
 				<div class="loader"></div>
-				<button type="button" class="icon-expand"></button>
 				<button type="button" class="exit-fs"><span><?php _e( 'Close', 'mor'); ?></span><span class="icon-close"></span></button>
 				<div class="owl-carousel">
 					<?php foreach($reversed as $c => $i){

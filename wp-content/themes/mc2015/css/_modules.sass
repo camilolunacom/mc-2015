@@ -737,12 +737,15 @@ article
 
 .post-content
 	position: relative
-	//transition: all 0.3s
 
 	h2
 		font-size: 20px
 		font-weight: bold
 		text-align: center
+
+	img
+		height: auto
+		max-width: 100%
 
 	p
 		font-size: 14px
@@ -821,6 +824,7 @@ article
 
 	figure
 		background-color: white
+		cursor: zoom-in
 		position: relative
 
 	.img
@@ -833,21 +837,19 @@ article
 			display: inline-block
 
 	.gallery-controls
-		left: -1em
-		position: absolute
-		right: -1em
-		top: calc(50% - 10px)
-		z-index: 2
 
 		div
 			cursor: pointer
-			display: inline-block
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 1
 
 			&.owl-next
-				float: right
+				right: -1.5em
 
 			&.owl-prev
-				float: left
+				left: -1.5em
 
 .post-share
 	margin-top: 1em
@@ -1226,10 +1228,6 @@ article
 		figcaption
 			div
 				display: inline-block
-
-		.gallery-controls
-			left: -4em
-			right: -4em
 
 		&:hover button.icon-expand
 			opacity: 1

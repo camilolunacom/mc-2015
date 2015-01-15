@@ -344,13 +344,15 @@ $(document).on('ready', function(){
   }
 
   //Fullscreen for pictures
-  if($('.post-gallery .icon-expand').length > 0){
-    $('.post-gallery .icon-expand').on('click', function(){
-      var $el = $(this).parent()[0];
-      if(screenfull.enabled){
-        screenfull.request($el);
-      }
-    });
+  if($('.post-gallery .owl-carousel').length > 0){
+    if(!screenfull.isFullscreen){
+      $('.post-gallery .owl-carousel').on('click', function(){
+        var $el = $(this).parent()[0];
+        if(screenfull.enabled){
+          screenfull.request($el);
+        }
+      });
+    }
     $('.post-gallery .exit-fs').on('click', function(){
       if(screenfull.enabled){
         screenfull.exit();
