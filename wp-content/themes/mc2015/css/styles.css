@@ -1307,6 +1307,8 @@ article.artist.sticky .post-title {
     display: block; }
   .post-gallery::-webkit-full-screen button.icon-expand {
     display: none; }
+  .post-gallery::-webkit-full-screen figcaption {
+    background-color: white; }
   .post-gallery::-webkit-full-screen figure {
     background-color: white;
     cursor: default; }
@@ -1331,6 +1333,8 @@ article.artist.sticky .post-title {
     display: block; }
   .post-gallery::-moz-full-screen button.icon-expand {
     display: none; }
+  .post-gallery::-moz-full-screen figcaption {
+    background-color: white; }
   .post-gallery::-moz-full-screen figure {
     background-color: white;
     cursor: default; }
@@ -1355,6 +1359,8 @@ article.artist.sticky .post-title {
     display: block; }
   .post-gallery::-ms-fullscreen button.icon-expand {
     display: none; }
+  .post-gallery::-ms-fullscreen figcaption {
+    background-color: white; }
   .post-gallery::-ms-fullscreen figure {
     background-color: white;
     cursor: default; }
@@ -1379,6 +1385,8 @@ article.artist.sticky .post-title {
     display: block; }
   .post-gallery:-webkit-full-screen button.icon-expand {
     display: none; }
+  .post-gallery:-webkit-full-screen figcaption {
+    background-color: white; }
   .post-gallery:-webkit-full-screen figure {
     background-color: white;
     cursor: default; }
@@ -1403,6 +1411,8 @@ article.artist.sticky .post-title {
     display: block; }
   .post-gallery:-moz-full-screen button.icon-expand {
     display: none; }
+  .post-gallery:-moz-full-screen figcaption {
+    background-color: white; }
   .post-gallery:-moz-full-screen figure {
     background-color: white;
     cursor: default; }
@@ -1427,6 +1437,8 @@ article.artist.sticky .post-title {
     display: block; }
   .post-gallery:-ms-fullscreen button.icon-expand {
     display: none; }
+  .post-gallery:-ms-fullscreen figcaption {
+    background-color: white; }
   .post-gallery:-ms-fullscreen figure {
     background-color: white;
     cursor: default; }
@@ -1481,6 +1493,14 @@ article.artist.sticky .post-title {
     display: none; }
   .post-gallery:fullscreen button.icon-expand {
     display: none; }
+  .post-gallery:-webkit-full-screen figcaption {
+    background-color: white; }
+  .post-gallery:-moz-full-screen figcaption {
+    background-color: white; }
+  .post-gallery:-ms-fullscreen figcaption {
+    background-color: white; }
+  .post-gallery:fullscreen figcaption {
+    background-color: white; }
   .post-gallery:-webkit-full-screen figure {
     background-color: white;
     cursor: default; }
