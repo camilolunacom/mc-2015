@@ -157,8 +157,7 @@ article {
     article.artist .post-content {
       margin-top: 0; }
     article.artist .post-title {
-      margin: 0.5em auto;
-      text-shadow: 1px 1px white; }
+      margin: 0.5em auto; }
   article.exhibition .post-actions {
     top: 0; }
   article.exhibition .post-info {
@@ -216,7 +215,7 @@ article {
       border-bottom: 2px solid transparent;
       color: black;
       display: inline-block;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 500;
       letter-spacing: 0.1em;
       padding-bottom: 0.25em;
@@ -344,13 +343,15 @@ article {
   padding: 1em;
   position: relative; }
   .exhibition-current .exhibition-artist {
-    font-size: 32px;
+    font-size: 34px;
     font-weight: bold;
+    letter-spacing: 0.1em;
     margin: 0;
     text-transform: uppercase; }
   .exhibition-current .exhibition-content {
     background: rgba(255, 255, 255, 0.8);
     height: 100%;
+    letter-spacing: 0.15em;
     padding: 7em 1em;
     text-align: center;
     -webkit-transition: 0.3s all;
@@ -364,8 +365,10 @@ article {
     line-height: 1em;
     margin: 0 auto 1em auto; }
   .exhibition-current .exhibition-text {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
+    letter-spacing: 0.2em;
+    line-height: 1.4em;
     margin: 0 auto;
     text-transform: uppercase; }
     .exhibition-current .exhibition-text p {
@@ -374,10 +377,11 @@ article {
       .exhibition-current .exhibition-text p:last-of-type {
         margin-bottom: 0; }
   .exhibition-current .exhibition-title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
+    letter-spacing: 0.15em;
     line-height: 1em;
-    margin: 0.5em auto;
+    margin: 0.65em auto;
     text-transform: uppercase; }
   .exhibition-current .read-more {
     display: inline-block; }
@@ -411,7 +415,7 @@ article {
   text-align: left;
   width: 300px; }
   .exhibition-past .exhibition-artist {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin: 0; }
   .exhibition-past .exhibition-detail {
@@ -443,8 +447,9 @@ article {
   .exhibition-past .exhibition-title {
     font-size: 18px;
     font-weight: bold;
+    line-height: 0.9em;
     margin: 0;
-    margin-top: 0.25em; }
+    margin-top: 0.65em; }
   .exhibition-past:hover .exhibition-img > div {
     opacity: 1; }
 
@@ -544,7 +549,7 @@ article {
   .prev-post-link a {
     color: rgba(0, 0, 0, 0.3);
     font-weight: bold;
-    letter-spacing: 0.2em; }
+    letter-spacing: 0.3em; }
     .next-post-link a:hover,
     .prev-post-link a:hover {
       color: black; }
@@ -850,7 +855,7 @@ article {
         color: white;
         display: inline-block;
         font-size: xx-small;
-        margin: 0 0.2em;
+        margin: 0 0.5em;
         padding: 0.5em;
         -webkit-transition: 0.3s all;
         transition: 0.3s all; }
@@ -1009,7 +1014,7 @@ article {
   text-align: center; }
   .social-networks .social-network {
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 0.25em; }
     .social-networks .social-network a {
       background-color: black;
@@ -1018,7 +1023,7 @@ article {
       -webkit-box-shadow: 0 0 0 1px black;
       box-shadow: 0 0 0 1px black;
       color: white;
-      font-size: medium;
+      font-size: 12px;
       padding: 0.5em; }
       .social-networks .social-network a:hover {
         background-color: white;
@@ -1131,11 +1136,11 @@ article {
     display: inline-block;
     width: 45%; }
   .artists.list {
-    margin-top: 3em;
-    width: 55%; }
+    margin-top: 5em;
+    width: 40%; }
     .artists.list li {
       /*padding: 0 1em */
-      padding-left: 12%;
+      padding-left: 8%;
       /*&:nth-of-type(odd)
        * text-align: right */ }
   .artists.thumb {
@@ -1158,7 +1163,7 @@ article {
   .exhibition-current .exhibition-detail {
     width: 45%; }
   .exhibition-current .exhibition-text {
-    width: 60%; }
+    width: 70%; }
   .exhibition-current .exhibition-title {
     width: 50%; }
 
