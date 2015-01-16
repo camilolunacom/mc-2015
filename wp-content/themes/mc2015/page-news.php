@@ -62,8 +62,6 @@
 					<?php $date_field = get_post_meta( get_the_ID(), '_date-field', true ); ?>
 					<?php if( $date_field ){ ?>
 						<span class="news-date"><?php echo $date_field; // the_date('d/m/Y'); ?></span>
-					<?php }else{ ?>
-						<span class="news-date"><?php echo the_date('d/m/Y'); ?></span>
 					<?php } ?>
 					<h2 class="news-title"><?php echo the_title(); ?></h2>
 					<div class="news-excerpt">

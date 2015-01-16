@@ -900,8 +900,6 @@ article {
         font-weight: bold; }
   .post-gallery figure {
     background-color: white;
-    cursor: -webkit-zoom-in;
-    cursor: zoom-in;
     position: relative; }
   .post-gallery .img {
     background-color: white;
@@ -922,6 +920,9 @@ article {
       right: -1.5em; }
     .post-gallery .gallery-controls div.owl-prev {
       left: -1.5em; }
+  .post-gallery .owl-carousel figure {
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in; }
 
 .post-share {
   margin-top: 1em;
