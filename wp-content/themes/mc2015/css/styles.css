@@ -826,7 +826,7 @@ article {
     text-align: center; }
   .post-content img {
     height: auto;
-    max-width: 100%; }
+    width: 100%; }
   .post-content p {
     font-size: 14px;
     line-height: 1.8em; }
