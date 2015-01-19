@@ -185,9 +185,12 @@ article {
   article.post {
     margin-bottom: 1em; }
     article.post .post-actions {
-      top: 0; }
+      position: static; }
     article.post .post-attachment-link {
       text-transform: uppercase; }
+    article.post .post-content {
+      margin: 2em 0;
+      width: 100%; }
     article.post .post-title {
       margin-top: 0.1em; }
 
