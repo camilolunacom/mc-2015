@@ -1319,6 +1319,8 @@ article.artist.sticky .post-title {
   position: fixed;
   right: 0;
   top: 2.5em;
+  width: -webkit-calc(100% - 20px - 4rem);
+  width: calc(100% - 20px - 4rem);
   z-index: 2; }
 
 .post-gallery:-webkit-full-screen {
