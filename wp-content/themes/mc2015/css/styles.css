@@ -744,9 +744,9 @@ article {
       background-color: white;
       -webkit-border-radius: 50%;
       border-radius: 50%;
-      font-size: 22px;
+      font-size: 12px;
       height: 24px;
-      padding: 0;
+      padding: 0.4em;
       width: 24px; }
       .page-numbers .page-numbers.next:hover, .page-numbers .page-numbers.prev:hover {
         background-color: black;
