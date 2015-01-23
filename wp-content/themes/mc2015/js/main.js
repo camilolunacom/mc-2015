@@ -300,7 +300,8 @@ $(document).on('ready', function(){
     }
 
     if(($('#the-gallery').length > 0) && !isTouchDevice()){
-      var sticky_trigger = $('.the-gallery-pic').outerHeight(true)*2 - $('header').outerHeight(true);
+      var pics_number = $('.the-gallery-pic').length;
+      var sticky_trigger = $('.the-gallery-pic').outerHeight(true)*pics_number - $('header').outerHeight(true);
       if(ScrollTop >= sticky_trigger){
         $('#the-gallery').removeClass('sticky');
         $('.map').removeAttr('style');
