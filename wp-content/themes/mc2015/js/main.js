@@ -234,6 +234,7 @@ $(document).on('ready', function(){
 	});
 
 	if($('.past-exhibition-year').length > 0){
+    $('.exhibition-group').slideUp();
 		$('.past-exhibition-year').on('click', function(e){
 			e.preventDefault();
       if($(this).hasClass('active')){

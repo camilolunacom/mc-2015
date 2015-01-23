@@ -411,7 +411,6 @@ article {
     background-color: white; }
 
 .exhibition-group {
-  display: none;
   position: relative;
   /*&.visible
    * opacity: 1 */ }
