@@ -1032,7 +1032,7 @@ article {
 
 .social-networks {
   list-style-type: none;
-  margin: 0.5em 0;
+  margin: 0.5em 0 1.1em 0;
   padding: 0;
   text-align: center; }
   .social-networks .social-network {
@@ -1270,7 +1270,9 @@ article {
     margin-bottom: 14em; }
 
   .artists.thumb li {
-    width: 250px; }
+    width: 280px; }
+  .artists.thumb .artist-name {
+    padding: 3.5em 0; }
 
   .events {
     display: block; }
