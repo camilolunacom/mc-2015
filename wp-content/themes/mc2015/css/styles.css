@@ -1322,84 +1322,6 @@ article.artist.sticky .post-title {
   top: 2.5em;
   z-index: 2; }
 
-.post-gallery::-webkit-full-screen {
-  background-color: white;
-  border: 10px solid black;
-  height: 100%;
-  padding: 2em;
-  width: 100%; }
-  .post-gallery::-webkit-full-screen button.exit-fs {
-    display: block; }
-  .post-gallery::-webkit-full-screen button.icon-expand {
-    display: none; }
-  .post-gallery::-webkit-full-screen figcaption {
-    background-color: white; }
-  .post-gallery::-webkit-full-screen figure {
-    background-color: white;
-    cursor: default; }
-  .post-gallery::-webkit-full-screen .gallery-controls .owl-next {
-    right: 1em; }
-  .post-gallery::-webkit-full-screen .gallery-controls .owl-prev {
-    left: 1em; }
-  .post-gallery::-webkit-full-screen .img {
-    background: white;
-    line-height: 88vh;
-    height: 88vh; }
-  .post-gallery::-webkit-full-screen .owl-carousel {
-    margin: 0 auto;
-    width: 95%; }
-.post-gallery::-moz-full-screen {
-  background-color: white;
-  border: 10px solid black;
-  height: 100%;
-  padding: 2em;
-  width: 100%; }
-  .post-gallery::-moz-full-screen button.exit-fs {
-    display: block; }
-  .post-gallery::-moz-full-screen button.icon-expand {
-    display: none; }
-  .post-gallery::-moz-full-screen figcaption {
-    background-color: white; }
-  .post-gallery::-moz-full-screen figure {
-    background-color: white;
-    cursor: default; }
-  .post-gallery::-moz-full-screen .gallery-controls .owl-next {
-    right: 1em; }
-  .post-gallery::-moz-full-screen .gallery-controls .owl-prev {
-    left: 1em; }
-  .post-gallery::-moz-full-screen .img {
-    background: white;
-    line-height: 88vh;
-    height: 88vh; }
-  .post-gallery::-moz-full-screen .owl-carousel {
-    margin: 0 auto;
-    width: 95%; }
-.post-gallery::-ms-fullscreen {
-  background-color: white;
-  border: 10px solid black;
-  height: 100%;
-  padding: 2em;
-  width: 100%; }
-  .post-gallery::-ms-fullscreen button.exit-fs {
-    display: block; }
-  .post-gallery::-ms-fullscreen button.icon-expand {
-    display: none; }
-  .post-gallery::-ms-fullscreen figcaption {
-    background-color: white; }
-  .post-gallery::-ms-fullscreen figure {
-    background-color: white;
-    cursor: default; }
-  .post-gallery::-ms-fullscreen .gallery-controls .owl-next {
-    right: 1em; }
-  .post-gallery::-ms-fullscreen .gallery-controls .owl-prev {
-    left: 1em; }
-  .post-gallery::-ms-fullscreen .img {
-    background: white;
-    line-height: 88vh;
-    height: 88vh; }
-  .post-gallery::-ms-fullscreen .owl-carousel {
-    margin: 0 auto;
-    width: 95%; }
 .post-gallery:-webkit-full-screen {
   background-color: white;
   border: 10px solid black;
@@ -1421,8 +1343,8 @@ article.artist.sticky .post-title {
     left: 1em; }
   .post-gallery:-webkit-full-screen .img {
     background: white;
-    line-height: 88vh;
-    height: 88vh; }
+    line-height: 70vh;
+    height: 70vh; }
   .post-gallery:-webkit-full-screen .owl-carousel {
     margin: 0 auto;
     width: 95%; }
@@ -1447,8 +1369,8 @@ article.artist.sticky .post-title {
     left: 1em; }
   .post-gallery:-moz-full-screen .img {
     background: white;
-    line-height: 88vh;
-    height: 88vh; }
+    line-height: 70vh;
+    height: 70vh; }
   .post-gallery:-moz-full-screen .owl-carousel {
     margin: 0 auto;
     width: 95%; }
@@ -1473,8 +1395,8 @@ article.artist.sticky .post-title {
     left: 1em; }
   .post-gallery:-ms-fullscreen .img {
     background: white;
-    line-height: 88vh;
-    height: 88vh; }
+    line-height: 70vh;
+    height: 70vh; }
   .post-gallery:-ms-fullscreen .owl-carousel {
     margin: 0 auto;
     width: 95%; }
@@ -1556,20 +1478,20 @@ article.artist.sticky .post-title {
     left: 1em; }
   .post-gallery:-webkit-full-screen .img {
     background: white;
-    line-height: 88vh;
-    height: 88vh; }
+    line-height: 70vh;
+    height: 70vh; }
   .post-gallery:-moz-full-screen .img {
     background: white;
-    line-height: 88vh;
-    height: 88vh; }
+    line-height: 70vh;
+    height: 70vh; }
   .post-gallery:-ms-fullscreen .img {
     background: white;
-    line-height: 88vh;
-    height: 88vh; }
+    line-height: 70vh;
+    height: 70vh; }
   .post-gallery:fullscreen .img {
     background: white;
-    line-height: 88vh;
-    height: 88vh; }
+    line-height: 70vh;
+    height: 70vh; }
   .post-gallery:-webkit-full-screen .owl-carousel {
     margin: 0 auto;
     width: 95%; }
@@ -1607,3 +1529,20 @@ article.artist.sticky .post-title {
       display: block; }
     .navigation-menu.is-visible #hamburguer {
       color: rgba(255, 255, 255, 0.7); } }
+@media screen and (min-width: 48em) {
+  .post-gallery:-webkit-full-screen .img {
+    background: white;
+    line-height: 88vh;
+    height: 88vh; }
+  .post-gallery:-moz-full-screen .img {
+    background: white;
+    line-height: 88vh;
+    height: 88vh; }
+  .post-gallery:-ms-fullscreen .img {
+    background: white;
+    line-height: 88vh;
+    height: 88vh; }
+  .post-gallery:fullscreen .img {
+    background: white;
+    line-height: 88vh;
+    height: 88vh; } }
