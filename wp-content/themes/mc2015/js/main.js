@@ -279,7 +279,7 @@ $(document).on('ready', function(){
       }
     }
 
-    if(($('article.artist').length > 0) && !isTouchDevice()){
+    if($('article.artist').length > 0){
       //Page bottom detection
       var bottom_threshold = ScrollTop + $(window).height();
       var bottom_trigger = $(document).height() - $(window).height()/6;
