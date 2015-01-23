@@ -119,7 +119,6 @@ main {
     main.index .menu {
       font-size: 33px;
       font-weight: bold;
-      margin-bottom: 0.5em;
       padding: 0;
       text-align: center; }
       main.index .menu li {
@@ -145,6 +144,16 @@ main {
   margin-right: -0.3em;
   vertical-align: middle; }
 
+@media screen and (max-width: 48em) {
+  main.index .announcements {
+    bottom: 1em;
+    left: 1.5em;
+    position: absolute;
+    right: 1.5em; }
+  main.index .footer-items {
+    display: none !important; }
+  main.index .menu {
+    font-size: 40px; } }
 @media screen and (min-width: 48em) {
   main.index .kc-ml-languages,
   main.index .prod-team {
@@ -202,6 +211,8 @@ article {
   margin: 0 auto;
   text-align: center;
   text-transform: uppercase; }
+  .announcements img {
+    display: none; }
   .announcements span {
     display: inline-block;
     border: 3px solid;
@@ -495,10 +506,6 @@ article {
   padding: 0;
   text-align: left; }
 
-.index-menu {
-  margin-bottom: 14em;
-  margin-top: 2em; }
-
 .kc-ml-languages {
   display: none;
   letter-spacing: 0.1em;
@@ -784,7 +791,7 @@ article {
   transform-origin: top left; }
 
 .picture-credits {
-  display: none;
+  display: none !important;
   font-size: 9px;
   letter-spacing: 0.2em;
   line-height: 1em;
@@ -1256,7 +1263,7 @@ article {
     padding: 2em 4em; }
 
   .picture-credits {
-    display: block; }
+    display: inline-block !important; }
 
   .post-gallery button.icon-expand {
     display: block; }

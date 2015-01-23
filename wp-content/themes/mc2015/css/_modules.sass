@@ -64,6 +64,9 @@ article
 	text-align: center
 	text-transform: uppercase
 
+	img
+		display: none
+
 	span
 		display: inline-block
 		border: 3px solid
@@ -398,10 +401,6 @@ article
 	padding: 0
 	text-align: left
 
-.index-menu
-	margin-bottom: 14em
-	margin-top: 2em
-
 .kc-ml-languages
 	display: none
 	letter-spacing: 0.1em
@@ -701,7 +700,7 @@ article
 	transform-origin: top left
 
 .picture-credits
-	display: none
+	display: none !important
 	font-size: 9px
 	letter-spacing: 0.2em
 	line-height: 1em
@@ -1236,7 +1235,7 @@ article
 		padding: 2em 4em
 
 	.picture-credits
-		display: block
+		display: inline-block !important
 
 	.post-gallery
 		button.icon-expand
