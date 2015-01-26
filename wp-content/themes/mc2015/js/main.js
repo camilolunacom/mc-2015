@@ -88,6 +88,13 @@ la_carte = [
   }
 ];
 
+$(function(){
+  $('#menu-main a[href*="' + location.pathname.split("/")[1] + '"]').parent().addClass('current_page_item');
+  if($('body').hasClass('single-post')){
+    $('#menu-main a[href*="news"]').parent().addClass('current_page_item');
+  }
+});
+
 //Gmaps
 function loadMapScript() {
 	var script = document.createElement("script");
