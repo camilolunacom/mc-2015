@@ -358,7 +358,8 @@ $(document).on('ready', function(){
   if($('.post-gallery .owl-carousel').length > 0){
     var evt = (isTouchDevice() ? 'touchstart' : 'click');
     if(!screenfull.isFullscreen){
-      $('.post-gallery .owl-carousel').on(evt, function(){
+      $('.post-gallery .owl-carousel').on(evt, function(e){
+        console.log(e.type);
         var $el = $(this).parent()[0];
         if(screenfull.enabled){
           screenfull.request($el);
