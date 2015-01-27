@@ -356,15 +356,16 @@ $(document).on('ready', function(){
 
   //Fullscreen for pictures
   if($('.post-gallery .owl-carousel').length > 0){
+    var evt = (isTouchDevice() ? 'touchstart' : 'click');
     if(!screenfull.isFullscreen){
-      $('.post-gallery .owl-carousel').on('click', function(){
+      $('.post-gallery .owl-carousel').on(evt, function(){
         var $el = $(this).parent()[0];
         if(screenfull.enabled){
           screenfull.request($el);
         }
       });
     }
-    $('.post-gallery .exit-fs').on('click', function(){
+    $('.post-gallery .exit-fs').on(evt, function(){
       if(screenfull.enabled){
         screenfull.exit();
       }
