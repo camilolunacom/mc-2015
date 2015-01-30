@@ -11,11 +11,6 @@
 			<h3 class="post-date"><?php echo the_date(); ?></h3>
 		<?php } ?>
 			<h1 class="post-title"><?php the_title(); ?></h1>
-			<div class="post-gallery">
-				<figure>
-					<img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="">
-				</figure>
-			</div>
 			<div class="post-content">
 				<?php the_content(); ?>
 				<div class="post-actions">

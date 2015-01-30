@@ -44,21 +44,28 @@ article
 		margin-bottom: 1em
 
 		.post-actions
-			top: 0
+			position: static
 
 		.post-attachment-link
 			text-transform: uppercase
+
+		.post-content
+			margin: 2em 0
+			width: 100%
 			
 		.post-title
 			margin-top: 0.1em
 
 .announcements
-	font-size: 11px
+	font-size: 10px
 	font-weight: 500
 	letter-spacing: 0.2em
 	margin: 0 auto
 	text-align: center
 	text-transform: uppercase
+
+	img
+		display: none
 
 	span
 		display: inline-block
@@ -289,7 +296,7 @@ article
 		background-color: white
 
 .exhibition-group
-	display: none
+	//display: none
 	position: relative
 	//opacity: 0
 	//transition: 0.5s all
@@ -394,10 +401,6 @@ article
 	padding: 0
 	text-align: left
 
-.index-menu
-	margin-bottom: 14em
-	margin-top: 2em
-
 .kc-ml-languages
 	display: none
 	letter-spacing: 0.1em
@@ -429,6 +432,13 @@ article
 	
 	a
 		font-size: 3rem
+
+.mc4wp-alert
+	font-size: 0.7em
+	font-weight: 500
+	letter-spacing: 0.1em
+	margin-top: 1.4em
+	text-transform: uppercase
 
 .navigation-menu
 	background: rgba(255, 255, 255, 0.7)
@@ -577,7 +587,7 @@ article
 	background-repeat: no-repeat
 	background-size: auto 70%
 	box-sizing: border-box
-	margin: 2em auto 6em auto
+	margin: 2em auto 5em auto
 	max-width: 700px
 	padding: 1em
 	position: relative
@@ -591,14 +601,15 @@ article
 		font-family: suisse_works
 		font-size: 14px
 		font-weight: bold
-		line-height: 1.5em
+		line-height: 1.35em
 		margin: 0 auto
 		max-width: 450px
 
 	.news-title
 		font-size: 32px
 		font-weight: bold
-		margin: 0.5em auto
+		line-height: 1.1em
+		margin: 0.25em auto
 		max-width: 400px
 
 	.read-more
@@ -644,9 +655,9 @@ article
 		&.prev
 			background-color: white
 			border-radius: 50%
-			font-size: 22px
+			font-size: 12px
 			height: 24px
-			padding: 0
+			padding: 0.4em
 			width: 24px
 
 			&:hover
@@ -689,7 +700,7 @@ article
 	transform-origin: top left
 
 .picture-credits
-	display: none
+	display: none !important
 	font-size: 9px
 	letter-spacing: 0.2em
 	line-height: 1em
@@ -956,7 +967,7 @@ article
 
 .social-networks
 	list-style-type: none
-	margin: 0.5em 0
+	margin: 0.5em 0 1.1em 0
 	padding: 0
 	text-align: center
 
@@ -1078,7 +1089,7 @@ article
 		.logo
 			left: 10px
 			position: absolute
-			top: 0
+			top: 0.5em
 
 		.menu
 			font-size: 33px
@@ -1094,7 +1105,7 @@ article
 			font-size: 1.5em
 			position: absolute
 			right: 1em
-			top: 1em
+			top: 0.75em
 			transition: color 0.3s
 
 @media screen and (min-width: $tablet)
@@ -1102,6 +1113,9 @@ article
 		margin: 0 auto
 		max-width: 800px
 		width: 75%
+
+	.announcements
+		font-size: 11px
 
 	.artists
 		li
@@ -1221,7 +1235,7 @@ article
 		padding: 2em 4em
 
 	.picture-credits
-		display: block
+		display: inline-block !important
 
 	.post-gallery
 		button.icon-expand
@@ -1248,7 +1262,10 @@ article
 	.artists
 		&.thumb
 			li
-				width: 250px
+				width: 280px
+
+			.artist-name
+				padding: 3.5em 0
 
 	.events
 		display: block

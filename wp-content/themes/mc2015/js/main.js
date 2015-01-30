@@ -88,6 +88,13 @@ la_carte = [
   }
 ];
 
+$(function(){
+  $('#menu-main a[href*="' + location.pathname.split("/")[1] + '"]').parent().addClass('current_page_item');
+  if($('body').hasClass('single-post')){
+    $('#menu-main a[href*="news"]').parent().addClass('current_page_item');
+  }
+});
+
 //Gmaps
 function loadMapScript() {
 	var script = document.createElement("script");
@@ -234,6 +241,7 @@ $(document).on('ready', function(){
 	});
 
 	if($('.past-exhibition-year').length > 0){
+    $('.exhibition-group').slideUp();
 		$('.past-exhibition-year').on('click', function(e){
 			e.preventDefault();
       if($(this).hasClass('active')){
@@ -279,15 +287,17 @@ $(document).on('ready', function(){
       }
     }
 
-    if(($('article.artist').length > 0) && !isTouchDevice()){
+    if($('article.artist').length > 0){
       //Page bottom detection
-      var bottom_threshold = ScrollTop + $(window).height();
-      var bottom_trigger = $(document).height() - $(window).height()/6;
-      if(bottom_threshold >= bottom_trigger){
-        $('.next-post-link, .prev-post-link').fadeIn();
-      }
-      else {
-        $('.next-post-link, .prev-post-link').fadeOut();
+      if(!isTouchDevice()){
+        var bottom_threshold = ScrollTop + $(window).height();
+        var bottom_trigger = $(document).height() - $(window).height()/6;
+        if(bottom_threshold >= bottom_trigger){
+          $('.next-post-link, .prev-post-link').fadeIn();
+        }
+        else {
+          $('.next-post-link, .prev-post-link').fadeOut();
+        }
       }
 
       var sticky_trigger = $('.post-gallery').offset().top + $('.post-gallery').outerHeight(true) - $('header').outerHeight(true) - $('.post-title').outerHeight(true) + 60;
@@ -300,7 +310,8 @@ $(document).on('ready', function(){
     }
 
     if(($('#the-gallery').length > 0) && !isTouchDevice()){
-      var sticky_trigger = $('.the-gallery-pic').outerHeight(true)*2 - $('header').outerHeight(true);
+      var pics_number = $('.the-gallery-pic').length;
+      var sticky_trigger = $('.the-gallery-pic').outerHeight(true)*pics_number - $('header').outerHeight(true);
       if(ScrollTop >= sticky_trigger){
         $('#the-gallery').removeClass('sticky');
         $('.map').removeAttr('style');
@@ -345,15 +356,17 @@ $(document).on('ready', function(){
 
   //Fullscreen for pictures
   if($('.post-gallery .owl-carousel').length > 0){
+    var evt = (isTouchDevice() ? 'touchstart' : 'click');
     if(!screenfull.isFullscreen){
-      $('.post-gallery .owl-carousel').on('click', function(){
+      $('.post-gallery .owl-carousel').on(evt, function(e){
+        console.log(e.type);
         var $el = $(this).parent()[0];
         if(screenfull.enabled){
           screenfull.request($el);
         }
       });
     }
-    $('.post-gallery .exit-fs').on('click', function(){
+    $('.post-gallery .exit-fs').on(evt, function(){
       if(screenfull.enabled){
         screenfull.exit();
       }

@@ -7,6 +7,7 @@ article.artist.sticky
 		position: fixed
 		right: 0
 		top: 2.5em
+		width: calc(100% - 20px - 4rem)
 		z-index: 2
 
 .post-gallery
@@ -40,8 +41,8 @@ article.artist.sticky
 		
 		.img
 			background: white
-			line-height: $carousel_height_fs
-			height: $carousel_height_fs
+			line-height: $carousel_height_fs_mb
+			height: $carousel_height_fs_mb
 
 		.owl-carousel
 			margin: 0 auto
@@ -75,3 +76,12 @@ article.artist.sticky
 
 		#hamburguer
 			color: rgba(255, 255, 255, 0.7)
+
+@media screen and (min-width: $tablet)
+
+	.post-gallery
+		+fullscreen()
+			.img
+				background: white
+				line-height: $carousel_height_fs
+				height: $carousel_height_fs
