@@ -35,8 +35,8 @@
 				<?php
 
 				$args = array(
-					'orderby' => 'count',
-					'order' => 'DESC'
+					'orderby' => 'name',
+					'order' => 'ASC'
 				);
 				$categories = get_categories($args);
 
