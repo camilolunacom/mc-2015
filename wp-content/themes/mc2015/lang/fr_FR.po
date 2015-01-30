@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MC2015\n"
-"POT-Creation-Date: 2014-12-23 15:08-0500\n"
-"PO-Revision-Date: 2014-12-23 15:08-0500\n"
+"POT-Creation-Date: 2015-01-30 13:01-0500\n"
+"PO-Revision-Date: 2015-01-30 13:13-0500\n"
 "Last-Translator: Carlos Sosa <carlos@8manos.com>\n"
 "Language-Team: 8manos l18n <l18n@8manos.com>\n"
 "Language: fr\n"
@@ -20,16 +20,16 @@ msgstr ""
 msgid "Share"
 msgstr "Partager"
 
-#: page-gallery.php:24 ../mc2015/page-gallery.php:24
+#: page-gallery.php:25 ../mc2015/page-gallery.php:25
 msgid "Tue/Sat 11am-7pm"
-msgstr ""
+msgstr "Mar./Sam. 11 h - 19 h"
 
-#: page-gallery.php:38 ../mc2015/page-gallery.php:38
+#: page-gallery.php:40 ../mc2015/page-gallery.php:40
 msgid "Newsletter"
 msgstr ""
 
-#: single-post.php:26 single-exhibition.php:63 ../mc2015/single-post.php:26
-#: ../mc2015/single-exhibition.php:63 ../mcg/functions.php:242
+#: single-post.php:21 single-exhibition.php:62 ../mc2015/single-post.php:21
+#: ../mc2015/single-exhibition.php:62 ../mcg/functions.php:242
 #: ../mcg/functions.php:397
 msgid "Press release"
 msgstr "Communiqué"
@@ -51,8 +51,8 @@ msgstr "Voir"
 msgid "Group exhibition"
 msgstr "Exposition collective"
 
-#: single-exhibition.php:33 single-artist.php:21
-#: ../mc2015/single-exhibition.php:33 ../mc2015/single-artist.php:21
+#: single-exhibition.php:32 single-artist.php:20
+#: ../mc2015/single-exhibition.php:32 ../mc2015/single-artist.php:20
 msgid "Close"
 msgstr "Fermer"
 
@@ -68,7 +68,7 @@ msgstr ""
 msgid "Filter"
 msgstr "Filtre"
 
-#: page-news.php:84 ../mc2015/page-news.php:84
+#: page-news.php:82 ../mc2015/page-news.php:82
 msgid "Read more"
 msgstr "Voir"
 
@@ -84,7 +84,7 @@ msgstr "Liste"
 msgid "View artist"
 msgstr "Voir"
 
-#: single-artist.php:58 ../mc2015/single-artist.php:58
+#: single-artist.php:57 ../mc2015/single-artist.php:57
 msgid "Download CV"
 msgstr "CV"
 
