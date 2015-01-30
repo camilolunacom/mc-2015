@@ -54,6 +54,7 @@ gulp.task('deal-js', function(){
 });
 
 gulp.task('default', function(){
+	gulp.start('sass', 'autoprefix', 'minify-css', 'autoprefix-min', 'autoprefix-min', 'deal-js');
 	gulp.watch('wp-content/themes/mc2015/css/*.sass', ['sass']);
 	gulp.watch('wp-content/themes/mc2015/css/styles.css', ['autoprefix']);
 	gulp.watch('wp-content/themes/mc2015/css/styles.css', ['minify-css']);
