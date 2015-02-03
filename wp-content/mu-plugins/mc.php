@@ -136,34 +136,6 @@ class MCG {
 							'mode'  => 'single'
 						),
 						array(
-							'id'    => 'news',
-							'title' => __('News', 'mcg'),
-							'type'  => 'textarea'
-						),
-						array(
-							'id'    => 'pub',
-							'title' => __('Publications', 'mcg'),
-							'type'  => 'file',
-							'mode'  => 'checkbox'
-						),
-						array(
-							'id'    => 'video',
-							'title' => __('Video', 'mcg'),
-							'type'  => 'multiinput',
-							'subfields' => array(
-								array(
-									'id'    => 'key',
-									'title' => __('URL', 'mcg'),
-									'type'  => 'text'
-								),
-								array(
-									'id'    => 'value',
-									'title' => __('Title', 'mcg'),
-									'type'  => 'text'
-								)
-							)
-						),
-						array(
 							'id'    => 'images',
 							'title' => __('Images', 'mcg'),
 							'type'  => 'file',
