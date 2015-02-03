@@ -193,12 +193,6 @@ class MCG {
 							'type'  => 'date'
 						),
 						array(
-							'id'    => 'artists',
-							'title' => __('Artists', 'mcg'),
-							'desc'  => __('Artists names, one name per line', 'mcg'),
-							'type'  => 'textarea'
-						),
-						array(
 							'id'    => 'images',
 							'title' => __('Images', 'mcg'),
 							'type'  => 'file',
