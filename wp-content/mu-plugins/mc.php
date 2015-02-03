@@ -231,23 +231,6 @@ class MCG {
 							'title' => __('Images', 'mcg'),
 							'type'  => 'file',
 							'mode'  => 'checkbox'
-						),
-						array(
-							'id'        => 'quotes',
-							'title'     => __('Quotes', 'mcg'),
-							'type'      => 'multiinput',
-							'subfields' => array(
-								array(
-									'id'    => 'key',
-									'title' => __('Name', 'mcg'),
-									'type'  => 'text'
-								),
-								array(
-									'id'    => 'value',
-									'title' => __('Text', 'mcg'),
-									'type'  => 'textarea'
-								)
-							)
 						)
 					)
 				)
