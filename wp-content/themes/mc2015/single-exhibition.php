@@ -26,12 +26,15 @@
 			<h1 class="post-subtitle"><?php the_title(); ?></h1>
 			<div class="post-info"><?php the_content(); ?></div>
 
-			<?php if ( $data['images'] ) { ?>
+			<?php 
+				if ( $data['images'] ) { 
+				$reversed = array_reverse( $data['images'] );
+			?>
 			<div class="post-gallery">
 				<div class="loader"></div>
 				<button type="button" class="exit-fs"><span><?php _e( 'Close', 'mor'); ?></span><span class="icon-close"></span></button>
 				<div class="owl-carousel">
-					<?php foreach ( $data['images'] as $c => $img ) { ?>
+					<?php foreach ( $reversed as $c => $img ) { ?>
 					<figure>
 						<div class="img">
 							<img class="owl-lazy" data-src="<?php echo $img['medium'][0] ?>" alt="">	
