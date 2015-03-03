@@ -5,7 +5,13 @@
 *,
 *:after,
 *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+::-moz-selection {
+  background: black;
+  color: white; }
 
 ::selection {
   background: black;
@@ -14,6 +20,7 @@
 a {
   color: black;
   text-decoration: none;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s; }
   a:hover {
     color: rgba(0, 0, 0, 0.7); }
@@ -89,6 +96,7 @@ main {
     background-attachment: fixed;
     background-color: black;
     background-position: center;
+    -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -219,6 +227,8 @@ article {
   text-align: center; }
 
 .artist {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
   .artist.list {
     background: none !important;
@@ -236,6 +246,7 @@ article {
       padding-bottom: 0.25em;
       text-decoration: none;
       text-transform: uppercase;
+      -webkit-transition: border-color 0.3s;
       transition: border-color 0.3s; }
       .artist.list .artist-link:hover {
         border-color: black; }
@@ -244,6 +255,7 @@ article {
   .artist.thumb {
     background-position: center;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
     background-size: cover;
     padding: 0.7em;
     position: relative;
@@ -255,6 +267,7 @@ article {
       padding: 6em 0;
       position: relative;
       z-index: 2;
+      -webkit-transition: background-color 0.3s;
       transition: background-color 0.3s; }
       .artist.thumb .artist-name:hover {
         color: initial; }
@@ -269,6 +282,7 @@ article {
         bottom: 3em;
         content: "";
         height: 4em;
+        left: -webkit-calc(50% - 1px);
         left: calc(50% - 1px);
         position: absolute; }
     .artist.thumb .view-artist-cont {
@@ -283,6 +297,7 @@ article {
       left: 0;
       position: absolute;
       top: 0;
+      -webkit-transition: 0.3s background-color;
       transition: 0.3s background-color;
       width: 100%;
       z-index: 1; }
@@ -315,6 +330,7 @@ article {
   .events a {
     border-bottom: 2px solid transparent;
     padding-bottom: 1px;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .events a:hover {
       border-bottom: 2px solid;
@@ -346,6 +362,7 @@ article {
 .exhibition-current {
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
   background-size: cover;
   margin: 2em auto 4em auto;
   padding: 1em;
@@ -362,6 +379,7 @@ article {
     letter-spacing: 0.15em;
     padding: 7em 1em;
     text-align: center;
+    -webkit-transition: 0.3s all;
     transition: 0.3s all; }
     .exhibition-current .exhibition-content .exhibition-type:after {
       bottom: -9.5em;
@@ -430,6 +448,7 @@ article {
     margin: 0; }
   .exhibition-past .exhibition-img {
     background-position: center;
+    -webkit-background-size: cover;
     background-size: cover;
     height: 180px;
     padding: 1em; }
@@ -443,6 +462,7 @@ article {
       line-height: 142px;
       opacity: 0;
       text-align: center;
+      -webkit-transition: 0.3s all;
       transition: 0.3s all; }
       .exhibition-past .exhibition-img > div .read-more {
         display: inline;
@@ -471,6 +491,7 @@ article {
     bottom: -6em;
     content: "";
     height: 5.5em;
+    left: -webkit-calc(50% - 1px);
     left: calc(50% - 1px);
     position: absolute; }
 
@@ -502,6 +523,8 @@ article {
       content: "/";
       display: inline-block;
       margin-right: 0.2em; }
+    .kc-ml-languages li.lang-es {
+      display: none; }
 
 .loader {
   background: url(ajax-loader.gif) center no-repeat;
@@ -566,7 +589,11 @@ article {
 
 .next-post-link {
   right: 1em;
+  -webkit-transform: rotate(90deg) translate(2.5em, 0.75em);
+  -ms-transform: rotate(90deg) translate(2.5em, 0.75em);
   transform: rotate(90deg) translate(2.5em, 0.75em);
+  -webkit-transform-origin: top right;
+  -ms-transform-origin: top right;
   transform-origin: top right; }
 
 .newsletter {
@@ -610,6 +637,7 @@ article {
       outline: none;
       padding: 0.3em 0.5em;
       text-transform: uppercase;
+      -webkit-transition: 0.5s all;
       transition: 0.5s all; }
       .newsletter form input[type="submit"]:hover {
         background: black;
@@ -662,7 +690,10 @@ article {
 
 .news-item {
   background-repeat: no-repeat;
+  -webkit-background-size: auto 70%;
   background-size: auto 70%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 2em auto 5em auto;
   max-width: 700px;
@@ -718,9 +749,11 @@ article {
   .page-numbers .page-numbers {
     display: block;
     padding: 0.5em;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .page-numbers .page-numbers.next, .page-numbers .page-numbers.prev {
       background-color: white;
+      -webkit-border-radius: 50%;
       border-radius: 50%;
       font-size: 12px;
       height: 24px;
@@ -754,7 +787,11 @@ article {
 
 .prev-post-link {
   left: 1em;
+  -webkit-transform: rotate(-90deg) translate(-2.5em, 0.75em);
+  -ms-transform: rotate(-90deg) translate(-2.5em, 0.75em);
   transform: rotate(-90deg) translate(-2.5em, 0.75em);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
   transform-origin: top left; }
 
 .picture-credits {
@@ -766,7 +803,11 @@ article {
   right: 0;
   text-align: center;
   text-transform: uppercase;
+  -webkit-transform: rotate(-90deg) translate(4em, -1em);
+  -ms-transform: rotate(-90deg) translate(4em, -1em);
   transform: rotate(-90deg) translate(4em, -1em);
+  -webkit-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
   transform-origin: bottom right;
   width: 100vh;
   z-index: 0; }
@@ -783,12 +824,15 @@ article {
     width: 100px; }
     .post-actions .post-attachment-link [class^="icon-"] {
       background-color: black;
+      -webkit-border-radius: 50%;
       border-radius: 50%;
+      -webkit-box-shadow: 0 0 0 1px;
       box-shadow: 0 0 0 1px;
       color: white;
       display: inline-block;
       font-size: 12px;
       padding: 0.5em;
+      -webkit-transition: all 0.3s;
       transition: all 0.3s; }
     .post-actions .post-attachment-link:hover [class^="icon-"] {
       background-color: white;
@@ -826,6 +870,7 @@ article {
     z-index: 999; }
     .post-gallery button.exit-fs {
       background: rgba(255, 255, 255, 0.4);
+      -webkit-border-radius: 2px;
       border-radius: 2px;
       display: none;
       font-size: x-small;
@@ -837,26 +882,32 @@ article {
         vertical-align: middle; }
       .post-gallery button.exit-fs .icon-close {
         background-color: black;
+        -webkit-border-radius: 50%;
         border-radius: 50%;
+        -webkit-box-shadow: 0 0 0 1px black;
         box-shadow: 0 0 0 1px black;
         color: white;
         display: inline-block;
         font-size: xx-small;
         margin: 0 0.5em;
         padding: 0.5em;
+        -webkit-transition: 0.3s all;
         transition: 0.3s all; }
       .post-gallery button.exit-fs:hover .icon-close {
         background-color: white;
         color: black; }
     .post-gallery button.icon-expand {
       background-color: black;
+      -webkit-border-radius: 50%;
       border-radius: 50%;
+      -webkit-box-shadow: 0 0 0 1px black;
       box-shadow: 0 0 0 1px black;
       color: white;
       display: none;
       font-size: 12px;
       opacity: 0;
       padding: 0.4em;
+      -webkit-transition: 0.3s all;
       transition: 0.3s all; }
       .post-gallery button.icon-expand:hover {
         background-color: white;
@@ -884,6 +935,8 @@ article {
     cursor: pointer;
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 1; }
     .post-gallery .gallery-controls div.owl-next {
@@ -891,6 +944,7 @@ article {
     .post-gallery .gallery-controls div.owl-prev {
       left: -1.5em; }
   .post-gallery .owl-carousel figure {
+    cursor: -webkit-zoom-in;
     cursor: zoom-in; }
 
 .post-share {
@@ -907,6 +961,7 @@ article {
       border: 1px solid black;
       content: "";
       height: 2em;
+      left: -webkit-calc(50% - 1px);
       left: calc(50% - 1px);
       position: absolute;
       top: -2.5em; }
@@ -936,9 +991,12 @@ article {
   .prod-team a {
     color: rgba(0, 0, 0, 0.3);
     display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s; }
     .prod-team a:hover {
       color: black;
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
       transform: rotate(90deg); }
 
 .read-more,
@@ -953,6 +1011,7 @@ article {
   letter-spacing: 0.2em;
   padding: 0.25em 0.5em;
   text-transform: uppercase;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s; }
   .read-more:hover,
   .view-artist:hover {
@@ -994,7 +1053,9 @@ article {
     padding: 0.25em; }
     .social-networks .social-network a {
       background-color: black;
+      -webkit-border-radius: 50%;
       border-radius: 50%;
+      -webkit-box-shadow: 0 0 0 1px black;
       box-shadow: 0 0 0 1px black;
       color: white;
       font-size: 12px;
@@ -1006,6 +1067,7 @@ article {
 .the-gallery-pic {
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-background-size: auto 60%;
   background-size: auto 60%;
   display: none;
   margin: 0 2em;
@@ -1065,6 +1127,7 @@ article {
 @media screen and (max-width: 48em) {
   .navigation-menu {
     height: 70px;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     width: 100%; }
     .navigation-menu nav,
@@ -1096,6 +1159,7 @@ article {
       position: absolute;
       right: 1em;
       top: 0.75em;
+      -webkit-transition: color 0.3s;
       transition: color 0.3s; } }
 @media screen and (min-width: 48em) {
   article {
@@ -1260,6 +1324,7 @@ article.artist.sticky .post-title {
   position: fixed;
   right: 0;
   top: 2.5em;
+  width: -webkit-calc(100% - 20px - 4rem);
   width: calc(100% - 20px - 4rem);
   z-index: 2; }
 
@@ -1341,29 +1406,107 @@ article.artist.sticky .post-title {
   .post-gallery:-ms-fullscreen .owl-carousel {
     margin: 0 auto;
     width: 95%; }
+.post-gallery:-webkit-full-screen {
+  background-color: white;
+  border: 10px solid black;
+  height: 100%;
+  padding: 2em;
+  width: 100%; }
+.post-gallery:-moz-full-screen {
+  background-color: white;
+  border: 10px solid black;
+  height: 100%;
+  padding: 2em;
+  width: 100%; }
+.post-gallery:-ms-fullscreen {
+  background-color: white;
+  border: 10px solid black;
+  height: 100%;
+  padding: 2em;
+  width: 100%; }
 .post-gallery:fullscreen {
   background-color: white;
   border: 10px solid black;
   height: 100%;
   padding: 2em;
   width: 100%; }
+  .post-gallery:-webkit-full-screen button.exit-fs {
+    display: block; }
+  .post-gallery:-moz-full-screen button.exit-fs {
+    display: block; }
+  .post-gallery:-ms-fullscreen button.exit-fs {
+    display: block; }
   .post-gallery:fullscreen button.exit-fs {
     display: block; }
+  .post-gallery:-webkit-full-screen button.icon-expand {
+    display: none; }
+  .post-gallery:-moz-full-screen button.icon-expand {
+    display: none; }
+  .post-gallery:-ms-fullscreen button.icon-expand {
+    display: none; }
   .post-gallery:fullscreen button.icon-expand {
     display: none; }
+  .post-gallery:-webkit-full-screen figcaption {
+    background-color: white; }
+  .post-gallery:-moz-full-screen figcaption {
+    background-color: white; }
+  .post-gallery:-ms-fullscreen figcaption {
+    background-color: white; }
   .post-gallery:fullscreen figcaption {
     background-color: white; }
+  .post-gallery:-webkit-full-screen figure {
+    background-color: white;
+    cursor: default; }
+  .post-gallery:-moz-full-screen figure {
+    background-color: white;
+    cursor: default; }
+  .post-gallery:-ms-fullscreen figure {
+    background-color: white;
+    cursor: default; }
   .post-gallery:fullscreen figure {
     background-color: white;
     cursor: default; }
+  .post-gallery:-webkit-full-screen .gallery-controls .owl-next {
+    right: 1em; }
+  .post-gallery:-moz-full-screen .gallery-controls .owl-next {
+    right: 1em; }
+  .post-gallery:-ms-fullscreen .gallery-controls .owl-next {
+    right: 1em; }
   .post-gallery:fullscreen .gallery-controls .owl-next {
     right: 1em; }
+  .post-gallery:-webkit-full-screen .gallery-controls .owl-prev {
+    left: 1em; }
+  .post-gallery:-moz-full-screen .gallery-controls .owl-prev {
+    left: 1em; }
+  .post-gallery:-ms-fullscreen .gallery-controls .owl-prev {
+    left: 1em; }
   .post-gallery:fullscreen .gallery-controls .owl-prev {
     left: 1em; }
+  .post-gallery:-webkit-full-screen .img {
+    background: white;
+    line-height: 70vh;
+    height: 70vh; }
+  .post-gallery:-moz-full-screen .img {
+    background: white;
+    line-height: 70vh;
+    height: 70vh; }
+  .post-gallery:-ms-fullscreen .img {
+    background: white;
+    line-height: 70vh;
+    height: 70vh; }
   .post-gallery:fullscreen .img {
     background: white;
     line-height: 70vh;
     height: 70vh; }
+  .post-gallery:-webkit-full-screen .owl-carousel {
+    margin: 0 auto;
+    width: 95%; }
+  .post-gallery:-moz-full-screen .owl-carousel {
+    margin: 0 auto;
+    width: 95%; }
+  .post-gallery:-ms-fullscreen .owl-carousel {
+    margin: 0 auto;
+    width: 95%; }
   .post-gallery:fullscreen .owl-carousel {
     margin: 0 auto;
     width: 95%; }
@@ -1409,5 +1552,3 @@ article.artist.sticky .post-title {
     background: white;
     line-height: 88vh;
     height: 88vh; } }
-
-/*# sourceMappingURL=styles.css.map */
