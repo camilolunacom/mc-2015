@@ -104,7 +104,7 @@ function loadMapScript() {
 }
 
 function initializeMap() {
-  var la_galerie = new google.maps.LatLng(48.860143, 2.366514);
+  var la_galerie = new google.maps.LatLng(48.863943, 2.360240);
   var drag = true;
   if(isTouchDevice()){
   	drag = false;

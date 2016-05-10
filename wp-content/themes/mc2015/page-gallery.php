@@ -20,8 +20,8 @@
 					<div class="contact-info-city">
 						<address itemscope itemtype="http://schema.org/PostalAddress">
 							<h2 class="contact-city-name" itemprop="addressLocality">Paris</h2>
-							<p class="contact-city-details" itemprop="streetAddress">8, Rue Saint-Claude, Paris, France 75003</p>
-							<p class="contact-city-details" itemprop="streetAddress">M°8, Saint-Sébastien Froissart</p>
+							<p class="contact-city-details" itemprop="streetAddress">61 Rue de Bretagne, 75003 Paris</p>
+							<p class="contact-city-details" itemprop="streetAddress">M° Arts et Métiers</p>
 							<p class="contact-city-details" itemprop="hoursAvailable"><time itemprop="openingHours" datetime="Tu,We,Th,Fr,Sa 11:00-19:00"><?php _e( 'Tue/Sat 11am-7pm', 'mor'); ?></time></p>
 							<a href="mailto:contact@mor-charpentier.com" class="contact-city-mail" itemprop="email">contact@mor-charpentier.com</a>
 							<p class="contact-city-details" itemprop="telephone">+33 (0) 1 44 54 01 58</p>
