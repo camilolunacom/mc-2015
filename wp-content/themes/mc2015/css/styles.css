@@ -1268,8 +1268,7 @@ article {
 
   .post-gallery button.icon-expand {
     display: block; }
-  .post-gallery figcaption div {
-    display: inline-block; }
+    
   .post-gallery:hover button.icon-expand {
     opacity: 1; }
 

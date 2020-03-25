@@ -6,6 +6,7 @@
 	<nav role="navigation">
 		<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
 	</nav>
+
 	<div class="nav-footer">
 		<?php get_template_part('part', 'social'); ?>
 		<?php kc_ml_list_languages( false, 'language_code' ); ?>

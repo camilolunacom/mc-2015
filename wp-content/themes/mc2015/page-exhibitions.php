@@ -4,17 +4,17 @@
 		'post_type' => 'exhibition', 
 		'posts_per_page' => 1,
 		'meta_query' => array(
-						'relation'=>'AND',
+						/* 'relation'=>'AND',
 						array(
 							'key'     => '_date-start',
 							'value'   => $today,
-							'compare' => '<',
+							'compare' => '<=',
 							'type'    => 'CHAR'
-						),
+						), */
 						array(
 							'key'     => '_date-end',
 							'value'   => $today,
-							'compare' => '>',
+							'compare' => '>=',
 							'type'    => 'CHAR'
 						)
 					)

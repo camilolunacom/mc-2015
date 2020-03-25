@@ -155,7 +155,7 @@ class kcWalker_Terms extends Walker {
 	var $pad = '';
 	var $db_fields = array( 'parent' => 'parent', 'id' => 'term_id' );
 
-	function start_el( &$output, $term, $depth, $args, $id = 0 ) {
+	function start_el( &$output, $post, $depth = 0, $args = [], $id = 0 ) {
 		$indent = ( $depth && !empty($this->pad) ) ? str_repeat( $this->pad, $depth ) .'&nbsp;' : '';
 		$output[$term->term_id] = $indent . $term->name;
 	}
@@ -166,7 +166,7 @@ class kcWalker_Posts extends Walker {
 	var $pad = '';
 	var $db_fields = array( 'parent' => 'post_parent', 'id' => 'ID' );
 
-	function start_el( &$output, $post, $depth, $args, $id = 0 ) {
+	function start_el( &$output, $post, $depth = 0, $args = [], $id = 0 ) {
 		$indent = ( $depth && !empty($this->pad) ) ? str_repeat( $this->pad, $depth ) .'&nbsp;' : '';
 		$output[ $post->ID ] = $indent . apply_filters( 'the_title', $post->post_title );
 	}
@@ -178,7 +178,7 @@ if ( !class_exists( 'kcWalker_Menu' ) ) {
 		var $db_fields = array( 'parent' => 'menu_item_parent', 'id' => 'db_id' );
 		var $pad = '';
 
-		function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+		function start_el( &$output, $post, $depth = 0, $args = [], $id = 0 ) {
 			$indent = ( $depth && !empty($this->pad) ) ? str_repeat( $this->pad, $depth ) .'&nbsp;' : '';
 			$output[ $item->ID ] = $indent . apply_filters( 'the_title', $item->title, $item->ID );
 		}

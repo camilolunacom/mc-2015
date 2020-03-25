@@ -10,7 +10,7 @@ $lang_attr = ob_get_clean();
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
-	<title><?php bloginfo('name'); ?><?php wp_title(' | '); ?></title>
+	<title><?php wp_title(' | '); ?></title>
 
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 
@@ -39,7 +39,9 @@ $lang_attr = ob_get_clean();
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-
+	<style type="text/css">
+	.kc-ml-languages li.lang-es { display: inline-block !important; }
+	</style>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

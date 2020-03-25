@@ -1,57 +1,153 @@
 <?php
 
-if( ! defined("MC4WP_LITE_VERSION") ) {
-	header( 'Status: 403 Forbidden' );
-	header( 'HTTP/1.1 403 Forbidden' );
-	exit;
-}
-
+/**
+ * Class MC4WP_Integration
+ *
+ * Base class for all integrations.
+ *
+ * Extend this class and implement the `add_hooks` method to get a settings page.
+ *
+ * @access public
+ * @since 3.0
+ * @abstract
+ */
 abstract class MC4WP_Integration {
 
-	/**
-	 * @var string
-	 */
-	protected $type = 'integration';
 
 	/**
-	 * @var string
+	 * @var string Name of this integration.
 	 */
-	protected $checkbox_name = '_mc4wp_subscribe';
+	public $name = '';
 
 	/**
-	 * @var array
+	 * @var string Description
 	 */
-	private $options;
+	public $description = '';
 
 	/**
-	* Constructor
-	*/
-	public function __construct() {
-		$this->checkbox_name = '_mc4wp_subscribe' . '_' . $this->type;
+	 * @var string Slug, used as an unique identifier for this integration.
+	 */
+	public $slug = '';
+
+	/**
+	 * @var array Array of settings
+	 */
+	public $options = array();
+
+	/**
+	 * @var string Name attribute for the checkbox element. Will be created from slug if empty.
+	 */
+	protected $checkbox_name = '';
+
+	/**
+	 * Constructor
+	 *
+	 * @param string $slug
+	 * @param array $options
+	 */
+	public function __construct( $slug, array $options ) {
+		$this->slug    = $slug;
+		$this->options = $this->parse_options( $options );
+
+		// if checkbox name is not set, set a good custom value
+		if ( $this->checkbox_name === '' ) {
+			$this->checkbox_name = '_mc4wp_subscribe_' . $this->slug;
+		}
 	}
 
 	/**
-	 * Get the checkbox options
+	 * Return array of default options
 	 *
 	 * @return array
 	 */
-	public function get_options() {
-
-		if( $this->options === null ) {
-			$this->options = mc4wp_get_options( 'checkbox' );
-		}
-
-		return $this->options;
+	protected function get_default_options() {
+		return array(
+			'css'               => 0,
+			'double_optin'      => 1,
+			'enabled'           => 0,
+			'implicit'          => 0,
+			'label'             => __( 'Sign me up for the newsletter!', 'mailchimp-for-wp' ),
+			'lists'             => array(),
+			'precheck'          => 0,
+			'replace_interests' => 0,
+			'update_existing'   => 0,
+			'wrap_p'            => 1,
+		);
 	}
 
 	/**
-	 * Should the checkbox be pre-checked?
+	 * @param array $options
 	 *
+	 * @return array
+	 */
+	protected function parse_options( array $options ) {
+		$slug = $this->slug;
+
+		$default_options = $this->get_default_options();
+		$options         = array_merge( $default_options, $options );
+
+		/**
+		 * @deprecated Use mc4wp_integration_{$slug}_options instead
+		 */
+		$options = (array) apply_filters( 'mc4wp_' . $slug . '_integration_options', $options );
+
+		/**
+		 * Filters options for a specific integration
+		 *
+		 * The dynamic portion of the hook, `$slug`, refers to the slug of the ingration.
+		 *
+		 * @param array $integration_options
+		 */
+		return (array) apply_filters( 'mc4wp_integration_' . $slug . '_options', $options );
+	}
+
+	/**
+	 * Initialize the integration
+	 */
+	public function initialize() {
+		$this->add_required_hooks();
+		$this->add_hooks();
+	}
+
+	/**
+	 * Adds the required hooks for core functionality, like adding checkbox reset CSS.
+	 */
+	protected function add_required_hooks() {
+		if ( $this->options['css'] && ! $this->options['implicit'] ) {
+			add_action( 'wp_head', array( $this, 'print_css_reset' ) );
+		}
+	}
+
+	/**
+	 * Was integration triggered?
+	 *
+	 * Will always return true when integration is implicit. Otherwise, will check value of checkbox.
+	 *
+	 * @param int $object_id Useful when overriding method. (optional)
 	 * @return bool
 	 */
-	public function is_prechecked() {
-		$opts = $this->get_options();
-		return (bool) $opts['precheck'];
+	public function triggered( $object_id = null ) {
+		return $this->options['implicit'] || $this->checkbox_was_checked();
+	}
+
+	/**
+	 * Adds the hooks which are specific to this integration
+	 */
+	abstract protected function add_hooks();
+
+	/**
+	 * Print CSS reset
+	 *
+	 * @hooked `wp_head`
+	 */
+	public function print_css_reset() {
+		$suffix = defined( 'SCRIPT_DEBUG' ) ? '' : '.min';
+		$css    = file_get_contents( MC4WP_PLUGIN_DIR . 'assets/css/checkbox-reset' . $suffix . '.css' );
+
+		// replace selector by integration specific selector so the css affects just this checkbox
+		$css = str_ireplace( '__INTEGRATION_SLUG__', $this->slug, $css );
+
+		printf( '<style type="text/css">%s</style>', $css );
 	}
 
 	/**
@@ -60,248 +156,403 @@ abstract class MC4WP_Integration {
 	 * @return string
 	 */
 	public function get_label_text() {
+		$integration = $this;
+		$label       = $this->options['label'];
 
-		$opts = $this->get_options();
-
-		// Get general label text
-		$label = $opts['label'];
-
-		// Override label text if a specific text for this integration is set
-		if ( isset( $opts['text_' . $this->type . '_label'] ) && ! empty( $opts['text_' . $this->type . '_label'] ) ) {
-			// custom label text was set
-			$label = $opts['text_' . $this->type . '_label'];
-		}
-
-		// replace label variables
-		$label = mc4wp_replace_variables( $label, $opts['lists'] );
-
+		/**
+		 * Filters the checkbox label
+		 *
+		 * @since 3.0
+		 *
+		 * @param string $label
+		 * @param MC4WP_Integration $integration
+		 * @ignore
+		 */
+		$label = (string) apply_filters( 'mc4wp_integration_checkbox_label', $label, $integration );
 		return $label;
 	}
 
 	/**
-	 * Was the honeypot filled?
+	 * Was the integration checkbox checked?
 	 *
 	 * @return bool
 	 */
-	protected function is_honeypot_filled() {
+	public function checkbox_was_checked() {
+		$data = $this->get_data();
+		return isset( $data[ $this->checkbox_name ] ) && (int) $data[ $this->checkbox_name ] === 1;
+	}
 
-		// Check if honeypot was filled (by spam bots)
-		if( isset( $_POST['_mc4wp_required_but_not_really'] ) && ! empty( $_POST['_mc4wp_required_but_not_really'] ) ) {
-			return true;
+	/**
+	 * Get a string of attributes for the checkbox element.
+	 *
+	 * @return string
+	 */
+	protected function get_checkbox_attributes() {
+		$integration = $this;
+		$slug        = $this->slug;
+
+		$attributes = array();
+
+		if ( $this->options['precheck'] ) {
+			$attributes['checked'] = 'checked';
 		}
 
+		/**
+		 * Filters the attributes array.
+		 *
+		 * @param array $attributes
+		 * @param MC4WP_Integration $integration
+		 * @ignore
+		 */
+		$attributes = (array) apply_filters( 'mc4wp_integration_checkbox_attributes', $attributes, $integration );
+
+		/**
+		 * Filters the attributes array.
+		 *
+		 * The dynamic portion of the hook, `$slug`, refers to the slug for this integration.
+		 *
+		 * @param array $attributes
+		 * @param MC4WP_Integration $integration
+		 * @ignore
+		 */
+		$attributes = (array) apply_filters( 'mc4wp_integration_' . $slug . '_checkbox_attributes', $attributes, $integration );
+
+		$string = '';
+		foreach ( $attributes as $key => $value ) {
+			$string .= sprintf( '%s="%s"', $key, esc_attr( $value ) );
+		}
+
+		return $string;
+	}
+
+	/**
+	 * Outputs a checkbox
+	 */
+	public function output_checkbox() {
+		echo $this->get_checkbox_html();
+	}
+
+	/**
+	 * Get HTML for the checkbox
+	 * @param array $html_attrs
+	 * @return string
+	 */
+	public function get_checkbox_html( array $html_attrs = array() ) {
+		$show_checkbox    = empty( $this->options['implicit'] );
+		$integration_slug = $this->slug;
+
+		/**
+		 * Filters whether to show the sign-up checkbox for this integration.
+		 *
+		 * @param bool $show_checkbox
+		 * @param string $integration_slug
+		 */
+		$show_checkbox = (bool) apply_filters( 'mc4wp_integration_show_checkbox', $show_checkbox, $integration_slug );
+
+		if ( ! $show_checkbox ) {
+			return '';
+		}
+
+		ob_start();
+
+		echo sprintf( '<!-- Mailchimp for WordPress v%s - https://www.mc4wp.com/ -->', MC4WP_VERSION );
+
+		/** @ignore */
+		do_action( 'mc4wp_integration_before_checkbox_wrapper', $this );
+
+		/** @ignore */
+		do_action( 'mc4wp_integration_' . $this->slug . '_before_checkbox_wrapper', $this );
+
+		$wrapper_tag = $this->options['wrap_p'] ? 'p' : 'span';
+
+		$html_attrs          = array_merge(
+			array(
+				'class' => '',
+			),
+			$html_attrs
+		);
+		$html_attrs['class'] = $html_attrs['class'] . sprintf( ' mc4wp-checkbox mc4wp-checkbox-%s', $this->slug );
+
+		$html_attr_str = '';
+		foreach ( $html_attrs as $key => $value ) {
+			$html_attr_str .= sprintf( '%s="%s" ', $key, esc_attr( $value ) );
+		}
+
+		// Hidden field to make sure "0" is sent to server
+		echo sprintf( '<input type="hidden" name="%s" value="0" />', esc_attr( $this->checkbox_name ) );
+		echo sprintf( '<%s %s>', $wrapper_tag, $html_attr_str );
+		echo '<label>';
+		echo sprintf( '<input type="checkbox" name="%s" value="1" %s />', esc_attr( $this->checkbox_name ), $this->get_checkbox_attributes() );
+		echo sprintf( '<span>%s</span>', $this->get_label_text() );
+		echo '</label>';
+		echo sprintf( '</%s>', $wrapper_tag );
+
+		/** @ignore */
+		do_action( 'mc4wp_integration_after_checkbox_wrapper', $this );
+
+		/** @ignore */
+		do_action( 'mc4wp_integration_' . $this->slug . '_after_checkbox_wrapper', $this );
+		echo '<!-- / Mailchimp for WordPress -->';
+
+		$html = ob_get_clean();
+		return $html;
+	}
+
+	/**
+	 * Get the selected Mailchimp lists
+	 *
+	 * @return array Array of List ID's
+	 */
+	public function get_lists() {
+		$data        = $this->get_data();
+		$integration = $this;
+		$slug        = $this->slug;
+
+		// get checkbox lists options
+		$lists = $this->options['lists'];
+
+		// get lists from request, if set.
+		if ( ! empty( $data['_mc4wp_lists'] ) ) {
+			$lists = $data['_mc4wp_lists'];
+
+			// ensure lists is an array
+			if ( ! is_array( $lists ) ) {
+				$lists = explode( ',', $lists );
+				$lists = array_map( 'trim', $lists );
+			}
+		}
+
+		/**
+		 * Allow plugins to filter final lists value. This filter is documented elsewhere.
+		 *
+		 * @since 2.0
+		 * @see MC4WP_Form::get_lists
+		 * @ignore
+		 */
+		$lists = (array) apply_filters( 'mc4wp_lists', $lists );
+
+		/**
+		 * Filters the Mailchimp lists this integration should subscribe to
+		 *
+		 * @since 3.0
+		 *
+		 * @param array $lists
+		 * @param MC4WP_Integration $integration
+		 */
+		$lists = (array) apply_filters( 'mc4wp_integration_lists', $lists, $integration );
+
+		/**
+		 * Filters the Mailchimp lists a specific integration should subscribe to
+		 *
+		 * The dynamic portion of the hook, `$slug`, refers to the slug of the integration.
+		 *
+		 * @since 3.0
+		 *
+		 * @param array $lists
+		 * @param MC4WP_Integration $integration
+		 */
+		$lists = (array) apply_filters( 'mc4wp_integration_' . $slug . '_lists', $lists, $integration );
+
+		return $lists;
+	}
+
+	/**
+	 * Makes a subscription request
+	 *
+	 * @param array $data
+	 * @param int $related_object_id
+	 *
+	 * @return boolean
+	 */
+	protected function subscribe( array $data, $related_object_id = 0 ) {
+		$integration = $this;
+		$slug        = $this->slug;
+		$mailchimp   = new MC4WP_MailChimp();
+		$log         = $this->get_log();
+		$list_ids    = $this->get_lists();
+
+		/** @var MC4WP_MailChimp_Subscriber $subscriber */
+		$subscriber = null;
+		$result     = false;
+
+		// validate lists
+		if ( empty( $list_ids ) ) {
+			$log->warning( sprintf( '%s > No Mailchimp lists were selected', $this->name ) );
+			return false;
+		}
+
+		/**
+		 * Filters data for integration requests.
+		 *
+		 * @param array $data
+		 */
+		$data = apply_filters( 'mc4wp_integration_data', $data );
+
+		/**
+		 * Filters data for a specific integration request.
+		 *
+		 * The dynamic portion of the hook, `$slug`, refers to the integration slug.
+		 *
+		 * @param array $data
+		 * @param int $related_object_id
+		 */
+		$data = apply_filters( "mc4wp_integration_{$slug}_data", $data, $related_object_id );
+
+		/**
+		 * @ignore
+		 * @deprecated 4.0
+		 */
+		$data = apply_filters( 'mc4wp_merge_vars', $data );
+
+		/**
+		 * @deprecated 4.0
+		 * @ignore
+		 */
+		$data = apply_filters( 'mc4wp_integration_merge_vars', $data, $integration );
+
+		/**
+		 * @deprecated 4.0
+		 * @ignore
+		 */
+		$data = apply_filters( "mc4wp_integration_{$slug}_merge_vars", $data, $integration );
+
+		$email_type = mc4wp_get_email_type();
+
+		$mapper = new MC4WP_List_Data_Mapper( $data, $list_ids );
+
+		/** @var MC4WP_MailChimp_Subscriber[] $map */
+		$map = $mapper->map();
+
+		foreach ( $map as $list_id => $subscriber ) {
+			$subscriber->status     = $this->options['double_optin'] ? 'pending' : 'subscribed';
+			$subscriber->email_type = $email_type;
+			$subscriber->ip_signup  = mc4wp_get_request_ip_address();
+
+			/** @ignore (documented elsewhere) */
+			$subscriber = apply_filters( 'mc4wp_subscriber_data', $subscriber );
+
+			/**
+			 * Filters subscriber data before it is sent to Mailchimp. Only fires for integration requests.
+			 *
+			 * @param MC4WP_MailChimp_Subscriber $subscriber
+			 */
+			$subscriber = apply_filters( 'mc4wp_integration_subscriber_data', $subscriber );
+
+			/**
+			 * Filters subscriber data before it is sent to Mailchimp. Only fires for integration requests.
+			 *
+			 * The dynamic portion of the hook, `$slug`, refers to the integration slug.
+			 *
+			 * @param MC4WP_MailChimp_Subscriber $subscriber
+			 * @param int $related_object_id
+			 */
+			$subscriber = apply_filters( "mc4wp_integration_{$slug}_subscriber_data", $subscriber, $related_object_id );
+
+			$result = $mailchimp->list_subscribe( $list_id, $subscriber->email_address, $subscriber->to_array(), $this->options['update_existing'], $this->options['replace_interests'] );
+		}
+
+		// if result failed, show error message
+		if ( ! $result ) {
+
+			// log error
+			if ( (int) $mailchimp->get_error_code() === 214 ) {
+				$log->warning( sprintf( '%s > %s is already subscribed to the selected list(s)', $this->name, $subscriber->email_address ) );
+			} else {
+				$log->error( sprintf( '%s > Mailchimp API Error: %s', $this->name, $mailchimp->get_error_message() ) );
+			}
+
+			// bail
+			return false;
+		}
+
+		$log->info( sprintf( '%s > Successfully subscribed %s', $this->name, $subscriber->email_address ) );
+
+		/**
+		 * Runs right after someone is subscribed using an integration
+		 *
+		 * @since 3.0
+		 *
+		 * @param MC4WP_Integration $integration
+		 * @param string $email_address
+		 * @param array $merge_vars
+		 * @param MC4WP_MailChimp_Subscriber[] $subscriber_data
+		 * @param int $related_object_id
+		 */
+		do_action( 'mc4wp_integration_subscribed', $integration, $subscriber->email_address, $subscriber->merge_fields, $map, $related_object_id );
+
+		return $result;
+	}
+
+	/**
+	 * Are the required dependencies for this integration installed?
+	 *
+	 * @return bool
+	 */
+	public function is_installed() {
 		return false;
 	}
 
 	/**
-	* @return bool
-	*/
-	public function checkbox_was_checked() {
-
-		if( $this->is_honeypot_filled() ) {
-			return false;
-		}
-
-		return ( isset( $_POST[ $this->checkbox_name ] ) && $_POST[ $this->checkbox_name ] == 1 );
-	}
-
-	/**
-	* Outputs a checkbox
-	*/
-	public function output_checkbox() {
-		echo $this->get_checkbox();
-	}
-
-	/**
-	* @param mixed $args Array or string
-	* @return string
-	*/
-	public function get_checkbox( $args = array() ) {
-
-		$checked = ( $this->is_prechecked() ) ? 'checked ' : '';
-
-		// set label text
-		if ( isset( $args['labels'][0] ) ) {
-			// cf 7 shortcode
-			$label = $args['labels'][0];
-		} else {
-			$label = $this->get_label_text();
-		}
-
-		// CF7 checkbox?
-		if( is_array( $args ) && isset( $args['type'] ) ) {
-
-			// check for default:0 or default:1 to set the checked attribute
-		 	if( in_array( 'default:1', $args['options'] ) ) {
-		 		$checked = 'checked';
-		 	} else if( in_array( 'default:0', $args['options'] ) ) {
-		 		$checked = '';
-		 	}
-		 	
-		}
-
-		$content = "<!-- MailChimp for WP v". MC4WP_LITE_VERSION ." - https://mc4wp.com/ -->";
-
-		do_action( 'mc4wp_before_checkbox' ); 
-
-		// checkbox
-		$content .= '<p id="mc4wp-checkbox">';
-		$content .= '<label>';
-		$content .= '<input type="checkbox" name="'. esc_attr( $this->checkbox_name ) .'" value="1" '. $checked . ' /> ';
-		$content .= $label;
-		$content .= '</label>';
-		$content .= '</p>';
-
-		// honeypot
-		$content .= '<textarea name="_mc4wp_required_but_not_really" style="display: none !important;"></textarea>';
-
-		do_action( 'mc4wp_after_checkbox' );
-
-		return $content;
-	}
-
-	/**
+	 * Which UI elements should we show on the settings page for this integration?
+	 *
 	 * @return array
 	 */
-	protected function get_lists() {
-
-		// get checkbox lists options
-		$opts = $this->get_options();
-		$lists = $opts['lists'];
-
-		// get lists from form, if set.
-		if( isset( $_POST['_mc4wp_lists'] ) && ! empty( $_POST['_mc4wp_lists'] ) ) {
-
-			$lists = $_POST['_mc4wp_lists'];
-
-			// make sure lists is an array
-			if( ! is_array( $lists ) ) {
-
-				// sanitize value
-				$lists = sanitize_text_field( $lists );
-				$lists = array( $lists );
-			}
-
-		}
-
-		// allow plugins to filter final
-		$lists = apply_filters( 'mc4wp_lists', $lists );
-
-		return (array) $lists;
+	public function get_ui_elements() {
+		return array_keys( $this->options );
 	}
 
+	/**
+	 * Does integration have the given UI element?
+	 *
+	 * @param string $element
+	 * @return bool
+	 */
+	public function has_ui_element( $element ) {
+		$elements = $this->get_ui_elements();
+		return in_array( $element, $elements, true );
+	}
 
 	/**
-	* Makes a subscription request
-	*
-	* @param string $email
-	* @param array $merge_vars
-	* @param string $signup_type
-	* @param int $comment_id
-	* @return boolean
-	*/
-	protected function subscribe( $email, array $merge_vars = array(), $signup_type = 'comment', $comment_id = null ) {
+	 * Return a string to the admin settings page for this object (if any)
+	 *
+	 * @param int $object_id
+	 * @return string
+	 */
+	public function get_object_link( $object_id ) {
+		return '';
+	}
 
-		$api = mc4wp_get_api();
-		$opts = $this->get_options();
-		$lists = $this->get_lists();
+	/**
+	 * Get the data for this integration request
+	 *
+	 * By default, this will return a combination of all $_GET and $_POST parameters.
+	 * Override this method if you need data from somewhere else.
+	 *
+	 * This data should contain the value of the checkbox (required)
+	 * and the lists to which should be subscribed (optional)
+	 *
+	 * @see MC4WP_Integration::$checkbox_name
+	 * @see MC4WP_Integration::get_lists
+	 * @see MC4WP_Integration::checkbox_was_checked
+	 *
+	 * @return array
+	 */
+	public function get_data() {
+		$data = array_merge( (array) $_GET, (array) $_POST );
+		return $data;
+	}
 
-		if( empty( $lists) ) {
-			if( ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) && current_user_can( 'manage_options' ) ) {
-				wp_die(
-					'<h3>' . __( 'MailChimp for WordPress - Error', 'mailchimp-for-wp' ) . '</h3>' .
-					'<p>' . sprintf( __( 'Please select a list to subscribe to in the <a href="%s">checkbox settings</a>.', 'mailchimp-for-wp' ), admin_url( 'admin.php?page=mc4wp-lite-checkbox-settings' ) ) . '</p>' .
-					'<p style="font-style:italic; font-size:12px;">' . __( 'This message is only visible to administrators for debugging purposes.', 'mailchimp-for-wp' ) . '</p>',
-					__( 'MailChimp for WordPress - Error', 'mailchimp-for-wp' ),
-					array( 'back_link' => true )
-				);
-			}
+	/**
+	 * @return MC4WP_Debug_Log
+	 */
+	protected function get_log() {
+		return mc4wp( 'log' );
+	}
 
-			return 'no_lists_selected';
-		}
-
-		// maybe guess first and last name
-		if ( isset( $merge_vars['NAME'] ) && !isset( $merge_vars['FNAME'] ) && !isset( $merge_vars['LNAME'] ) ) {
-
-			$strpos = strpos( $merge_vars['NAME'], ' ' );
-			if ( $strpos !== false ) {
-				$merge_vars['FNAME'] = substr( $merge_vars['NAME'], 0, $strpos );
-				$merge_vars['LNAME'] = substr( $merge_vars['NAME'], $strpos );
-			} else {
-				$merge_vars['FNAME'] = $merge_vars['NAME'];
-			}
-		}
-
-		// set ip address
-		if( ! isset( $merge_vars['OPTIN_IP'] ) && isset( $_SERVER['REMOTE_ADDR'] ) ) {
-			$merge_vars['OPTIN_IP'] = sanitize_text_field( $_SERVER['REMOTE_ADDR'] );
-		}
-
-		$result = false;
-
-		/**
-		 * @filter `mc4wp_merge_vars`
-		 * @expects array
-		 * @param array $merge_vars
-		 * @param string $signup_type
-		 *
-		 * Use this to filter the final merge vars before the request is sent to MailChimp
-		 */
-		$merge_vars = apply_filters( 'mc4wp_merge_vars', $merge_vars, $signup_type );
-
-		/**
-		 * @filter `mc4wp_merge_vars`
-		 * @expects string
-		 * @param string $email_type
-		 *
-		 * Use this to change the email type this users should receive
-		 */
-		$email_type = apply_filters( 'mc4wp_email_type', 'html' );
-
-		/**
-		 * @action `mc4wp_before_subscribe`
-		 * @param string $email
-		 * @param array $merge_vars
-		 *
-		 * Runs before the request is sent to MailChimp
-		 */
-		do_action( 'mc4wp_before_subscribe', $email, $merge_vars );
-
-		foreach( $lists as $list_id ) {
-			$result = $api->subscribe( $list_id, $email, $merge_vars, $email_type, $opts['double_optin'], false, true );
-		}
-
-		/**
-		 * @action `mc4wp_after_subscribe`
-		 * @param string $email
-		 * @param array $merge_vars
-		 * @param boolean $result
-		 *
-		 * Runs after the request is sent to MailChimp
-		 */
-		do_action( 'mc4wp_after_subscribe', $email, $merge_vars, $result );
-
-		if ( $result === true ) {
-
-			// TODO: Remove this
-			$from_url = ( isset( $_SERVER['HTTP_REFERER'] ) ) ? sanitize_text_field( $_SERVER['HTTP_REFERER'] ) : '';
-			do_action( 'mc4wp_subscribe_checkbox', $email, $lists, $signup_type, $merge_vars, $comment_id, $from_url );
-		}
-
-		// check if result succeeded, show debug message to administrators (only in NON-AJAX requests)
-		if ( $result !== true && $api->has_error() && current_user_can( 'manage_options' ) && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) && ( ! isset( $_POST['_wpcf7_is_ajax_call'] ) || $_POST['_wpcf7_is_ajax_call'] != 1 ) ) {
-			wp_die( '<h3>' . __( 'MailChimp for WordPress - Error', 'mailchimp-for-wp' ) . '</h3>' .
-					'<p>' . __( 'The MailChimp server returned the following error message as a response to our sign-up request:', 'mailchimp-for-wp' ) . '</p>' .
-					'<pre>' . $api->get_error_message() . '</pre>' .
-					'<p>' . __( 'This is the data that was sent to MailChimp:', 'mailchimp-for-wp' ) . '</p>' .
-					'<strong>' . __( 'Email address:', 'mailchimp-for-wp' ) . '</strong>' .
-					'<pre>' . esc_html( $email ) . '</pre>' .
-					'<strong>' . __( 'Merge variables:', 'mailchimp-for-wp' ) . '</strong>' .
-					'<pre>' . esc_html( print_r( $merge_vars, true ) ) . '</pre>' .
-			        '<p style="font-style:italic; font-size:12px;">' . __( 'This message is only visible to administrators for debugging purposes.', 'mailchimp-for-wp' ) . '</p>',
-					__( 'MailChimp for WordPress - Error', 'mailchimp-for-wp' ), array( 'back_link' => true ) );
-		}
-
-		return $result;
+	/**
+	 * @return MC4WP_API_V3
+	 */
+	protected function get_api() {
+		return mc4wp( 'api' );
 	}
 }

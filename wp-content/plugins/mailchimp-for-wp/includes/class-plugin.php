@@ -1,118 +1,79 @@
 <?php
 
-if( ! defined("MC4WP_LITE_VERSION") ) {
-	header( 'Status: 403 Forbidden' );
-	header( 'HTTP/1.1 403 Forbidden' );
-	exit;
-}
+/**
+ * Class MC4WP_Plugin
+ *
+ * Helper class for easy access to information like the plugin file or plugin directory.
+ * Used in MC4WP Premium.
+ *
+ * @access public
+ * @ignore
+ */
+class MC4WP_Plugin {
 
-class MC4WP_Lite {
 
 	/**
-	* @var MC4WP_Lite_Form_Manager
-	*/
-	private $form_manager;
+	 * @var string The plugin version.
+	 */
+	protected $version;
 
 	/**
-	* @var MC4WP_Lite_Checkbox_Manager
-	*/
-	private $checkbox_manager;
+	 * @var string The main plugin file.
+	 */
+	protected $file;
 
 	/**
-	* @var MC4WP_Lite_API
-	*/
-	private $api = null;
-
-	/**
-	* Constructor
-	*/
-	public function __construct() {
-
-        spl_autoload_register( array( $this, 'autoload') );
-
-		// checkbox
-		$this->checkbox_manager = new MC4WP_Lite_Checkbox_Manager();
-
-		// form
-		$this->form_manager = new MC4WP_Lite_Form_Manager();
-
-		// widget
-		add_action( 'widgets_init', array( $this, 'register_widget' ) );
-	}
-
-    /**
-     * @return bool
-     */
-    public function autoload( $class_name ) {
-
-        static $classes = null;
-
-        if( $classes === null ) {
-
-	        $classes = array(
-		        'MC4WP_Lite_API'                             => 'class-api.php',
-		        'MC4WP_Lite_Checkbox_Manager'                => 'class-checkbox-manager.php',
-		        'MC4WP_Lite_Form_Manager'                    => 'class-form-manager.php',
-		        'MC4WP_Lite_Form_Request'                    => 'class-form-request.php',
-		        'MC4WP_Lite_Widget'                          => 'class-widget.php',
-		        'MC4WP_MailChimp'                            => 'class-mailchimp.php',
-
-		        // integrations
-		        'MC4WP_Integration'                     => 'integrations/class-integration.php',
-		        'MC4WP_bbPress_Integration'             => 'integrations/class-bbpress.php',
-		        'MC4WP_BuddyPress_Integration'          => 'integrations/class-buddypress.php',
-		        'MC4WP_CF7_Integration'                 => 'integrations/class-cf7.php',
-		        'MC4WP_Events_Manager_Integration'      => 'integrations/class-events-manager.php',
-		        'MC4WP_Comment_Form_Integration'        => 'integrations/class-comment-form.php',
-		        'MC4WP_General_Integration'             => 'integrations/class-general.php',
-		        'MC4WP_MultiSite_Integration'           => 'integrations/class-multisite.php',
-		        'MC4WP_Registration_Form_Integration'   => 'integrations/class-registration-form.php',
-		        'MC4WP_WooCommerce_Integration'         => 'integrations/class-woocommerce.php',
-		        'MC4WP_EDD_Integration'                 => 'integrations/class-edd.php'
-	        );
-
-        }
-
-        if( isset( $classes[$class_name] ) ) {
-            require_once MC4WP_LITE_PLUGIN_DIR . 'includes/' . $classes[$class_name];
-            return true;
-        }
-
-        return false;
-
-
-    }
-
-	/**
-	* @return MC4WP_Lite_Checkbox
-	*/
-	public function get_checkbox_manager() {
-		return $this->checkbox_manager;
+	 * @param string $file The plugin version.
+	 * @param string $version The main plugin file.
+	 */
+	public function __construct( $file, $version ) {
+		$this->file    = $file;
+		$this->version = $version;
 	}
 
 	/**
-	* @return MC4WP_Lite_Form
-	*/
-	public function get_form_manager() {
-		return $this->form_manager;
+	 * Get the main plugin file.
+	 *
+	 * @return string
+	 */
+	public function file() {
+		return $this->file;
 	}
 
 	/**
-	* @return MC4WP_Lite_API
-	*/
-	public function get_api() {
+	 * Get the plugin version.
+	 *
+	 * @return string
+	 */
+	public function version() {
+		return $this->version;
+	}
 
-		if( $this->api === null ) {
-			$opts = mc4wp_get_options();
-			$this->api = new MC4WP_Lite_API( $opts['general']['api_key'] );
+	/**
+	 * Gets the directory the plugin lives in.
+	 *
+	 * @param string $path
+	 *
+	 * @return string
+	 */
+	public function dir( $path = '' ) {
+
+		// ensure path has leading slash
+		if ( '' !== $path ) {
+			$path = '/' . ltrim( $path, '/' );
 		}
-		
-		return $this->api;
+
+		return dirname( $this->file ) . $path;
 	}
 
-	public function register_widget()
-	{
-		register_widget( 'MC4WP_Lite_Widget' );
+	/**
+	 * Gets the URL to the plugin files.
+	 *
+	 * @param string $path
+	 *
+	 * @return string
+	 */
+	public function url( $path = '' ) {
+		return plugins_url( $path, $this->file );
 	}
-
 }

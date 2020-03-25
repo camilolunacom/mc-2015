@@ -1,0 +1,6 @@
+{
+    "require": {
+        "krizalys/onedrive-php-sdk": "^2.4",
+        "stevenmaguire/oauth2-dropbox": "^3.0"
+    }
+}
