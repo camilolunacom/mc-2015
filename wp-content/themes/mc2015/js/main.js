@@ -361,7 +361,6 @@ $(document).on('ready', function(){
       $('.post-gallery .owl-carousel').on(evt, function(e){
         console.log(e.type);
         var $el = $(this).parent()[0];
-        console.log($el);
         if(screenfull.isEnabled){
           screenfull.request($el);
         }
