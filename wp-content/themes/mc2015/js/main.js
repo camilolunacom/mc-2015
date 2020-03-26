@@ -361,13 +361,14 @@ $(document).on('ready', function(){
       $('.post-gallery .owl-carousel').on(evt, function(e){
         console.log(e.type);
         var $el = $(this).parent()[0];
-        if(screenfull.enabled){
+        console.log($el);
+        if(screenfull.isEnabled){
           screenfull.request($el);
         }
       });
     }
     $('.post-gallery .exit-fs').on(evt, function(){
-      if(screenfull.enabled){
+      if(screenfull.isEnabled){
         screenfull.exit();
       }
     });
