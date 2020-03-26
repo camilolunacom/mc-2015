@@ -8,20 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/8manos/mor-charpentier.git"
+    "url": "git://github.com/camilolunacom/mor-charpentier.git"
   },
   "author": "cesosag",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/8manos/mor-charpentier/issues"
+    "url": "https://github.com/camilolunacom/mor-charpentier/issues"
   },
   "devDependencies": {
     "gulp": "~3.8.9",
-    "gulp-ruby-sass": "~0.7.1",
     "gulp-autoprefixer": "~1.0.1",
-    "gulp-rename": "~1.2.0",
     "gulp-concat": "~2.4.2",
     "gulp-minify-css": "~0.3.11",
+    "gulp-rename": "~1.2.0",
+    "gulp-ruby-sass": "~0.7.1",
     "gulp-uglify": "~1.0.2"
   }
 }

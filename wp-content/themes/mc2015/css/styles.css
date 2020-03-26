@@ -8,10 +8,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-::-moz-selection {
-  background: black;
-  color: white; }
-
 ::selection {
   background: black;
   color: white; }
@@ -280,7 +276,6 @@ article {
         bottom: 3em;
         content: "";
         height: 4em;
-        left: -webkit-calc(50% - 1px);
         left: calc(50% - 1px);
         position: absolute; }
     .artist.thumb .view-artist-cont {
@@ -489,7 +484,6 @@ article {
     bottom: -6em;
     content: "";
     height: 5.5em;
-    left: -webkit-calc(50% - 1px);
     left: calc(50% - 1px);
     position: absolute; }
 
@@ -750,7 +744,6 @@ article {
     transition: all 0.3s; }
     .page-numbers .page-numbers.next, .page-numbers .page-numbers.prev {
       background-color: white;
-      -webkit-border-radius: 50%;
       border-radius: 50%;
       font-size: 12px;
       height: 24px;
@@ -821,7 +814,6 @@ article {
     width: 100px; }
     .post-actions .post-attachment-link [class^="icon-"] {
       background-color: black;
-      -webkit-border-radius: 50%;
       border-radius: 50%;
       -webkit-box-shadow: 0 0 0 1px;
       box-shadow: 0 0 0 1px;
@@ -867,7 +859,6 @@ article {
     z-index: 999; }
     .post-gallery button.exit-fs {
       background: rgba(255, 255, 255, 0.4);
-      -webkit-border-radius: 2px;
       border-radius: 2px;
       display: none;
       font-size: x-small;
@@ -879,7 +870,6 @@ article {
         vertical-align: middle; }
       .post-gallery button.exit-fs .icon-close {
         background-color: black;
-        -webkit-border-radius: 50%;
         border-radius: 50%;
         -webkit-box-shadow: 0 0 0 1px black;
         box-shadow: 0 0 0 1px black;
@@ -895,7 +885,6 @@ article {
         color: black; }
     .post-gallery button.icon-expand {
       background-color: black;
-      -webkit-border-radius: 50%;
       border-radius: 50%;
       -webkit-box-shadow: 0 0 0 1px black;
       box-shadow: 0 0 0 1px black;
@@ -958,7 +947,6 @@ article {
       border: 1px solid black;
       content: "";
       height: 2em;
-      left: -webkit-calc(50% - 1px);
       left: calc(50% - 1px);
       position: absolute;
       top: -2.5em; }
@@ -1050,7 +1038,6 @@ article {
     padding: 0.25em; }
     .social-networks .social-network a {
       background-color: black;
-      -webkit-border-radius: 50%;
       border-radius: 50%;
       -webkit-box-shadow: 0 0 0 1px black;
       box-shadow: 0 0 0 1px black;
@@ -1320,7 +1307,6 @@ article.artist.sticky .post-title {
   position: fixed;
   right: 0;
   top: 2.5em;
-  width: -webkit-calc(100% - 20px - 4rem);
   width: calc(100% - 20px - 4rem);
   z-index: 2; }
 
@@ -1348,32 +1334,6 @@ article.artist.sticky .post-title {
     line-height: 70vh;
     height: 70vh; }
   .post-gallery:-webkit-full-screen .owl-carousel {
-    margin: 0 auto;
-    width: 95%; }
-.post-gallery:-moz-full-screen {
-  background-color: white;
-  border: 10px solid black;
-  height: 100%;
-  padding: 2em;
-  width: 100%; }
-  .post-gallery:-moz-full-screen button.exit-fs {
-    display: block; }
-  .post-gallery:-moz-full-screen button.icon-expand {
-    display: none; }
-  .post-gallery:-moz-full-screen figcaption {
-    background-color: white; }
-  .post-gallery:-moz-full-screen figure {
-    background-color: white;
-    cursor: default; }
-  .post-gallery:-moz-full-screen .gallery-controls .owl-next {
-    right: 1em; }
-  .post-gallery:-moz-full-screen .gallery-controls .owl-prev {
-    left: 1em; }
-  .post-gallery:-moz-full-screen .img {
-    background: white;
-    line-height: 70vh;
-    height: 70vh; }
-  .post-gallery:-moz-full-screen .owl-carousel {
     margin: 0 auto;
     width: 95%; }
 .post-gallery:-ms-fullscreen {
@@ -1408,12 +1368,6 @@ article.artist.sticky .post-title {
   height: 100%;
   padding: 2em;
   width: 100%; }
-.post-gallery:-moz-full-screen {
-  background-color: white;
-  border: 10px solid black;
-  height: 100%;
-  padding: 2em;
-  width: 100%; }
 .post-gallery:-ms-fullscreen {
   background-color: white;
   border: 10px solid black;
@@ -1428,15 +1382,11 @@ article.artist.sticky .post-title {
   width: 100%; }
   .post-gallery:-webkit-full-screen button.exit-fs {
     display: block; }
-  .post-gallery:-moz-full-screen button.exit-fs {
-    display: block; }
   .post-gallery:-ms-fullscreen button.exit-fs {
     display: block; }
   .post-gallery:fullscreen button.exit-fs {
     display: block; }
   .post-gallery:-webkit-full-screen button.icon-expand {
-    display: none; }
-  .post-gallery:-moz-full-screen button.icon-expand {
     display: none; }
   .post-gallery:-ms-fullscreen button.icon-expand {
     display: none; }
@@ -1444,16 +1394,11 @@ article.artist.sticky .post-title {
     display: none; }
   .post-gallery:-webkit-full-screen figcaption {
     background-color: white; }
-  .post-gallery:-moz-full-screen figcaption {
-    background-color: white; }
   .post-gallery:-ms-fullscreen figcaption {
     background-color: white; }
   .post-gallery:fullscreen figcaption {
     background-color: white; }
   .post-gallery:-webkit-full-screen figure {
-    background-color: white;
-    cursor: default; }
-  .post-gallery:-moz-full-screen figure {
     background-color: white;
     cursor: default; }
   .post-gallery:-ms-fullscreen figure {
@@ -1464,25 +1409,17 @@ article.artist.sticky .post-title {
     cursor: default; }
   .post-gallery:-webkit-full-screen .gallery-controls .owl-next {
     right: 1em; }
-  .post-gallery:-moz-full-screen .gallery-controls .owl-next {
-    right: 1em; }
   .post-gallery:-ms-fullscreen .gallery-controls .owl-next {
     right: 1em; }
   .post-gallery:fullscreen .gallery-controls .owl-next {
     right: 1em; }
   .post-gallery:-webkit-full-screen .gallery-controls .owl-prev {
     left: 1em; }
-  .post-gallery:-moz-full-screen .gallery-controls .owl-prev {
-    left: 1em; }
   .post-gallery:-ms-fullscreen .gallery-controls .owl-prev {
     left: 1em; }
   .post-gallery:fullscreen .gallery-controls .owl-prev {
     left: 1em; }
   .post-gallery:-webkit-full-screen .img {
-    background: white;
-    line-height: 70vh;
-    height: 70vh; }
-  .post-gallery:-moz-full-screen .img {
     background: white;
     line-height: 70vh;
     height: 70vh; }
@@ -1495,9 +1432,6 @@ article.artist.sticky .post-title {
     line-height: 70vh;
     height: 70vh; }
   .post-gallery:-webkit-full-screen .owl-carousel {
-    margin: 0 auto;
-    width: 95%; }
-  .post-gallery:-moz-full-screen .owl-carousel {
     margin: 0 auto;
     width: 95%; }
   .post-gallery:-ms-fullscreen .owl-carousel {
@@ -1533,10 +1467,6 @@ article.artist.sticky .post-title {
       color: rgba(255, 255, 255, 0.7); } }
 @media screen and (min-width: 48em) {
   .post-gallery:-webkit-full-screen .img {
-    background: white;
-    line-height: 88vh;
-    height: 88vh; }
-  .post-gallery:-moz-full-screen .img {
     background: white;
     line-height: 88vh;
     height: 88vh; }
