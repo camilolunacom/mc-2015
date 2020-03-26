@@ -1,14 +1,13 @@
-var autoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var gulp = require('gulp');
-var minifyCSS = require('gulp-minify-css');
-var rename = require('gulp-rename');
-var sass = require('gulp-ruby-sass');
-var uglify = require('gulp-uglify');
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
+const rename = require('gulp-rename');
+const sass = require('gulp-ruby-sass');
+const uglify = require('gulp-uglify');
 
 gulp.task('sass', function(){
-	return gulp.src('wp-content/themes/mc2015/css/styles.sass')
-		.pipe(sass())
+	return sass('wp-content/themes/mc2015/css/styles.sass')
 		.on('error', function(err){
 			console.log(err.message);
 		})
@@ -26,7 +25,7 @@ gulp.task('autoprefix', function(){
 
 gulp.task('minify-css', function(){
 	return gulp.src('wp-content/themes/mc2015/css/styles.css')
-		.pipe(minifyCSS())
+		.pipe(cleanCSS({compatibility: '*'}))
 		.pipe(rename({
 			suffix: '.min'
 		}))
@@ -53,8 +52,7 @@ gulp.task('deal-js', function(){
 		.pipe(gulp.dest('wp-content/themes/mc2015/js/'));
 });
 
-gulp.task('default', function(){
-	gulp.start('sass', 'autoprefix', 'minify-css', 'autoprefix-min', 'autoprefix-min', 'deal-js');
+gulp.task('default', gulp.series('sass', 'autoprefix', 'minify-css', 'autoprefix-min', 'autoprefix-min', 'deal-js'), function(done) {
 	gulp.watch('wp-content/themes/mc2015/css/*.sass', ['sass']);
 	gulp.watch('wp-content/themes/mc2015/css/styles.css', ['autoprefix']);
 	gulp.watch('wp-content/themes/mc2015/css/styles.css', ['minify-css']);
