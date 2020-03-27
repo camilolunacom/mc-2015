@@ -854,9 +854,17 @@ article {
   position: relative; }
   .post-gallery button {
     position: absolute;
-    right: 1em;
-    top: 1em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     z-index: 999; }
+    .post-gallery .owl-prev {
+      left: 1em;
+    }
+    .post-gallery .owl-next {
+      right: 1em;
+    }
     .post-gallery button.exit-fs {
       background: rgba(255, 255, 255, 0.4);
       border-radius: 2px;
