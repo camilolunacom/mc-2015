@@ -859,6 +859,10 @@ article {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 999; }
+    .post-gallery .exit-fs {
+      top: 2em;
+      right: 1em;
+    }
     .post-gallery .owl-prev {
       left: 1em;
     }
