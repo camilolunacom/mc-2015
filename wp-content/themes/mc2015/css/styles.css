@@ -1486,3 +1486,14 @@ article.artist.sticky .post-title {
     background: white;
     line-height: 88vh;
     height: 88vh; } }
+
+/* When logged in */
+.admin-bar .navigation-menu {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar .navigation-menu {
+    top: 46px;
+  }
+}
