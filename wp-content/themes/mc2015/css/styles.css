@@ -546,7 +546,7 @@ article {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999999999999999; }
+  z-index: 999; }
   .navigation-menu .menu {
     font-weight: bold;
     letter-spacing: 0.1em;
@@ -858,7 +858,7 @@ article {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    z-index: 999; }
+    z-index: 99; }
     .post-gallery .exit-fs {
       top: 2em;
       right: 1em;
