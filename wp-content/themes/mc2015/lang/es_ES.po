@@ -1,0 +1,332 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MC2015\n"
+"POT-Creation-Date: 2015-01-30 13:01-0500\n"
+"PO-Revision-Date: 2020-03-30 11:06-0500\n"
+"Last-Translator: Carlos Sosa <carlos@8manos.com>\n"
+"Language-Team: 8manos l18n <l18n@8manos.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: post-share.php:2 ../mc2015/post-share.php:2
+msgid "Share"
+msgstr "Compartir"
+
+#: page-gallery.php:25 ../mc2015/page-gallery.php:25
+msgid "Tue/Sat 11am-7pm"
+msgstr "Mar./Sáb. 11am-7pm"
+
+#: page-gallery.php:40 ../mc2015/page-gallery.php:40
+msgid "Newsletter"
+msgstr ""
+
+#: single-post.php:21 single-exhibition.php:62 ../mc2015/single-post.php:21
+#: ../mc2015/single-exhibition.php:62 ../mcg/functions.php:242
+#: ../mcg/functions.php:397
+msgid "Press release"
+msgstr "Comunicado de prensa"
+
+#: page-exhibitions.php:47 ../mc2015/page-exhibitions.php:47
+msgid "Current exhibition"
+msgstr "Exposición actual"
+
+#: _past-exhibitions.php:36 ../mc2015/_past-exhibitions.php:36
+msgid "Past exhibitions"
+msgstr "Exposiciones pasadas"
+
+#: _past-exhibitions.php:67 ../mc2015/_past-exhibitions.php:67
+#: ../mcg/functions.php:367
+msgid "View exhibition"
+msgstr "Ver exposición"
+
+#: _past-exhibitions.php:72 ../mc2015/_past-exhibitions.php:72
+msgid "Group exhibition"
+msgstr "Exposición colectiva"
+
+#: single-exhibition.php:32 single-artist.php:20
+#: ../mc2015/single-exhibition.php:32 ../mc2015/single-artist.php:20
+msgid "Close"
+msgstr "Cerrar"
+
+#: page-news.php:22 ../mc2015/page-news.php:22
+msgid "<span class=\"icon-page-prev\"></span>"
+msgstr ""
+
+#: page-news.php:23 ../mc2015/page-news.php:23
+msgid "<span class=\"icon-page-next\"></span>"
+msgstr ""
+
+#: page-news.php:33 ../mc2015/page-news.php:33
+msgid "Filter"
+msgstr "Filtro"
+
+#: page-news.php:82 ../mc2015/page-news.php:82
+msgid "Read more"
+msgstr "Saber más"
+
+#: page-artists.php:10 ../mc2015/page-artists.php:10
+msgid "Thumbnails"
+msgstr "Mosaico"
+
+#: page-artists.php:11 ../mc2015/page-artists.php:11
+msgid "List"
+msgstr "Lista"
+
+#: page-artists.php:22 ../mc2015/page-artists.php:22
+msgid "View artist"
+msgstr "Ver artista"
+
+#: single-artist.php:57 ../mc2015/single-artist.php:57
+msgid "Download CV"
+msgstr "Hoja de vida"
+
+#: ../mcg/comments.php:3
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: ../mcg/comments.php:11
+msgid "Comments are closed."
+msgstr ""
+
+#: ../mcg/content-exhibition.php:23 ../mcg/tpl-gallery.php:40
+#: ../mcg/content-artist.php:30 ../mcg/functions.php:298
+msgid "View original size"
+msgstr ""
+
+#: ../mcg/content-exhibition.php:23 ../mcg/tpl-gallery.php:40
+#: ../mcg/content-artist.php:30 ../mcg/functions.php:298
+msgid "Zoom"
+msgstr ""
+
+#: ../mcg/content-exhibition.php:43 ../mcg/content.php:16
+#: ../mcg/tpl-gallery.php:53
+msgid "Continue&hellip;"
+msgstr ""
+
+#: ../mcg/content-404.php:4
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: ../mcg/content-404.php:5
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help :)"
+msgstr ""
+
+#: ../mcg/content-404.php:8
+msgid "Nothing Found"
+msgstr ""
+
+#: ../mcg/content-404.php:9
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr ""
+
+#: ../mcg/content-artist.php:56
+msgid "Artist CV"
+msgstr "Hoja de vida"
+
+#: ../mcg/searchform.php:2 ../mcg/searchform.php:4
+msgid "Search"
+msgstr ""
+
+#: ../mcg/functions.php:30
+msgid "Main menu"
+msgstr ""
+
+#: ../mcg/functions.php:31
+msgid "Social menu"
+msgstr ""
+
+#: ../mcg/functions.php:57
+msgid "Header"
+msgstr ""
+
+#: ../mcg/functions.php:58
+msgid "News index"
+msgstr ""
+
+#: ../mcg/functions.php:253
+msgid "Artist info"
+msgstr ""
+
+#: ../mcg/functions.php:378
+msgid "Site settings"
+msgstr ""
+
+#: ../mcg/functions.php:379
+msgid "Contact &amp; address info"
+msgstr ""
+
+#: ../mcg/functions.php:380
+msgid "GPS coordinate"
+msgstr ""
+
+#: ../mcg/functions.php:381
+msgid "Phone number"
+msgstr ""
+
+#: ../mcg/functions.php:382 ../mcg/p/krr.php:300
+msgid "Email"
+msgstr ""
+
+#: ../mcg/functions.php:383
+msgid "Address"
+msgstr ""
+
+#: ../mcg/functions.php:384
+msgid "Social networks"
+msgstr ""
+
+#: ../mcg/functions.php:385
+msgid "Exhibition"
+msgstr "Exposición"
+
+#: ../mcg/functions.php:386
+msgid "Exhibitions"
+msgstr "Exposiciones"
+
+#: ../mcg/functions.php:387
+msgid "Artist"
+msgstr "Artista"
+
+#: ../mcg/functions.php:388
+msgid "Artists"
+msgstr "Artistas"
+
+#: ../mcg/functions.php:389
+msgid "Facebook URL"
+msgstr ""
+
+#: ../mcg/functions.php:390
+msgid "LinkedIn URL"
+msgstr ""
+
+#: ../mcg/functions.php:391
+msgid "Twitter username"
+msgstr ""
+
+#: ../mcg/functions.php:392
+msgid "Artist data"
+msgstr ""
+
+#: ../mcg/functions.php:393
+msgid "Start date"
+msgstr ""
+
+#: ../mcg/functions.php:394
+msgid "End date"
+msgstr ""
+
+#: ../mcg/functions.php:395
+msgid "Images"
+msgstr ""
+
+#: ../mcg/functions.php:396
+msgid "Post data"
+msgstr ""
+
+#: ../mcg/functions.php:398
+msgid "Past"
+msgstr ""
+
+#: ../mcg/functions.php:399
+msgid "Present"
+msgstr ""
+
+#: ../mcg/functions.php:400
+msgid "Future"
+msgstr ""
+
+#: ../mcg/p/krr.php:15
+msgid "Go back"
+msgstr ""
+
+#: ../mcg/p/krr.php:88
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../mcg/p/krr.php:225
+msgid "Comments"
+msgstr ""
+
+#: ../mcg/p/krr.php:225
+msgid "Pings"
+msgstr ""
+
+#: ../mcg/p/krr.php:255
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../mcg/p/krr.php:262 ../mcg/p/krr.php:283
+msgid "Edit"
+msgstr ""
+
+#: ../mcg/p/krr.php:269
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../mcg/p/krr.php:298
+msgid "Name"
+msgstr ""
+
+#: ../mcg/p/krr.php:302
+msgid "Website"
+msgstr ""
+
+#: ../mcg/p/krr.php:411
+msgid "Widget areas"
+msgstr ""
+
+#: ../mcg/p/krr.php:416
+msgid "After header"
+msgstr ""
+
+#: ../mcg/p/krr.php:422
+msgid "Before page"
+msgstr ""
+
+#: ../mcg/p/krr.php:428
+msgid "Before content"
+msgstr ""
+
+#: ../mcg/p/krr.php:434
+msgid "After content"
+msgstr ""
+
+#: ../mcg/p/krr.php:440
+msgid "Side"
+msgstr ""
+
+#: ../mcg/p/krr.php:446
+msgid "After page"
+msgstr ""
+
+#: ../mcg/p/krr.php:452
+msgid "Before footer"
+msgstr ""
+
+#~ msgid "View more"
+#~ msgstr "Voir"
+
+#, fuzzy
+#~ msgid "Current show"
+#~ msgstr "Vue exposition"
+
+#~ msgid "The gallery's newsletter"
+#~ msgstr "Newsletter"
+
+#~ msgid "Monthly.no spam."
+#~ msgstr "no spam"
