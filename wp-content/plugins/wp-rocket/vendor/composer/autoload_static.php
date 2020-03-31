@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita85285426e9ce70425f0ba08e3488220
+class ComposerStaticInitd081d58e24dbc0b4315b93bddb595db6
 {
     public static $prefixLengthsPsr4 = array (
         'W' => 
@@ -337,7 +337,7 @@ class ComposerStaticInita85285426e9ce70425f0ba08e3488220
         'Psr\\Log\\LoggerInterface' => __DIR__ . '/..' . '/psr/log/Psr/Log/LoggerInterface.php',
         'Psr\\Log\\LoggerTrait' => __DIR__ . '/..' . '/psr/log/Psr/Log/LoggerTrait.php',
         'Psr\\Log\\NullLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/NullLogger.php',
-        'Psr\\Log\\Test\\DummyTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
+        'Psr\\Log\\Test\\DummyTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/DummyTest.php',
         'Psr\\Log\\Test\\LoggerInterfaceTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\TestLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/TestLogger.php',
         'RocketLazyload\\Assets' => __DIR__ . '/..' . '/wp-media/rocket-lazyload-common/src/Assets.php',
@@ -423,7 +423,6 @@ class ComposerStaticInita85285426e9ce70425f0ba08e3488220
         'WP_Rocket\\ServiceProvider\\Options' => __DIR__ . '/../..' . '/inc/classes/ServiceProvider/class-options.php',
         'WP_Rocket\\ServiceProvider\\RocketCDN' => __DIR__ . '/../..' . '/inc/classes/ServiceProvider/RocketCDN.php',
         'WP_Rocket\\ServiceProvider\\Settings' => __DIR__ . '/../..' . '/inc/classes/ServiceProvider/class-settings.php',
-        'WP_Rocket\\ServiceProvider\\Third_Party_Subscribers' => __DIR__ . '/../..' . '/inc/classes/ServiceProvider/class-third-party-subscribers.php',
         'WP_Rocket\\ServiceProvider\\Updater_Subscribers' => __DIR__ . '/../..' . '/inc/classes/ServiceProvider/class-updater-subscribers.php',
         'WP_Rocket\\Subscriber\\Admin\\Database\\Optimization_Subscriber' => __DIR__ . '/../..' . '/inc/classes/subscriber/admin/Database/class-optimization-subscriber.php',
         'WP_Rocket\\Subscriber\\Admin\\Deactivation\\Deactivation_Intent_Subscriber' => __DIR__ . '/../..' . '/inc/classes/subscriber/admin/Deactivation/class-deactivation-intent-subscriber.php',
@@ -476,6 +475,8 @@ class ComposerStaticInita85285426e9ce70425f0ba08e3488220
         'WP_Rocket\\Subscriber\\Third_Party\\Themes\\Bridge_Subscriber' => __DIR__ . '/../..' . '/inc/classes/subscriber/third-party/Themes/class-bridge-subscriber.php',
         'WP_Rocket\\Subscriber\\Tools\\Cache_Dir_Size_Check_Subscriber' => __DIR__ . '/../..' . '/inc/classes/subscriber/Tools/class-cache-dir-size-check-subscriber.php',
         'WP_Rocket\\Subscriber\\Tools\\Detect_Missing_Tags_Subscriber' => __DIR__ . '/../..' . '/inc/classes/subscriber/Tools/class-detect-missing-tags-subscriber.php',
+        'WP_Rocket\\ThirdParty\\Plugins\\Optimization\\AMP' => __DIR__ . '/../..' . '/inc/ThirdParty/Plugins/Optimization/AMP.php',
+        'WP_Rocket\\ThirdParty\\ServiceProvider' => __DIR__ . '/../..' . '/inc/ThirdParty/ServiceProvider.php',
         'WP_Rocket\\Traits\\Config_Updater' => __DIR__ . '/../..' . '/inc/classes/traits/trait-config-updater.php',
         'WP_Rocket\\Traits\\Memoize' => __DIR__ . '/../..' . '/inc/classes/traits/trait-memoize.php',
         'WP_Rocket\\Traits\\Updater_Api_Tools' => __DIR__ . '/../..' . '/inc/classes/traits/trait-updater-api-tools.php',
@@ -484,9 +485,9 @@ class ComposerStaticInita85285426e9ce70425f0ba08e3488220
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInita85285426e9ce70425f0ba08e3488220::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInita85285426e9ce70425f0ba08e3488220::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInita85285426e9ce70425f0ba08e3488220::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd081d58e24dbc0b4315b93bddb595db6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd081d58e24dbc0b4315b93bddb595db6::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitd081d58e24dbc0b4315b93bddb595db6::$classMap;
 
         }, null, ClassLoader::class);
     }
